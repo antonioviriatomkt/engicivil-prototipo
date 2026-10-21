@@ -23,6 +23,12 @@ for (const path of pages) {
     const page = await browser.newPage({ viewport: { width, height: 900 } })
     await page.goto(base + path, { waitUntil: 'networkidle' })
     await page.evaluate(() => document.fonts.ready)
+    // Percorre a página para carregar imagens com loading="lazy" antes da captura.
+    await page.evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo({ top: y, behavior: 'instant' }); await new Promise(r => setTimeout(r, 60)) }
+      window.scrollTo({ top: 0, behavior: 'instant' })
+      await Promise.race([Promise.all([...document.images].map(img => img.complete || new Promise(r => { img.onload = img.onerror = r }))), new Promise(r => setTimeout(r, 5000))])
+    })
     const file = `${out}/${day}-${slug}-${label}.png`
     await page.screenshot({ path: file, fullPage: true })
     console.log(file)

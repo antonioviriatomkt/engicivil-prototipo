@@ -4,6 +4,7 @@ Decisões que valem para os dois protótipos. Entrada nova no topo, com data, qu
 
 | Data | Decisão | Quem | Porquê / notas |
 |---|---|---|---|
+| 2026-10-21 | **G passa a usar a marca atual** (tokens de `context/tokens-atuais.json`: azul `#2e71a8`, cinzas, Roboto Condensed, logótipo atual), em vez da base neutra. O **F continua na base neutra** até decisão em contrário. | António | Pedido explícito numa sessão da G («falta contraste»). Substitui, só para a G, a decisão «Base neutra» abaixo. |
 | 2026-10-21 | Repositório **público**, com o contexto do projeto. | António | Escolha explícita. ⚠️ Feedback do cliente e notas da ficha ficam visíveis a qualquer pessoa. |
 | 2026-10-21 | **Stack:** HTML/CSS estático + Vite multi-página; deploy no Vercel com preview por branch. | António (recomendação da Viriato) | Mais próximo dos mockups e fácil de manter. |
 | 2026-10-21 | **F e G avançam como protótipos**, cada um trabalhado em sessões próprias. | António | Saíram da ronda 2 (E = A+B, F = B+C, G = B+D). E fica só na tela de design. |

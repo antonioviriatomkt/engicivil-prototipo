@@ -24,7 +24,7 @@ Website-conceito feito pela **Viriato** (agência) para a **Engicivil – Cardos
 - **PT-PT.** Copy factual. **Nunca inventar** números, prazos, preços, testemunhos, nomes, promotores ou certificações. O que faltar → placeholder entre `[ ]`.
 - **Não usar BREEAM/LEED/WELL nem classe energética** como certificação. **Não mostrar nomes de particulares** (os nomes de ficheiro de algumas fotos contêm nomes — nunca os mostres como legenda).
 - **Dois negócios com peso igual:** **ENGICIVIL Construções** (obra para terceiros) e **ENGICIVIL Empreendimentos** (promoção própria) — nomes de trabalho do cliente. Mais a secção de **prédios construídos para terceiros**.
-- **Base neutra:** paleta só de cinzas + acento ardósia `#5f6b73`, wordmark de texto «ENGICIVIL». **Não criar identidade visual** (cores de marca, logótipo) — a identidade nova é um trabalho à parte e ainda não foi feita. Tipografia de cada protótipo: a do mockup.
+- **Base neutra (F):** paleta só de cinzas + acento ardósia `#5f6b73`, wordmark de texto «ENGICIVIL». **Exceção — G:** desde 21/10/2026 usa a marca atual (`context/tokens-atuais.json`), por decisão do António (ver `context/decisoes.md`). **Não criar identidade visual** (cores de marca, logótipo) — a identidade nova é um trabalho à parte e ainda não foi feita. Tipografia de cada protótipo: a do mockup.
 - Acessibilidade AA: contraste 4.5:1, alvos ≥ 44 px, `<a>`/`<button>`/`<label>` reais. Tem de funcionar a 390 px.
 
 ## Stack

@@ -1,26 +1,35 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-21** · por: sessão «hero» (Claude, branch `g/hero`)
+> Atualizado: **2026-10-21** · por: sessão «hero + marca atual» (Claude, branch `g/hero`)
 
 ## Onde estamos
-- `prototypes/g/index.html` = **homepage** convertida do mockup `mockups/G-BD.dc.html` (HTML estático, CSS inline, imagens em `/img/…`).
-- **Hero refeito (pedido do António):** título e texto por baixo, à esquerda (7 col.) · Fig. 1 (sócios + legenda + «Prefere falar?») à direita (5 col.) · por baixo, os dois negócios lado a lado (6 + 6 col.) · faixa de factos. Em telemóvel: título → texto → foto → Construções → Empreendimentos (a barra móvel com os dois negócios continua no topo).
-- Ideia da direção: antes/depois; mosaico de obra; índice «Onde trabalhamos» com os prédios para terceiros; diagrama «uma empresa, dois negócios».
-- Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados) (Google Fonts, `<link>` no `<head>`).
-- Referência visual congelada: `mockups/G-BD-desktop.jpg` e `mockups/G-BD-mobile.jpg`.
+- `prototypes/g/index.html` = **homepage** (HTML estático; CSS ainda quase todo inline, mais um `<style>` com tokens e o hero).
+- **Marca atual aplicada (pedido do António, 21/10):** a G deixou a base neutra e usa os tokens de `context/tokens-atuais.json`.
+  - Cores: azul `#2e71a8`, cinza `#575757`, texto `#333333`, cinza claro `#efefef`, linhas `#dddddd`/`#cdcdcd`.
+  - Tipo: Roboto Condensed (400 no corpo, 700 nos títulos); h1/h2 e botões em maiúsculas.
+  - Botões com raio 0; logótipo atual (`/img/logos/engicivil-logo.png`) no cabeçalho.
+  - Variáveis CSS em `:root` no `<style>` (`--blue`, `--grey-dark`, `--text`, `--light`, `--edge`, `--line`, `--font`).
+- **Hero:**
+  - Em cima: título e texto à esquerda, foto dos sócios (4:3, P&B) à direita, sem legenda nem «Fig.».
+  - Por baixo: dois blocos de cor, com o mesmo peso — **Construções** em cinza `#575757` e **Empreendimentos** em azul `#2e71a8`, texto branco (contraste 7:1 e 5:1).
+  - A seguir, a faixa de factos em `#efefef` (3 colunas abaixo de 1100 px).
+  - Em telemóvel: título → texto → Construções → Empreendimentos → foto → factos.
+- Contraste AA verificado por script em toda a página (1440 e 390 px): sem falhas. Sem scroll horizontal a 1440, 1024 e 390 px.
+- Tipografia anterior (Bricolage Grotesque, Source Serif 4, IBM Plex Mono) foi substituída.
 
-## Próximos passos (sugeridos — o António define a ordem)
-1. Corrigir problemas já existentes vistos nesta sessão (não mexidos): a 1024 px o cabeçalho parte-se em duas linhas e a faixa de factos sobrepõe «30 especialistas» a «PME Líder»; a 390 px «30 especialistas» encosta à margem. Rever o resto da página a 390 px.
-   - Opcional: com os cartões a 6 col., as imagens 3:2 ficam altas (~400 px) e empurram os factos para baixo — considerar 16:9.
-2. Extrair o CSS inline para `prototypes/g/styles.css` (tokens de cor/tipo/espaçamento como variáveis CSS) para poder criar mais páginas sem duplicar.
-3. Navegação funcional: menu mobile, âncoras, estados de foco.
-4. Páginas interiores (a confirmar com o António): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** · **Sobre** · **Contactos**.
-5. Formulário de contacto (só front-end; sem envio real).
+## Próximos passos (prioridade sugerida — o António define)
+1. **Menu móvel.** Abaixo de 760 px só há a barra Construções/Empreendimentos: «Onde trabalhamos», «Sobre nós» e «Contactos» ficam inacessíveis. Entre 761 e 960 px o cabeçalho quebra em duas linhas. Resolver com um botão Menu.
+2. Rever o resto da página com a marca atual: secções escuras, legendas «Fig.» fora do hero, o selo «Projeto em Empresas» das fotos antes/depois, o rodapé (links com 36 px de altura — subir para 44).
+3. Extrair o CSS inline para `prototypes/g/styles.css`.
+4. Páginas interiores (a confirmar): Construções · Empreendimentos · Serene · Gaio · Prédios para terceiros · Obra · Sobre · Contactos.
+5. Formulário (só front-end).
 
 ## Dúvidas em aberto
-- Ver «Por confirmar com o cliente» em `context/decisoes.md`.
+- A marca atual vale só para a G, ou também para o F? (Hoje o F continua na base neutra.)
+- O seletor PT/EN fica escondido abaixo de 1100 px (é só proposta).
+- Ver também «Por confirmar com o cliente» em `context/decisoes.md`.
 
 ## Carregar na próxima sessão
-- `context/brief.md` · `context/brief-r2.md` · `context/decisoes.md` (primeira sessão deste protótipo)
-- `prototypes/g/index.html` · `mockups/G-BD-desktop.jpg` · `screenshots/g/2026-10-21-g-*.png`
+- `prototypes/g/index.html` · `context/tokens-atuais.json`
+- Capturas: `screenshots/g/2026-10-21-g-*.png`

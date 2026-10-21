@@ -1,0 +1,51 @@
+{
+  "_source": "engicivil.pt — css/style.min.css + logótipo, extraído a 2026-10-21. Identidade ATUAL (a substituir).",
+  "color": {
+    "brand-blue": "#2e71a8",
+    "brand-blue-light": "#37a7df",
+    "brand-gradient": "linear-gradient(to right, #2e71a8, #37a7df)",
+    "logo-gradient-approx": ["#283870", "#2878b0"],
+    "logo-wordmark-grey-approx": "#505050",
+    "grey-dark": "#575757",
+    "grey-gradient": "linear-gradient(to right, #999999, #575757)",
+    "text": "#333333",
+    "text-input": "#888888",
+    "light-grey": "#efefef",
+    "light-grey-edge": "#cdcdcd",
+    "line": "#dddddd",
+    "white": "#ffffff",
+    "success": "#50c25b",
+    "success-hover": "#3b8f43",
+    "image-overlay": "rgba(0,0,0,0.4)",
+    "hover-overlay": "#2e71a8 @ 80%"
+  },
+  "font": {
+    "family": "'Roboto Condensed', sans-serif",
+    "weights": { "body": 300, "headings-nav-buttons": 400 },
+    "source": "Google Fonts, Roboto Condensed 300/400"
+  },
+  "type-scale": {
+    "hero-1": { "size": "47pt (3vw desktop · 20pt mobile)", "transform": "uppercase" },
+    "hero-2": { "size": "23pt (1.5vw desktop · 12pt mobile)", "transform": "uppercase" },
+    "h1": { "size": "28pt", "weight": 400, "transform": "uppercase", "margin-bottom": "30px" },
+    "h2": { "size": "24pt", "weight": 400, "transform": "uppercase" },
+    "h3": { "size": "20pt", "weight": 400, "transform": "uppercase" },
+    "h4": { "size": "14pt", "weight": 400, "line-height": "33px" },
+    "body": { "size": "12pt", "line-height": "25px", "margin-bottom": "30px" },
+    "nav": { "size": "12pt", "weight": 400, "transform": "uppercase", "color": "#575757", "hover": "#2e71a8" },
+    "small": { "size": "10pt" },
+    "input": { "size": "11pt" }
+  },
+  "component": {
+    "button": { "radius": 0, "padding": "12px 12px 10px", "min-width": "160px", "transform": "uppercase", "size": "12pt", "transition": "0.4s",
+      "variants": { "primary": "bg #2e71a8 → hover #575757", "secondary": "bg #575757 → hover #2e71a8", "on-dark": "bg #fff text #575757 → hover #575757" } },
+    "input": { "border": "1px solid #575757", "radius": 0, "padding": "12px" },
+    "icon": { "size": "48px", "radius": "24px" },
+    "hero-carousel": { "min-height": "480px", "max-height": "750px", "overlay": "#000 @ 40%" },
+    "logo-height-header": "50px",
+    "map-height": "480px"
+  },
+  "radius-utilities": ["0", "5px", "10px", "15px", "20px", "25px"],
+  "breakpoints": ["768px", "1200px", "1280px", "1920px"],
+  "framework": "Bootstrap 3 (container 1200) + Font Awesome 4.5 + AOS + Colorbox"
+}

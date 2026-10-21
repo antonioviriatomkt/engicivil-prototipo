@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Engicivil — Homepage · Versão F (B+C)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f4f4f1;color:#141414;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#141414}a:hover{color:#3a3a3a}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wm{font-family:'Hanken Grotesk',system-ui,sans-serif;font-weight:600;letter-spacing:.22em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero-bg{background-color:#3a3a3a;background-image:linear-gradient(180deg,rgba(20,20,20,.62) 0%,rgba(20,20,20,0) 22%,rgba(20,20,20,0) 42%,rgba(20,20,20,.78) 100%),url(/_blob/efcac696b09323c31d5857a6b78ecf24);background-size:cover;background-position:center 60%}
+.on-dark a{color:#ffffff}.on-dark a:hover{color:#d9d9d6}
+.lk:hover{opacity:.75}
+.btn-ink:hover{background:#3a3a3a !important;color:#ffffff !important}
+.btn-white:hover{background:#d9d9d6 !important;color:#141414 !important}
+.btn-ol:hover{background:#141414 !important;color:#ffffff !important}
+.btn-olw:hover{background:rgba(255,255,255,.14) !important}
+.opt:has(input:checked){border-color:#141414 !important;background:#f4f4f1 !important}
+:focus-visible{outline:2px solid #5f6b73;outline-offset:3px}
+.field:focus{border-color:#141414 !important;outline:2px solid #5f6b73;outline-offset:1px}
+.mnav{display:none}
+.mnav summary{list-style:none;cursor:pointer}
+.mnav summary::-webkit-details-marker{display:none}
+.m-label{display:none}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;scroll-behavior:auto !important}}
+@media (max-width: 1100px){
+  .nav-sec{display:none !important}
+  .h1{font-size:76px !important}
+  .ch-title{font-size:104px !important}
+}
+@media (max-width: 760px){
+  .wrap{padding-left:16px !important;padding-right:16px !important}
+  .nav-d{display:none !important}
+  .mnav{display:block !important}
+  .svc-hide{display:none !important}
+  .hero{height:520px !important}
+  .hero-foot{grid-template-columns:minmax(0,1fr) !important;padding-bottom:72px !important}
+  .h1{font-size:46px !important}
+  .entries-wrap{margin-top:-40px !important}
+  .entries{grid-template-columns:minmax(0,1fr) !important}
+  .entry{padding:28px 20px !important}
+  .entry-t{font-size:48px !important}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr)) !important;row-gap:0 !important}
+  .facts>div{border-left:0 !important;padding-left:0 !important;border-top:1px solid #d9d9d6 !important}
+  .sec{padding-top:80px !important;padding-bottom:80px !important}
+  .g12{grid-template-columns:minmax(0,1fr) !important}
+  .g12>*{grid-column:1 / -1 !important}
+  .g-2,.g-3,.steps,.g-foot{grid-template-columns:minmax(0,1fr) !important}
+  .pair{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .ch-title{font-size:64px !important}
+  .h2{font-size:42px !important}
+  .lema{font-size:34px !important}
+  .spec-head{display:none !important}
+  .spec-row{grid-template-columns:minmax(0,1fr) !important;row-gap:10px !important}
+  .m-label{display:block !important}
+  .first-m{order:-1}
+  .gap-xl{height:96px !important}
+  .stack{flex-direction:column !important;align-items:stretch !important}
+  .hide-m{display:none !important}
+}
+</style>
+</helmet>
+<div style="width:100%;min-height:100vh;background:#f4f4f1;color:#141414;font-family:'Hanken Grotesk',system-ui,sans-serif;">
+
+  <!-- Barra de serviço -->
+  <div style="background:#141414;color:#d9d9d6;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <span class="mono" style="font-size:12px;color:#d9d9d6;">Alvará IMPIC 70366-PUB, classe 5</span>
+      <div class="on-dark" style="display:flex;align-items:center;gap:24px;">
+        <a class="mono svc-hide" href="tel:+351234060223" style="font-size:12px;text-decoration:none;color:#d9d9d6;">+351 234 060 223</a>
+        <a class="mono svc-hide" href="mailto:geral@engicivil.pt" style="font-size:12px;text-decoration:none;color:#d9d9d6;">geral@engicivil.pt</a>
+        <div class="mono" aria-label="Idioma" style="display:flex;gap:2px;font-size:12px;">
+          <a href="#" aria-current="true" style="display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:32px;background:#ffffff;color:#141414;text-decoration:none;">PT</a>
+          <a href="#" lang="en" style="display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:32px;border:1px solid #6b6b6b;color:#d9d9d6;text-decoration:none;">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero hero-bg" aria-labelledby="h-hero" style="position:relative;height:820px;display:flex;flex-direction:column;justify-content:space-between;color:#ffffff;">
+    <header class="wrap on-dark" style="width:100%;max-width:1376px;margin:0 auto;padding:24px 48px 0;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="#" class="wm lk" aria-label="Engicivil, página inicial" style="font-size:19px;text-decoration:none;color:#ffffff;line-height:1;">ENGICIVIL</a>
+      <nav class="nav-d" aria-label="Principal" style="display:flex;align-items:center;gap:32px;">
+        <div style="display:flex;align-items:center;gap:28px;font-size:16px;font-weight:600;">
+          <a href="#construcoes" class="lk" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#ffffff;"><span aria-hidden="true" style="width:9px;height:9px;background:#ffffff;flex:none;"></span>Construções</a>
+          <a href="#empreendimentos" class="lk" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#ffffff;"><span aria-hidden="true" style="width:9px;height:9px;border:1px solid #ffffff;box-sizing:border-box;flex:none;"></span>Empreendimentos</a>
+        </div>
+        <span aria-hidden="true" class="nav-sec" style="width:1px;height:22px;background:rgba(255,255,255,.45);"></span>
+        <div class="nav-sec" style="display:flex;align-items:center;gap:28px;font-size:15px;">
+          <a href="#predios" class="lk" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:#ffffff;">Prédios construídos</a>
+          <a href="#empresa" class="lk" style="display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:#ffffff;">Empresa</a>
+        </div>
+      </nav>
+      <a href="#contacto" class="nav-d btn-olw" style="display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border:1px solid rgba(255,255,255,.75);color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Contactar</a>
+      <details class="mnav" style="position:relative;">
+        <summary style="display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid rgba(255,255,255,.75);font-size:15px;font-weight:600;">Menu</summary>
+        <nav aria-label="Principal (telemóvel)" style="position:absolute;right:0;top:54px;width:260px;background:#141414;padding:10px 0;display:flex;flex-direction:column;z-index:5;">
+          <a href="#construcoes" style="color:#ffffff;text-decoration:none;padding:13px 20px;font-size:17px;font-weight:600;">Engicivil Construções</a>
+          <a href="#empreendimentos" style="color:#ffffff;text-decoration:none;padding:13px 20px;font-size:17px;font-weight:600;border-bottom:1px solid #3a3a3a;">Engicivil Empreendimentos</a>
+          <a href="#predios" style="color:#ffffff;text-decoration:none;padding:13px 20px;font-size:16px;">Prédios construídos</a>
+          <a href="#empresa" style="color:#ffffff;text-decoration:none;padding:13px 20px;font-size:16px;">Empresa</a>
+          <a href="#contacto" style="color:#ffffff;text-decoration:none;padding:13px 20px;font-size:16px;">Contactos</a>
+        </nav>
+      </details>
+    </header>
+
+    <div class="wrap hero-foot" style="width:100%;max-width:1376px;margin:0 auto;padding:0 48px 196px;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:32px;align-items:end;">
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <h1 id="h-hero" class="serif h1" style="margin:0;font-size:104px;line-height:.96;letter-spacing:-.01em;max-width:11ch;">O seu projeto em boas mãos.</h1>
+        <p style="margin:0;font-size:19px;line-height:1.5;color:#f4f4f1;max-width:46ch;">Construímos para empresas e particulares e promovemos os nossos próprios edifícios de habitação. Em Aveiro, desde 2013.</p>
+      </div>
+      <p class="mono hide-m" style="margin:0;display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;font-size:12px;line-height:1.55;color:#d9d9d6;">
+        <span style="color:#ffffff;">Fig. 1</span>
+        <span>Serene Condominium, Ílhavo. Promovido pela Engicivil Empreendimentos e construído pela Engicivil Construções. Imagem de projeto.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Duas entradas, peso igual -->
+  <div class="wrap entries-wrap" style="position:relative;z-index:2;max-width:1376px;margin:-148px auto 0;padding:0 48px;box-sizing:border-box;">
+    <div class="entries" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));">
+
+      <article class="entry" aria-labelledby="h-e1" style="padding:40px 44px 40px;background:#ffffff;color:#141414;border:1px solid #141414;display:flex;flex-direction:column;gap:22px;">
+        <span class="mono" style="font-size:12px;color:#5f6b73;">Para empresas e particulares</span>
+        <h2 id="h-e1" style="margin:0;display:flex;flex-direction:column;gap:8px;">
+          <span class="wm" style="font-size:14px;line-height:1;">ENGICIVIL</span>
+          <span class="serif entry-t" style="font-size:68px;line-height:.92;letter-spacing:-.01em;">Construções</span>
+        </h2>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#3a3a3a;max-width:44ch;">Construção nova, reabilitação e requalificação de espaços industriais e de serviços. Obras públicas e particulares até 2.656.000 €.</p>
+        <dl class="mono" style="margin:0;display:flex;flex-direction:column;font-size:13px;">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt style="color:#3a3a3a;">Indústria e serviços</dt><dd style="margin:0;">6 projetos</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt style="color:#3a3a3a;">Construção</dt><dd style="margin:0;">12 projetos</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:10px 0;border-top:1px solid #d9d9d6;border-bottom:1px solid #d9d9d6;"><dt style="color:#3a3a3a;">Reabilitação</dt><dd style="margin:0;">6 projetos</dd></div>
+        </dl>
+        <div class="stack" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+          <a href="#contacto" class="btn-ink" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;background:#141414;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Pedir orçamento</a>
+          <a href="#construcoes" class="btn-ol" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid #141414;color:#141414;text-decoration:none;font-size:15px;font-weight:600;">Ver obra feita</a>
+        </div>
+      </article>
+
+      <article class="entry on-dark" aria-labelledby="h-e2" style="padding:40px 44px 40px;background:#141414;color:#ffffff;border:1px solid #141414;display:flex;flex-direction:column;gap:22px;">
+        <span class="mono" style="font-size:12px;color:#a3a3a3;">Para quem procura casa</span>
+        <h2 id="h-e2" style="margin:0;display:flex;flex-direction:column;gap:8px;">
+          <span class="wm" style="font-size:14px;line-height:1;">ENGICIVIL</span>
+          <span class="serif entry-t" style="font-size:68px;line-height:.92;letter-spacing:-.01em;">Empreendimentos</span>
+        </h2>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#d9d9d6;max-width:44ch;">Apartamentos promovidos e construídos por nós, em Ílhavo e em Oliveira do Bairro. Plantas, áreas e preços a pedido.</p>
+        <dl class="mono" style="margin:0;display:flex;flex-direction:column;font-size:13px;">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:10px 0;border-top:1px solid #3a3a3a;"><dt style="color:#d9d9d6;">Serene Condominium, Ílhavo</dt><dd style="margin:0;">8 fogos</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:10px 0;border-top:1px solid #3a3a3a;"><dt style="color:#d9d9d6;">Edifício Gaio, Oliveira do Bairro</dt><dd style="margin:0;">12 fogos</dd></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:10px 0;border-top:1px solid #3a3a3a;border-bottom:1px solid #3a3a3a;"><dt style="color:#d9d9d6;">Tipologias</dt><dd style="margin:0;">T1 a T3 duplex</dd></div>
+        </dl>
+        <div class="stack" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+          <a href="#empreendimentos" class="btn-white" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;background:#ffffff;color:#141414;text-decoration:none;font-size:15px;font-weight:600;">Ver empreendimentos</a>
+          <a href="#contacto" class="btn-olw" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid rgba(255,255,255,.75);color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Pedir informação</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Carimbo: prova comum -->
+  <section aria-label="Factos comuns às duas empresas" style="padding:72px 0 0;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;">
+      <p class="mono" style="margin:0 0 12px;font-size:12px;color:#6b6b6b;">Comum à Engicivil Construções e à Engicivil Empreendimentos</p>
+      <dl class="facts" style="margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:2px solid #141414;border-bottom:1px solid #141414;">
+        <div style="padding:20px 16px 22px 0;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;">
+          <dt class="mono" style="font-size:12px;line-height:1.4;color:#6b6b6b;">Alvará IMPIC 70366-PUB</dt>
+          <dd class="serif" style="margin:0;font-size:38px;line-height:1;">Classe 5</dd>
+        </div>
+        <div style="padding:20px 16px 22px;border-left:1px solid #d9d9d6;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;">
+          <dt class="mono" style="font-size:12px;line-height:1.4;color:#6b6b6b;">Valor máximo por obra</dt>
+          <dd class="serif" style="margin:0;font-size:38px;line-height:1;">2.656.000 €</dd>
+        </div>
+        <div style="padding:20px 16px 22px;border-left:1px solid #d9d9d6;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;">
+          <dt class="mono" style="font-size:12px;line-height:1.4;color:#6b6b6b;">Fundada em Aveiro</dt>
+          <dd class="serif" style="margin:0;font-size:38px;line-height:1;">2013</dd>
+        </div>
+        <div style="padding:20px 16px 22px;border-left:1px solid #d9d9d6;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;">
+          <dt class="mono" style="font-size:12px;line-height:1.4;color:#6b6b6b;">Especialistas na equipa</dt>
+          <dd class="serif" style="margin:0;font-size:38px;line-height:1;">30</dd>
+        </div>
+        <div style="padding:20px 16px 22px;border-left:1px solid #d9d9d6;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;">
+          <dt class="mono" style="font-size:12px;line-height:1.4;color:#6b6b6b;">IAPMEI, 2021 a 2023</dt>
+          <dd class="serif" style="margin:0;font-size:38px;line-height:1;">PME Líder</dd>
+        </div>
+        <div style="padding:20px 0 22px 16px;border-left:1px solid #d9d9d6;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;">
+          <dt class="mono" style="font-size:12px;line-height:1.4;color:#6b6b6b;">Melhores PME de Portugal, 2022</dt>
+          <dd class="serif" style="margin:0;font-size:38px;line-height:1;">TOP 5%</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 01 ENGICIVIL CONSTRUÇÕES (capítulo claro) -->
+  <section id="construcoes" aria-labelledby="h-c1" class="sec" style="margin-top:112px;background:#ffffff;padding:128px 0 136px;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:72px;">
+
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;border-top:2px solid #141414;padding-top:20px;">
+        <div style="grid-column:span 3;display:flex;flex-direction:column;gap:2px;">
+          <span class="mono" style="font-size:13px;color:#5f6b73;">01 / 06</span>
+          <span class="mono" style="font-size:13px;color:#3a3a3a;">Obra para clientes</span>
+        </div>
+        <div style="grid-column:span 9;display:flex;flex-direction:column;gap:28px;">
+          <h2 id="h-c1" style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <span class="wm" style="font-size:16px;line-height:1;">ENGICIVIL</span>
+            <span class="serif ch-title" style="font-size:136px;line-height:.88;letter-spacing:-.015em;">Construções</span>
+          </h2>
+          <div class="g-2" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:40px;align-items:end;">
+            <p style="margin:0;font-size:19px;line-height:1.55;color:#3a3a3a;max-width:46ch;">Construímos e reabilitamos para empresas e particulares: unidades industriais, escritórios, lojas, edifícios de habitação e moradias. Do orçamento à execução, com estaleiro e engenharia próprios.</p>
+            <div class="stack" style="display:flex;flex-wrap:wrap;gap:12px;">
+              <a href="#contacto" class="btn-ink" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;background:#141414;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Pedir orçamento</a>
+              <a href="#" class="btn-ol" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border:1px solid #141414;color:#141414;text-decoration:none;font-size:15px;font-weight:600;">Ver os 24 projetos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagens fortes de obra -->
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:40px;align-items:end;">
+        <figure style="grid-column:span 7;margin:0;display:flex;flex-direction:column;gap:12px;">
+          <img src="/_blob/a9cb474bf1c9bba0f0394bfd4abde56f" alt="Delabie: edifício administrativo e de produção com fachada negra, ao entardecer" style="display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover;">
+          <figcaption class="mono" style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;font-size:12px;line-height:1.55;color:#6b6b6b;">
+            <span style="color:#141414;">Fig. 2</span>
+            <span>Delabie. Edifício administrativo e de produção. Indústria e serviços.</span>
+          </figcaption>
+        </figure>
+        <figure style="grid-column:span 5;margin:0;display:flex;flex-direction:column;gap:12px;">
+          <img src="/_blob/6bde545c1ae6d30a8ba822f286833d2f" alt="Moradia em betão e vidro com relvado, em Oliveira de Azeméis" style="display:block;width:100%;aspect-ratio:4 / 5;object-fit:cover;">
+          <figcaption class="mono" style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;font-size:12px;line-height:1.55;color:#6b6b6b;">
+            <span style="color:#141414;">Fig. 3</span>
+            <span>Moradia em Oliveira de Azeméis. Construção nova em betão e vidro.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Ficha técnica das áreas -->
+      <div role="table" aria-label="Áreas de obra da Engicivil Construções">
+        <div role="row" class="spec-head mono" style="display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,3.4fr) minmax(0,1fr) minmax(0,3.2fr) minmax(0,1.4fr);column-gap:24px;padding:10px 0;border-bottom:1px solid #141414;font-size:12px;color:#6b6b6b;">
+          <span role="columnheader">Área</span>
+          <span role="columnheader">Âmbito</span>
+          <span role="columnheader">Projetos</span>
+          <span role="columnheader">Exemplos publicados</span>
+          <span role="columnheader"><span class="sr">Ações</span></span>
+        </div>
+        <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,3.4fr) minmax(0,1fr) minmax(0,3.2fr) minmax(0,1.4fr);column-gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid #d9d9d6;">
+          <h3 role="cell" class="serif" style="margin:0;font-size:30px;line-height:1.05;">Indústria e serviços</h3>
+          <div role="cell" style="font-size:15px;line-height:1.5;color:#3a3a3a;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Âmbito</span>Requalificação de unidades industriais, escritórios, showrooms, lojas e ginásios.</div>
+          <div role="cell" class="mono" style="font-size:15px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Projetos</span>6</div>
+          <div role="cell" style="font-size:15px;line-height:1.5;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Exemplos publicados</span>Delabie, Bresimar, Vitor Guimarães &amp; Filhos, loja ISPM</div>
+          <a role="cell" href="#" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;justify-self:end;">Ver projetos</a>
+        </div>
+        <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,3.4fr) minmax(0,1fr) minmax(0,3.2fr) minmax(0,1.4fr);column-gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid #d9d9d6;">
+          <h3 role="cell" class="serif" style="margin:0;font-size:30px;line-height:1.05;">Construção</h3>
+          <div role="cell" style="font-size:15px;line-height:1.5;color:#3a3a3a;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Âmbito</span>Edifícios de habitação e moradias, de raiz.</div>
+          <div role="cell" class="mono" style="font-size:15px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Projetos</span>12</div>
+          <div role="cell" style="font-size:15px;line-height:1.5;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Exemplos publicados</span>Moradia em Oliveira de Azeméis, Viaduto de Esgueira, Ribas I e II, Viela do Canto</div>
+          <a role="cell" href="#" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;justify-self:end;">Ver projetos</a>
+        </div>
+        <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,3.4fr) minmax(0,1fr) minmax(0,3.2fr) minmax(0,1.4fr);column-gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid #141414;">
+          <h3 role="cell" class="serif" style="margin:0;font-size:30px;line-height:1.05;">Reabilitação</h3>
+          <div role="cell" style="font-size:15px;line-height:1.5;color:#3a3a3a;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Âmbito</span>Moradias, residência universitária e fachadas, com o arquiteto ou designer indicado pelo cliente.</div>
+          <div role="cell" class="mono" style="font-size:15px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Projetos</span>6</div>
+          <div role="cell" style="font-size:15px;line-height:1.5;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Exemplos publicados</span>Residência universitária em Coimbra, moradia Kleya</div>
+          <a role="cell" href="#" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;justify-self:end;">Ver projetos</a>
+        </div>
+      </div>
+
+      <!-- Antes / depois -->
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;align-items:end;">
+        <div style="grid-column:span 4;display:flex;flex-direction:column;gap:14px;padding-bottom:36px;">
+          <span class="mono" style="font-size:12px;color:#141414;">Fig. 4</span>
+          <h3 class="serif" style="margin:0;font-size:44px;line-height:1.02;max-width:12ch;">Vitor Guimarães &amp; Filhos, antes e depois.</h3>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#3a3a3a;max-width:36ch;">O mesmo enquadramento, antes da obra e depois da entrega.</p>
+          <a href="#" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600;">Ver o projeto</a>
+        </div>
+        <div class="pair" style="grid-column:5 / span 8;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/283f663e0bd65ed7fa1dfbfacb0e7d7e" alt="Vitor Guimarães &amp; Filhos, exterior antes da intervenção" style="display:block;width:100%;aspect-ratio:1 / 1;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#6b6b6b;">4a. Antes</figcaption>
+          </figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/64fd4da717f8a5fa525be4d9c8b1248f" alt="Vitor Guimarães &amp; Filhos, exterior depois da intervenção" style="display:block;width:100%;aspect-ratio:1 / 1;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#6b6b6b;">4b. Depois</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 02 ENGICIVIL EMPREENDIMENTOS (capítulo escuro) -->
+  <section id="empreendimentos" aria-labelledby="h-c2" class="sec on-dark" style="background:#141414;color:#ffffff;padding:128px 0 136px;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:72px;">
+
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;border-top:2px solid #ffffff;padding-top:20px;">
+        <div style="grid-column:span 3;display:flex;flex-direction:column;gap:2px;">
+          <span class="mono" style="font-size:13px;color:#a3a3a3;">02 / 06</span>
+          <span class="mono" style="font-size:13px;color:#d9d9d6;">Promoção própria</span>
+        </div>
+        <div style="grid-column:span 9;display:flex;flex-direction:column;gap:28px;">
+          <h2 id="h-c2" style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <span class="wm" style="font-size:16px;line-height:1;">ENGICIVIL</span>
+            <span class="serif ch-title" style="font-size:136px;line-height:.88;letter-spacing:-.015em;">Empreendimentos</span>
+          </h2>
+          <div class="g-2" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:40px;align-items:end;">
+            <p style="margin:0;font-size:19px;line-height:1.55;color:#d9d9d6;max-width:46ch;">Promovemos edifícios de habitação na região de Aveiro e construímo-los com a nossa própria equipa. Dois empreendimentos, vinte apartamentos, do T1 ao T3 duplex.</p>
+            <div class="stack" style="display:flex;flex-wrap:wrap;gap:12px;">
+              <a href="#contacto" class="btn-white" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;background:#ffffff;color:#141414;text-decoration:none;font-size:15px;font-weight:600;">Pedir informação</a>
+              <a href="#contacto" class="btn-olw" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border:1px solid rgba(255,255,255,.75);color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Agendar visita</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Serene -->
+      <article id="serene" aria-labelledby="h-serene" style="display:flex;flex-direction:column;gap:24px;">
+        <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px;align-items:start;">
+          <figure style="grid-column:span 7;margin:0;display:flex;flex-direction:column;gap:12px;">
+            <div style="position:relative;">
+              <img src="/_blob/4ab21f4a674b7a53ead82ce7f2a89006" alt="Fachada do Serene Condominium à noite, com as varandas iluminadas" style="display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover;">
+              <img src="/_blob/bbb5c4c889392ed995805d5c88fc108b" alt="" aria-hidden="true" style="position:absolute;left:32px;bottom:32px;width:40%;max-width:280px;height:auto;">
+            </div>
+            <figcaption class="mono" style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;font-size:12px;line-height:1.55;color:#a3a3a3;">
+              <span style="color:#ffffff;">Fig. 5</span>
+              <span>Serene Condominium à noite. Imagem de projeto.</span>
+            </figcaption>
+          </figure>
+          <div style="grid-column:span 5;display:flex;flex-direction:column;gap:24px;">
+            <h3 id="h-serene" class="serif" style="margin:0;font-size:24px;line-height:1.1;color:#a3a3a3;">Serene Condominium</h3>
+            <p class="serif lema" style="margin:0;font-size:46px;line-height:1.04;">Projeto ímpar de design, conforto e luz.</p>
+            <div role="table" aria-label="Ficha técnica do Serene Condominium" style="display:flex;flex-direction:column;">
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #6b6b6b;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Local</span><span role="cell" style="font-size:15px;">Rua Vasco da Gama, Ílhavo</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Fogos</span><span role="cell" class="mono" style="font-size:15px;">8</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Tipologias</span><span role="cell" class="mono" style="font-size:15px;">4 × T2, 4 × T3 duplex</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Estado</span><span role="cell" style="font-size:15px;">Em construção / finalizado [confirmar]</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Inclui</span><span role="cell" style="font-size:15px;line-height:1.55;color:#d9d9d6;">Varandas e terraços a nascente e poente, elevador a todos os pisos, fotovoltaico em todos os apartamentos, carregamento elétrico, fachada em lâmina porcelânica e zinco patinado, condomínio fechado</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Áreas</span><span role="cell" class="mono" style="font-size:14px;color:#d9d9d6;">[Área m²]</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;border-bottom:1px solid #6b6b6b;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Preço</span><span role="cell" class="mono" style="font-size:14px;color:#d9d9d6;">[Preço sob consulta]</span></div>
+            </div>
+            <div class="stack" style="display:flex;flex-wrap:wrap;gap:12px;">
+              <a href="#contacto" class="btn-white" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;background:#ffffff;color:#141414;text-decoration:none;font-size:15px;font-weight:600;">Pedir informação</a>
+              <a href="#" class="btn-olw" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid rgba(255,255,255,.75);color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Ver ficha completa</a>
+            </div>
+          </div>
+        </div>
+        <div class="g-3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/a683d1567c35c397a8bae1cf2f1b0db4" alt="Vista aérea do Serene com os terraços" style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#a3a3a3;">5a. Terraços</figcaption>
+          </figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/d71c565b41dba68771aef300f310f990" alt="Sala e cozinha de um apartamento Serene" style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#a3a3a3;">5b. Sala e cozinha</figcaption>
+          </figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/31421a2b0a5b50da34edfe4c0287eced" alt="Casa de banho de um apartamento Serene" style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#a3a3a3;">5c. Casa de banho. Imagens de projeto.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <div class="gap-xl" aria-hidden="true" style="height:96px;"></div>
+
+      <!-- Gaio -->
+      <article id="gaio" aria-labelledby="h-gaio" style="display:flex;flex-direction:column;gap:24px;">
+        <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px;align-items:start;">
+          <div style="grid-column:span 5;display:flex;flex-direction:column;gap:24px;">
+            <h3 id="h-gaio" class="serif" style="margin:0;font-size:24px;line-height:1.1;color:#a3a3a3;">Edifício Gaio</h3>
+            <p class="serif lema" style="margin:0;font-size:46px;line-height:1.04;">Escolher onde viver é escolher como viver.</p>
+            <div role="table" aria-label="Ficha técnica do Edifício Gaio" style="display:flex;flex-direction:column;">
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #6b6b6b;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Local</span><span role="cell" style="font-size:15px;">Oliveira do Bairro</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Fogos</span><span role="cell" class="mono" style="font-size:15px;">12</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Tipologias</span><span role="cell" class="mono" style="font-size:15px;">T1, T2, T3 duplex</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Estado</span><span role="cell" style="font-size:15px;">Em construção</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Inclui</span><span role="cell" style="font-size:15px;line-height:1.55;color:#d9d9d6;">Varandas amplas, estacionamento interior com elevador, terraços nos duplex</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Áreas</span><span role="cell" class="mono" style="font-size:14px;color:#d9d9d6;">[Área m²]</span></div>
+              <div role="row" style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:16px;padding:12px 0;border-top:1px solid #3a3a3a;border-bottom:1px solid #6b6b6b;"><span role="rowheader" class="mono" style="font-size:12px;color:#a3a3a3;">Preço</span><span role="cell" class="mono" style="font-size:14px;color:#d9d9d6;">[Preço sob consulta]</span></div>
+            </div>
+            <div class="stack" style="display:flex;flex-wrap:wrap;gap:12px;">
+              <a href="#contacto" class="btn-white" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;background:#ffffff;color:#141414;text-decoration:none;font-size:15px;font-weight:600;">Pedir informação</a>
+              <a href="#" class="btn-olw" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid rgba(255,255,255,.75);color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Ver ficha completa</a>
+            </div>
+          </div>
+          <figure class="first-m" style="grid-column:span 7;margin:0;display:flex;flex-direction:column;gap:12px;">
+            <div style="position:relative;">
+              <img src="/_blob/ebf2bd5411871ab3de5ab82ba22a6ec2" alt="Fachada do Edifício Gaio à noite, com carros na rua" style="display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:center 60%;">
+              <img src="/_blob/3e25fe902c9769206c3ba4667daf90cb" alt="" aria-hidden="true" style="position:absolute;left:32px;bottom:32px;width:30%;max-width:220px;height:auto;">
+            </div>
+            <figcaption class="mono" style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;font-size:12px;line-height:1.55;color:#a3a3a3;">
+              <span style="color:#ffffff;">Fig. 6</span>
+              <span>Edifício Gaio à noite. O nome vem da ave, o gaio. Imagem de projeto.</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="g-3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/2a3597e9a8943ea4e718d37911d0edc1" alt="Pormenor das varandas do Edifício Gaio contra o céu azul" style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#a3a3a3;">6a. Varandas</figcaption>
+          </figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/7d3531f247b4c5d82217f1c93deeb9a0" alt="Sala de um duplex Gaio com escada interior" style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#a3a3a3;">6b. Duplex com escada interior</figcaption>
+          </figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/e6f06a006884dd6561c643f221de464d" alt="Sala de estar de um apartamento Gaio" style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#a3a3a3;">6c. Sala de estar. Imagens de projeto.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 03 PRÉDIOS CONSTRUÍDOS PARA TERCEIROS (ponte) -->
+  <section id="predios" aria-labelledby="h-c3" class="sec" style="background:#f4f4f1;padding:128px 0 136px;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:64px;">
+
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;border-top:2px solid #141414;padding-top:20px;">
+        <div style="grid-column:span 3;display:flex;flex-direction:column;gap:2px;">
+          <span class="mono" style="font-size:13px;color:#5f6b73;">03 / 06</span>
+          <span class="mono" style="font-size:13px;color:#3a3a3a;">Construído pela Engicivil</span>
+        </div>
+        <div style="grid-column:span 9;display:flex;flex-direction:column;gap:20px;">
+          <h2 id="h-c3" class="serif h2" style="margin:0;font-size:72px;line-height:1;letter-spacing:-.01em;max-width:16ch;">Prédios que construímos para outros promotores.</h2>
+          <p style="margin:0;font-size:18px;line-height:1.55;color:#3a3a3a;max-width:58ch;">Edifícios de habitação construídos pela Engicivil Construções para promotores e donos de obra. Se algum estiver à venda, o contacto é o do respetivo promotor.</p>
+        </div>
+      </div>
+
+      <!-- Montra -->
+      <div class="g-3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;row-gap:56px;">
+
+        <article aria-labelledby="h-p1" style="display:flex;flex-direction:column;gap:18px;">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/ae629635f514d3845c82825a91cdb3da" alt="Ribas I, edifício de habitação" style="display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#6b6b6b;"><span style="color:#141414;">Fig. 7</span>&#160;&#160;Ribas I</figcaption>
+          </figure>
+          <h3 id="h-p1" class="serif" style="margin:0;font-size:36px;line-height:1.05;">Ribas I</h3>
+          <dl style="margin:0;display:flex;flex-direction:column;">
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #141414;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Construído por</dt><dd style="margin:0;font-size:15px;">Engicivil Construções</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Tipo</dt><dd style="margin:0;font-size:15px;">Edifício de habitação</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Local</dt><dd class="mono" style="margin:0;font-size:14px;">[Concelho]</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Promotor</dt><dd class="mono" style="margin:0;font-size:14px;">[Promotor]</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;border-bottom:1px solid #141414;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Estado</dt><dd class="mono" style="margin:0;font-size:14px;">[À venda / vendido]</dd></div>
+          </dl>
+          <div class="stack" style="display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;">
+            <a href="#" class="btn-ol" style="display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid #141414;color:#141414;text-decoration:none;font-size:14px;font-weight:600;">Saber mais</a>
+            <a href="#" class="mono" style="display:inline-flex;align-items:center;min-height:44px;font-size:13px;">[Contacto do promotor]</a>
+          </div>
+        </article>
+
+        <article aria-labelledby="h-p2" style="display:flex;flex-direction:column;gap:18px;">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/8ae98d717436e2dcb39b705ea714bda5" alt="Viela do Canto, fachada com azulejo" style="display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#6b6b6b;"><span style="color:#141414;">Fig. 8</span>&#160;&#160;Viela do Canto, fachada em azulejo</figcaption>
+          </figure>
+          <h3 id="h-p2" class="serif" style="margin:0;font-size:36px;line-height:1.05;">Viela do Canto</h3>
+          <dl style="margin:0;display:flex;flex-direction:column;">
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #141414;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Construído por</dt><dd style="margin:0;font-size:15px;">Engicivil Construções</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Tipo</dt><dd style="margin:0;font-size:15px;">Edifício de habitação</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Local</dt><dd class="mono" style="margin:0;font-size:14px;">[Concelho]</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Promotor</dt><dd class="mono" style="margin:0;font-size:14px;">[Promotor]</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;border-bottom:1px solid #141414;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Estado</dt><dd class="mono" style="margin:0;font-size:14px;">[À venda / vendido]</dd></div>
+          </dl>
+          <div class="stack" style="display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;">
+            <a href="#" class="btn-ol" style="display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid #141414;color:#141414;text-decoration:none;font-size:14px;font-weight:600;">Saber mais</a>
+            <a href="#" class="mono" style="display:inline-flex;align-items:center;min-height:44px;font-size:13px;">[Contacto do promotor]</a>
+          </div>
+        </article>
+
+        <article aria-labelledby="h-p3" style="display:flex;flex-direction:column;gap:18px;">
+          <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+            <img src="/_blob/2f12a1e503fec3a2c5ec2d85847cbf72" alt="Edifício de habitação no Viaduto de Esgueira" style="display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover;">
+            <figcaption class="mono" style="font-size:12px;color:#6b6b6b;"><span style="color:#141414;">Fig. 9</span>&#160;&#160;Viaduto de Esgueira</figcaption>
+          </figure>
+          <h3 id="h-p3" class="serif" style="margin:0;font-size:36px;line-height:1.05;">Viaduto de Esgueira</h3>
+          <dl style="margin:0;display:flex;flex-direction:column;">
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #141414;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Construído por</dt><dd style="margin:0;font-size:15px;">Engicivil Construções</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Tipo</dt><dd style="margin:0;font-size:15px;">Edifício de habitação</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Local</dt><dd class="mono" style="margin:0;font-size:14px;">[Concelho]</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Promotor</dt><dd class="mono" style="margin:0;font-size:14px;">[Promotor]</dd></div>
+            <div style="display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid #d9d9d6;border-bottom:1px solid #141414;"><dt class="mono" style="font-size:12px;color:#6b6b6b;">Estado</dt><dd class="mono" style="margin:0;font-size:14px;">[À venda / vendido]</dd></div>
+          </dl>
+          <div class="stack" style="display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;">
+            <a href="#" class="btn-ol" style="display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid #141414;color:#141414;text-decoration:none;font-size:14px;font-weight:600;">Saber mais</a>
+            <a href="#" class="mono" style="display:inline-flex;align-items:center;min-height:44px;font-size:13px;">[Contacto do promotor]</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Restantes edifícios: índice técnico -->
+      <div role="table" aria-label="Outros edifícios de habitação construídos pela Engicivil">
+        <div role="row" class="spec-head mono" style="display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1.4fr);column-gap:24px;padding:10px 0;border-bottom:1px solid #141414;font-size:12px;color:#6b6b6b;">
+          <span role="columnheader">Edifício</span>
+          <span role="columnheader">Local</span>
+          <span role="columnheader">Promotor</span>
+          <span role="columnheader">Estado</span>
+          <span role="columnheader"><span class="sr">Ações</span></span>
+        </div>
+        <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1.4fr);column-gap:24px;align-items:center;padding:14px 0;border-bottom:1px solid #d9d9d6;">
+          <span role="cell" class="serif" style="font-size:26px;line-height:1.1;">Ribas II</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Local</span>[Concelho]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Promotor</span>[Promotor]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Estado</span>[À venda / vendido]</span>
+          <a role="cell" href="#" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;justify-self:end;">Saber mais</a>
+        </div>
+        <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1.4fr);column-gap:24px;align-items:center;padding:14px 0;border-bottom:1px solid #d9d9d6;">
+          <span role="cell" class="serif" style="font-size:26px;line-height:1.1;">Rua do Gravito</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Local</span>[Concelho]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Promotor</span>[Promotor]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Estado</span>[À venda / vendido]</span>
+          <a role="cell" href="#" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;justify-self:end;">Saber mais</a>
+        </div>
+        <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1.4fr);column-gap:24px;align-items:center;padding:14px 0;border-bottom:1px solid #d9d9d6;">
+          <span role="cell" class="serif" style="font-size:26px;line-height:1.1;">Peralta e Rios</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Local</span>[Concelho]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Promotor</span>[Promotor]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Estado</span>[À venda / vendido]</span>
+          <a role="cell" href="#" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;justify-self:end;">Saber mais</a>
+        </div>
+        <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr) minmax(0,2fr) minmax(0,2fr) minmax(0,1.4fr);column-gap:24px;align-items:center;padding:14px 0;border-bottom:1px solid #141414;">
+          <span role="cell" class="serif" style="font-size:26px;line-height:1.1;">Gafanha de Aquém</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Local</span>[Concelho]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Promotor</span>[Promotor]</span>
+          <span role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Estado</span>[À venda / vendido]</span>
+          <a role="cell" href="#" style="display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:600;justify-self:end;">Saber mais</a>
+        </div>
+      </div>
+
+      <!-- Ponte entre os dois negócios -->
+      <div class="g-2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));">
+        <div style="padding:36px 40px;background:#ffffff;border:1px solid #141414;display:flex;flex-direction:column;gap:14px;">
+          <span class="mono" style="font-size:12px;color:#5f6b73;">Engicivil Construções</span>
+          <h3 class="serif" style="margin:0;font-size:36px;line-height:1.05;">Vai promover um edifício?</h3>
+          <p style="margin:0;font-size:16px;line-height:1.55;color:#3a3a3a;max-width:44ch;">Construímos para promotores e donos de obra, com orçamento preparado pelo nosso gabinete de planeamento.</p>
+          <a href="#contacto" class="btn-ink" style="align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;margin-top:6px;background:#141414;color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;">Pedir orçamento de obra</a>
+        </div>
+        <div class="on-dark" style="padding:36px 40px;background:#141414;color:#ffffff;border:1px solid #141414;display:flex;flex-direction:column;gap:14px;">
+          <span class="mono" style="font-size:12px;color:#a3a3a3;">Engicivil Empreendimentos</span>
+          <h3 class="serif" style="margin:0;font-size:36px;line-height:1.05;">Procura casa?</h3>
+          <p style="margin:0;font-size:16px;line-height:1.55;color:#d9d9d6;max-width:44ch;">O Serene Condominium e o Edifício Gaio são promovidos e construídos por nós.</p>
+          <a href="#empreendimentos" class="btn-white" style="align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;margin-top:6px;background:#ffffff;color:#141414;text-decoration:none;font-size:15px;font-weight:600;">Ver empreendimentos</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 04 EMPRESA E CREDENCIAIS -->
+  <section id="empresa" aria-labelledby="h-c4" class="sec" style="background:#ffffff;padding:128px 0;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:56px;">
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;border-top:2px solid #141414;padding-top:20px;">
+        <div style="grid-column:span 3;display:flex;flex-direction:column;gap:2px;">
+          <span class="mono" style="font-size:13px;color:#5f6b73;">04 / 06</span>
+          <span class="mono" style="font-size:13px;color:#3a3a3a;">Empresa</span>
+        </div>
+        <div style="grid-column:span 9;">
+          <h2 id="h-c4" class="serif h2" style="margin:0;font-size:72px;line-height:1;letter-spacing:-.01em;max-width:16ch;">A mesma equipa por trás das duas empresas.</h2>
+        </div>
+      </div>
+
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:40px;">
+        <figure style="grid-column:span 4;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <img src="/_blob/f9394b7553354138d93e53de4413c3ac" alt="Os dois sócios fundadores da Engicivil, fotografia a preto e branco" style="display:block;width:100%;aspect-ratio:770 / 730;object-fit:cover;filter:grayscale(1);">
+          <figcaption class="mono" style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;font-size:12px;line-height:1.55;color:#6b6b6b;">
+            <span style="color:#141414;">Fig. 10</span>
+            <span>Os dois sócios fundadores.</span>
+          </figcaption>
+        </figure>
+        <div style="grid-column:6 / span 7;display:flex;flex-direction:column;gap:40px;">
+          <p class="serif" style="margin:0;font-size:30px;line-height:1.3;max-width:34ch;">Fundada em Aveiro, em 2013, por dois profissionais com mais de duas décadas de experiência. Hoje somos 30 especialistas.</p>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#3a3a3a;max-width:58ch;">Engenharia, planeamento e orçamentação internos, estaleiro próprio e meios de produção integrados. É esta estrutura que faz a obra dos nossos clientes e que constrói os nossos empreendimentos.</p>
+
+          <div role="table" aria-label="Registo, seguro e distinções">
+            <div role="row" class="spec-head mono" style="display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1.6fr) minmax(0,1.6fr);column-gap:24px;padding:10px 0;border-bottom:1px solid #141414;font-size:12px;color:#6b6b6b;">
+              <span role="columnheader">Credencial</span><span role="columnheader">Entidade</span><span role="columnheader">Referência</span>
+            </div>
+            <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1.6fr) minmax(0,1.6fr);column-gap:24px;padding:16px 0;border-bottom:1px solid #d9d9d6;font-size:15px;line-height:1.45;">
+              <div role="cell"><strong style="font-weight:600;">Alvará de construção, classe 5</strong><br><span style="color:#3a3a3a;">Obras públicas e particulares até 2.656.000 €</span></div>
+              <div role="cell"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Entidade</span>IMPIC</div>
+              <div role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Referência</span>70366-PUB</div>
+            </div>
+            <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1.6fr) minmax(0,1.6fr);column-gap:24px;padding:16px 0;border-bottom:1px solid #d9d9d6;font-size:15px;line-height:1.45;">
+              <div role="cell"><strong style="font-weight:600;">Seguro de responsabilidade civil</strong></div>
+              <div role="cell"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Entidade</span>Tranquilidade</div>
+              <div role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Referência</span>Capital de 670.000 €</div>
+            </div>
+            <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1.6fr) minmax(0,1.6fr);column-gap:24px;padding:16px 0;border-bottom:1px solid #d9d9d6;font-size:15px;line-height:1.45;">
+              <div role="cell"><strong style="font-weight:600;">PME Líder</strong><br><span style="color:#3a3a3a;">Três anos consecutivos</span></div>
+              <div role="cell"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Entidade</span>IAPMEI</div>
+              <div role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Referência</span>2021, 2022, 2023</div>
+            </div>
+            <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1.6fr) minmax(0,1.6fr);column-gap:24px;padding:16px 0;border-bottom:1px solid #d9d9d6;font-size:15px;line-height:1.45;">
+              <div role="cell"><strong style="font-weight:600;">TOP 5% Melhores PME de Portugal</strong></div>
+              <div role="cell"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Entidade</span>Scoring / Executive Digest</div>
+              <div role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Referência</span>2022</div>
+            </div>
+            <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1.6fr) minmax(0,1.6fr);column-gap:24px;padding:16px 0;border-bottom:1px solid #d9d9d6;font-size:15px;line-height:1.45;">
+              <div role="cell"><strong style="font-weight:600;">Prémio de Excelência</strong><br><span style="color:#3a3a3a;">Segundo ano consecutivo</span></div>
+              <div role="cell"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Entidade</span>Scoring</div>
+              <div role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Referência</span>Edição 2022</div>
+            </div>
+            <div role="row" class="spec-row" style="display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,1.6fr) minmax(0,1.6fr);column-gap:24px;padding:16px 0;border-bottom:1px solid #141414;font-size:15px;line-height:1.45;">
+              <div role="cell"><strong style="font-weight:600;">Marca R.U.-I.S.</strong><br><span style="color:#3a3a3a;">Reabilitação Urbana Inteligente e Sustentável</span></div>
+              <div role="cell"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Entidade</span>AICCOPN</div>
+              <div role="cell" class="mono" style="font-size:14px;"><span class="m-label mono" style="font-size:12px;color:#6b6b6b;">Referência</span>Qualificada em 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 COMO TRABALHAMOS -->
+  <section id="processo" aria-labelledby="h-c5" class="sec" style="background:#f4f4f1;padding:128px 0;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:56px;">
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;border-top:2px solid #141414;padding-top:20px;">
+        <div style="grid-column:span 3;display:flex;flex-direction:column;gap:2px;">
+          <span class="mono" style="font-size:13px;color:#5f6b73;">05 / 06</span>
+          <span class="mono" style="font-size:13px;color:#3a3a3a;">Como trabalhamos</span>
+        </div>
+        <div style="grid-column:span 9;display:flex;flex-direction:column;gap:20px;">
+          <h2 id="h-c5" class="serif h2" style="margin:0;font-size:72px;line-height:1;letter-spacing:-.01em;max-width:16ch;">Do orçamento à execução, com meios próprios.</h2>
+          <p style="margin:0;font-size:18px;line-height:1.55;color:#3a3a3a;max-width:58ch;">O mesmo método na obra para clientes e nos nossos empreendimentos. Os parceiros entram onde acrescentam.</p>
+        </div>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;row-gap:40px;border-top:1px solid #141414;">
+        <li style="position:relative;padding-top:28px;display:flex;flex-direction:column;gap:12px;">
+          <span aria-hidden="true" style="position:absolute;top:-6px;left:0;width:11px;height:11px;background:#141414;"></span>
+          <span class="serif" aria-hidden="true" style="font-size:72px;line-height:.9;">1</span>
+          <h3 style="margin:0;font-size:18px;line-height:1.3;font-weight:600;">Planeamento e orçamentação</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#3a3a3a;max-width:32ch;">O gabinete de planeamento e orçamentação prepara o orçamento, com precisão e transparência.</p>
+        </li>
+        <li style="position:relative;padding-top:28px;display:flex;flex-direction:column;gap:12px;">
+          <span aria-hidden="true" style="position:absolute;top:-6px;left:0;width:11px;height:11px;background:#141414;"></span>
+          <span class="serif" aria-hidden="true" style="font-size:72px;line-height:.9;">2</span>
+          <h3 style="margin:0;font-size:18px;line-height:1.3;font-weight:600;">Engenharia interna</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#3a3a3a;max-width:32ch;">As soluções técnicas são estudadas pela nossa equipa. Na reabilitação, com o arquiteto ou designer que o cliente indicar.</p>
+        </li>
+        <li style="position:relative;padding-top:28px;display:flex;flex-direction:column;gap:12px;">
+          <span aria-hidden="true" style="position:absolute;top:-6px;left:0;width:11px;height:11px;background:#141414;"></span>
+          <span class="serif" aria-hidden="true" style="font-size:72px;line-height:.9;">3</span>
+          <h3 style="margin:0;font-size:18px;line-height:1.3;font-weight:600;">Estaleiro e meios próprios</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#3a3a3a;max-width:32ch;">Estaleiro próprio e meios de produção integrados, com o apoio de uma rede de parceiros.</p>
+        </li>
+        <li style="position:relative;padding-top:28px;display:flex;flex-direction:column;gap:12px;">
+          <span aria-hidden="true" style="position:absolute;top:-6px;left:0;width:11px;height:11px;border:1px solid #141414;box-sizing:border-box;background:#f4f4f1;"></span>
+          <span class="serif" aria-hidden="true" style="font-size:72px;line-height:.9;">4</span>
+          <h3 style="margin:0;font-size:18px;line-height:1.3;font-weight:600;">Acompanhamento até à execução</h3>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#3a3a3a;max-width:32ch;">Acompanhamos cada obra, do seu projeto à sua execução.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 06 CONTACTO -->
+  <section id="contacto" aria-labelledby="h-c6" class="sec" style="background:#ffffff;padding:128px 0 136px;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:56px;">
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;border-top:2px solid #141414;padding-top:20px;">
+        <div style="grid-column:span 3;display:flex;flex-direction:column;gap:2px;">
+          <span class="mono" style="font-size:13px;color:#5f6b73;">06 / 06</span>
+          <span class="mono" style="font-size:13px;color:#3a3a3a;">Contacto</span>
+        </div>
+        <div style="grid-column:span 9;display:flex;flex-direction:column;gap:20px;">
+          <h2 id="h-c6" class="serif h2" style="margin:0;font-size:72px;line-height:1;letter-spacing:-.01em;max-width:16ch;">Diga-nos o que procura.</h2>
+          <p style="margin:0;font-size:18px;line-height:1.55;color:#3a3a3a;max-width:58ch;">Escolha o tipo de pedido para chegar diretamente à equipa certa. Respondemos em [prazo] dias úteis.</p>
+        </div>
+      </div>
+
+      <div class="g12" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:40px;">
+        <address style="grid-column:span 3;font-style:normal;display:flex;flex-direction:column;gap:22px;">
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <span class="mono" style="font-size:12px;color:#6b6b6b;">Escritório</span>
+            <span style="font-size:15px;line-height:1.55;">Rua Eng.º Von Haff, 47, 1.º B<br>3800-177 Aveiro</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <span class="mono" style="font-size:12px;color:#6b6b6b;">Telefone</span>
+            <a href="tel:+351234060223" style="display:inline-flex;align-items:center;min-height:44px;font-size:18px;font-weight:600;text-decoration:none;">+351 234 060 223</a>
+            <span style="font-size:12px;color:#6b6b6b;">Chamada para a rede fixa nacional</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <span class="mono" style="font-size:12px;color:#6b6b6b;">Obra e assuntos gerais</span>
+            <a href="mailto:geral@engicivil.pt" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;">geral@engicivil.pt</a>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <span class="mono" style="font-size:12px;color:#6b6b6b;">Comercial e empreendimentos</span>
+            <a href="mailto:comercial@engicivil.pt" style="display:inline-flex;align-items:center;min-height:44px;font-size:15px;">comercial@engicivil.pt</a>
+          </div>
+        </address>
+
+        <form action="#" method="post" style="grid-column:5 / span 8;display:flex;flex-direction:column;gap:24px;padding:36px;border:1px solid #141414;background:#ffffff;">
+          <fieldset style="margin:0;padding:0;border:0;display:flex;flex-direction:column;gap:10px;">
+            <legend style="padding:0;margin-bottom:12px;font-size:15px;font-weight:600;">Tipo de pedido</legend>
+            <div class="g-3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;">
+              <label class="opt" style="display:flex;align-items:flex-start;gap:12px;min-height:64px;padding:14px 16px;border:1px solid #a3a3a3;cursor:pointer;box-sizing:border-box;">
+                <input type="radio" name="tipo" value="obra" checked="" style="width:18px;height:18px;margin:2px 0 0;flex:none;accent-color:#141414;">
+                <span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">Orçamento de obra</span><span class="mono" style="font-size:12px;color:#6b6b6b;">Engicivil Construções</span></span>
+              </label>
+              <label class="opt" style="display:flex;align-items:flex-start;gap:12px;min-height:64px;padding:14px 16px;border:1px solid #a3a3a3;cursor:pointer;box-sizing:border-box;">
+                <input type="radio" name="tipo" value="casa" style="width:18px;height:18px;margin:2px 0 0;flex:none;accent-color:#141414;">
+                <span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">Comprar casa</span><span class="mono" style="font-size:12px;color:#6b6b6b;">Engicivil Empreendimentos</span></span>
+              </label>
+              <label class="opt" style="display:flex;align-items:flex-start;gap:12px;min-height:64px;padding:14px 16px;border:1px solid #a3a3a3;cursor:pointer;box-sizing:border-box;">
+                <input type="radio" name="tipo" value="outro" style="width:18px;height:18px;margin:2px 0 0;flex:none;accent-color:#141414;">
+                <span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">Outro assunto</span><span class="mono" style="font-size:12px;color:#6b6b6b;">Geral</span></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="g-2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label for="f-nome" style="font-size:14px;font-weight:600;">Nome</label>
+              <input id="f-nome" name="nome" type="text" autocomplete="name" required="" class="field" style="min-height:50px;padding:0 12px;border:1px solid #6b6b6b;border-radius:0;font:inherit;font-size:16px;background:#ffffff;color:#141414;box-sizing:border-box;width:100%;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label for="f-email" style="font-size:14px;font-weight:600;">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required="" class="field" style="min-height:50px;padding:0 12px;border:1px solid #6b6b6b;border-radius:0;font:inherit;font-size:16px;background:#ffffff;color:#141414;box-sizing:border-box;width:100%;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label for="f-tel" style="font-size:14px;font-weight:600;">Telefone <span style="font-weight:400;color:#6b6b6b;">(opcional)</span></label>
+              <input id="f-tel" name="telefone" type="tel" autocomplete="tel" class="field" style="min-height:50px;padding:0 12px;border:1px solid #6b6b6b;border-radius:0;font:inherit;font-size:16px;background:#ffffff;color:#141414;box-sizing:border-box;width:100%;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label for="f-emp" style="font-size:14px;font-weight:600;">Empreendimento <span style="font-weight:400;color:#6b6b6b;">(se for compra)</span></label>
+              <select id="f-emp" name="empreendimento" class="field" style="min-height:50px;padding:0 12px;border:1px solid #6b6b6b;border-radius:0;font:inherit;font-size:16px;background:#ffffff;color:#141414;box-sizing:border-box;width:100%;">
+                <option value="">Não se aplica</option>
+                <option value="serene">Serene Condominium, Ílhavo</option>
+                <option value="gaio">Edifício Gaio, Oliveira do Bairro</option>
+                <option value="indeciso">Ainda não sei</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <label for="f-msg" style="font-size:14px;font-weight:600;">Mensagem</label>
+            <textarea id="f-msg" name="mensagem" rows="5" class="field" placeholder="Tipo de obra, local e prazo pretendido, ou a tipologia que procura." style="padding:12px;border:1px solid #6b6b6b;border-radius:0;font:inherit;font-size:16px;line-height:1.5;resize:vertical;background:#ffffff;color:#141414;box-sizing:border-box;width:100%;"></textarea>
+          </div>
+
+          <div class="stack" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
+            <label style="display:flex;align-items:center;gap:10px;min-height:44px;font-size:14px;color:#3a3a3a;cursor:pointer;">
+              <input type="checkbox" name="privacidade" required="" style="width:18px;height:18px;margin:0;flex:none;accent-color:#141414;">
+              <span>Li e aceito a <a href="#">Política de Privacidade</a>.</span>
+            </label>
+            <button type="submit" class="btn-ink" style="min-height:52px;padding:0 30px;border:0;border-radius:0;background:#141414;color:#ffffff;font:inherit;font-size:16px;font-weight:600;cursor:pointer;">Enviar pedido</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="on-dark" style="background:#141414;color:#d9d9d6;padding:80px 0 36px;">
+    <div class="wrap" style="max-width:1376px;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:56px;">
+      <div class="g-foot" style="display:grid;grid-template-columns:minmax(0,3fr) minmax(0,3fr) minmax(0,3fr) minmax(0,3fr);gap:40px;align-items:start;">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <a href="#" class="wm lk" aria-label="Engicivil, página inicial" style="font-size:19px;text-decoration:none;color:#ffffff;line-height:1;">ENGICIVIL</a>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#a3a3a3;max-width:28ch;">O seu projeto em boas mãos.</p>
+        </div>
+        <nav aria-label="Rodapé" style="display:flex;flex-direction:column;font-size:15px;">
+          <a href="#construcoes" class="lk" style="min-height:40px;display:inline-flex;align-items:center;text-decoration:none;font-weight:600;">Engicivil Construções</a>
+          <a href="#empreendimentos" class="lk" style="min-height:40px;display:inline-flex;align-items:center;text-decoration:none;font-weight:600;">Engicivil Empreendimentos</a>
+          <a href="#predios" class="lk" style="min-height:40px;display:inline-flex;align-items:center;text-decoration:none;">Prédios construídos</a>
+          <a href="#empresa" class="lk" style="min-height:40px;display:inline-flex;align-items:center;text-decoration:none;">Empresa</a>
+        </nav>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <span class="mono" style="font-size:12px;color:#a3a3a3;">Escritório</span>
+          <span style="font-size:15px;line-height:1.6;">Rua Eng.º Von Haff, 47, 1.º B<br>3800-177 Aveiro</span>
+        </div>
+        <div style="display:flex;flex-direction:column;font-size:15px;">
+          <span class="mono" style="font-size:12px;color:#a3a3a3;margin-bottom:4px;">Contactos</span>
+          <a href="tel:+351234060223" class="lk" style="min-height:40px;display:inline-flex;align-items:center;text-decoration:none;">+351 234 060 223</a>
+          <a href="mailto:geral@engicivil.pt" class="lk" style="min-height:40px;display:inline-flex;align-items:center;text-decoration:none;">geral@engicivil.pt</a>
+          <a href="mailto:comercial@engicivil.pt" class="lk" style="min-height:40px;display:inline-flex;align-items:center;text-decoration:none;">comercial@engicivil.pt</a>
+        </div>
+      </div>
+      <div class="stack" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;border-top:1px solid #3a3a3a;">
+        <span class="mono" style="font-size:12px;color:#a3a3a3;">© 2026 ENGICIVIL – Cardoso &amp; Manata, Lda. Alvará IMPIC 70366-PUB, classe 5. Seguro RC Tranquilidade, 670.000 €.</span>
+        <span style="display:flex;flex-wrap:wrap;gap:24px;font-size:14px;">
+          <a href="https://www.livroreclamacoes.pt" class="lk" style="min-height:44px;display:inline-flex;align-items:center;color:#d9d9d6;text-underline-offset:4px;">Livro de Reclamações</a>
+          <a href="#" class="lk" style="min-height:44px;display:inline-flex;align-items:center;color:#d9d9d6;text-underline-offset:4px;">Política de Privacidade</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":12700}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

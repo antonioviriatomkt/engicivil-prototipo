@@ -27,7 +27,6 @@ input[type="radio"],input[type="checkbox"]{accent-color:#141414}
   .subbar{display:grid !important}
   .g1{grid-template-columns:minmax(0,1fr) !important}
   .g1>*{grid-column:1/-1 !important}
-  .hero-photo{order:-1}
   .facts{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
   .facts>div{border-left:0 !important;padding-left:0 !important;border-top:1px solid #d9d9d6 !important}
   .pair{grid-template-columns:minmax(0,1fr) !important}
@@ -99,18 +98,31 @@ input[type="radio"],input[type="checkbox"]{accent-color:#141414}
     </div>
   </header>
 
-  <!-- Hero: os sócios ao centro, um negócio de cada lado -->
+  <!-- Hero: título e texto à esquerda, sócios à direita; os dois negócios por baixo -->
   <section aria-labelledby="h-hero" style="padding:56px 0 88px;">
     <div class="pad" style="max-width:1240px;margin:0 auto;padding:0 40px;display:flex;flex-direction:column;gap:48px;">
-      <div class="g1" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;align-items:end;">
-        <h1 id="h-hero" class="ui" style="grid-column:span 7;margin:0;font-size:clamp(3rem,6.2vw,5.5rem);line-height:0.96;font-weight:600;letter-spacing:-0.03em;max-width:11ch;">Construímos em Aveiro desde 2013.</h1>
-        <p style="grid-column:8 / span 5;margin:0;font-size:clamp(1.1875rem,1.5vw,1.3125rem);line-height:1.6;color:#3a3a3a;max-width:30em;">Somos 30 especialistas, com engenharia e estaleiro próprios. Fazemos obra para empresas, famílias e promotores, e construímos casas nossas para vender.</p>
+      <div class="g1" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px;align-items:end;">
+        <div style="grid-column:span 7;display:flex;flex-direction:column;gap:28px;">
+          <h1 id="h-hero" class="ui" style="margin:0;font-size:clamp(3rem,6.2vw,5.5rem);line-height:0.96;font-weight:600;letter-spacing:-0.03em;max-width:11ch;">Construímos em Aveiro desde 2013.</h1>
+          <p style="margin:0;font-size:clamp(1.1875rem,1.5vw,1.3125rem);line-height:1.6;color:#3a3a3a;max-width:30em;">Somos 30 especialistas, com engenharia e estaleiro próprios. Fazemos obra para empresas, famílias e promotores, e construímos casas nossas para vender.</p>
+        </div>
+
+        <!-- Sócios -->
+        <figure class="hero-photo" style="grid-column:8 / span 5;margin:0;display:flex;flex-direction:column;gap:12px;">
+          <img src="/img/site/engicivil-3.jpg" alt="Os dois sócios fundadores da Engicivil, lado a lado, em fotografia a preto e branco." style="display:block;width:100%;aspect-ratio:770 / 730;object-fit:cover;">
+          <figcaption style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;font-size:0.9375rem;line-height:1.5;color:#3a3a3a;">
+            <span class="mono" style="font-size:12px;line-height:1.9;color:#141414;">Fig. 1</span>
+            <span>Os dois sócios fundadores. Abriram a Engicivil em 2013, com mais de duas décadas de experiência em obra. A mesma equipa constrói para clientes e para os nossos empreendimentos.</span>
+          </figcaption>
+          <p class="ui" style="margin:8px 0 0;padding-top:12px;border-top:1px solid #d9d9d6;font-size:0.9375rem;color:#6b6b6b;">Prefere falar? Ligue para o <a href="tel:+351234060223" style="color:#141414;">234 060 223</a>.</p>
+        </figure>
       </div>
 
-      <div class="g1" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;align-items:start;">
+      <!-- Os dois negócios, lado a lado -->
+      <div class="g1" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;align-items:stretch;">
 
         <!-- Caminho 1 -->
-        <article aria-labelledby="h-path-c" style="grid-column:span 4;display:flex;flex-direction:column;background:#ffffff;border:1px solid #141414;">
+        <article aria-labelledby="h-path-c" style="grid-column:span 6;display:flex;flex-direction:column;background:#ffffff;border:1px solid #141414;">
           <img src="/img/portefolio/construcao/moradia-unifamiliar-oliveira-de-azemeis/moradia-oliveira-de-azemeis.jpg" alt="Moradia em betão e vidro construída pela Engicivil em Oliveira de Azeméis." style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
           <div style="padding:24px;display:flex;flex-direction:column;gap:16px;">
             <span class="mono" style="font-size:12px;color:#5f6b73;">Para empresas, particulares e promotores</span>
@@ -131,18 +143,9 @@ input[type="radio"],input[type="checkbox"]{accent-color:#141414}
           </div>
         </article>
 
-        <!-- Sócios -->
-        <figure class="hero-photo" style="grid-column:span 4;margin:0;display:flex;flex-direction:column;gap:12px;">
-          <img src="/img/site/engicivil-3.jpg" alt="Os dois sócios fundadores da Engicivil, lado a lado, em fotografia a preto e branco." style="display:block;width:100%;aspect-ratio:770 / 730;object-fit:cover;">
-          <figcaption style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;font-size:0.9375rem;line-height:1.5;color:#3a3a3a;">
-            <span class="mono" style="font-size:12px;line-height:1.9;color:#141414;">Fig. 1</span>
-            <span>Os dois sócios fundadores. Abriram a Engicivil em 2013, com mais de duas décadas de experiência em obra. A mesma equipa constrói para clientes e para os nossos empreendimentos.</span>
-          </figcaption>
-          <p class="ui" style="margin:8px 0 0;padding-top:12px;border-top:1px solid #d9d9d6;font-size:0.9375rem;color:#6b6b6b;">Prefere falar? Ligue para o <a href="tel:+351234060223" style="color:#141414;">234 060 223</a>.</p>
-        </figure>
 
         <!-- Caminho 2 -->
-        <article aria-labelledby="h-path-e" style="grid-column:span 4;display:flex;flex-direction:column;background:#ffffff;border:1px solid #141414;">
+        <article aria-labelledby="h-path-e" style="grid-column:span 6;display:flex;flex-direction:column;background:#ffffff;border:1px solid #141414;">
           <img src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt="Render do Serene Condominium, em Ílhavo, ao entardecer." style="display:block;width:100%;aspect-ratio:3 / 2;object-fit:cover;">
           <div style="padding:24px;display:flex;flex-direction:column;gap:16px;">
             <span class="mono" style="font-size:12px;color:#5f6b73;">Para quem procura casa</span>

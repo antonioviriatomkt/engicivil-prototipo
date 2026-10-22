@@ -10,7 +10,8 @@
 - **Hero revisto** (pedidos do António, 22/10):
   - **Em cima:** à esquerda, «ENGICIVIL · Aveiro, desde 2013», o título (copy do site atual, reduzida e com a promoção: «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.»), o texto e o botão «Ligar 234 060 223»; à direita, a foto dos sócios (4:3, **sem legenda**).
   - **Em baixo:** os dois negócios lado a lado com a mesma altura. No desktop os cartões são horizontais (imagem à esquerda). Têm linhas de autoidentificação: Construções (Indústria e serviços · Habitação e reabilitação) e Empreendimentos (Serene e Gaio, com link para `#serene` / `#gaio`).
-  - Terceiro caminho, mais discreto, para promotores → `#locais`. Faixa de factos com só 4 itens no telemóvel.
+  - Terceiro caminho, mais discreto, para promotores → `#locais`.
+  - **Carimbo (faixa de factos) redesenhado:** rótulo escuro «Comum aos dois negócios / ENGICIVIL – Cardoso & Manata, Lda.» + 5 factos (Classe 5 · 2013 · 30 especialistas · PME Líder · TOP 5%), valores numa só linha. **Sem «Valor máximo por obra»** (pedido do António; o valor continua na tabela de credenciais e na secção 01). Mobile: 2×2 + TOP 5% a toda a largura.
   - Botões principais: visíveis a 1440×900 (846 px); a 1280×800 ficam logo abaixo da dobra (809 px).
   - Sem a Fig. 1, as figuras foram renumeradas (antes/depois = Fig. 1–2, mosaico = Fig. 3, Serene/Gaio = Fig. 4–5, diagrama = Fig. 6).
 - Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados).
@@ -27,6 +28,7 @@
 3. Opcional: indicar a secção atual no menu (scroll-spy com `aria-current`).
 4. Rever com o António a versão tablet (não existia no mockup; foi decisão desta sessão) e o novo hero (capturas `screenshots/g/2026-10-22-hero-antes-*.png` → `-depois-*.png` → `-rev2-*.png`).
 5. A foto dos sócios mostra o logótipo antigo ao fundo — substituir quando houver identidade nova.
+6. **Vídeo do hero do site atual** (pedido do António): por fazer. Este ambiente não consegue aceder a `engicivil.pt` (o proxy bloqueia o host). Opções: autorizar `engicivil.pt` nas definições de rede do ambiente, ou pôr o ficheiro em `public/video/` (de preferência MP4 H.264, sem som, ≤ 8 MB, + uma imagem de poster). Falta decidir onde entra (no lugar da foto dos sócios, ou como fundo do hero).
 
 ## Dúvidas em aberto
 - Ver «Por confirmar com o cliente» em `context/decisoes.md`.

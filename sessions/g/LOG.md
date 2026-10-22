@@ -2,6 +2,10 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · claude/wonderful-volta-b4600b · sessão 1 (cont.): carimbo + vídeo (bloqueado)
+- Carimbo redesenhado em forma de bloco de legenda (rótulo escuro + 5 factos de valor curto, numa linha); removido «Valor máximo por obra» (pedido do António). Mobile: 2×2 + último a toda a largura. Capturas: `screenshots/g/2026-10-22-carimbo-*.png`.
+- Vídeo do hero de engicivil.pt: não extraído — o host está bloqueado pela política de rede deste ambiente (o fetch também falhou na resolução de DNS). Fica nos próximos passos.
+
 ## 2026-10-22 · claude/wonderful-volta-b4600b · sessão 1 (cont.): hero, 2.ª revisão
 - Pedido do António: foto dos sócios em cima, à direita do título; as duas opções em baixo; sem a legenda da Fig. 1.
 - Cabeça: título + texto + «Ligar 234 060 223» (span 7) | foto 4:3 (span 5). Cartões lado a lado (span 6), horizontais no desktop (imagem 1/3), com a mesma altura.

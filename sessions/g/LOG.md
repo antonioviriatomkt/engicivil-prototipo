@@ -9,7 +9,8 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - Comum: traço dos separadores desliza; campos do formulário/menu com entrada suave; **botão de pausa do vídeo** (WCAG 2.2.2).
 - `prototypes/g/motion.css` + `motion.js` (novos) e 2 linhas no `<head>`. «Reduzir movimento» ou sem JS → nada se aplica. Sem scroll horizontal a 390 e 1440 nas duas propostas; sem erros na consola.
 - Nota técnica: as cortinas (clip-path) observam o elemento pai — o Chrome conta o recorte do próprio elemento no IntersectionObserver.
-- Capturas: `screenshots/g/2026-10-22-motion-*.png`; vídeos de scroll das duas propostas enviados ao António na conversa (não estão no repo).
+- Capturas: `screenshots/g/2026-10-22-motion-a-*.png`; vídeos de scroll das duas propostas enviados ao António na conversa (não estão no repo).
+- **Decisão (António): proposta A «Discreta».** Apagados a B e o seletor; `?motion=` deixou de existir — a classe `.motion` é posta sempre no `<head>` (exceto com «reduzir movimento»). O botão de pausa do vídeo passou a aparecer sempre (também sem motion). Verificado a 390 e 1440 e com «reduzir movimento»: sem scroll horizontal, tudo revelado, sem erros. Capturas da página inteira atualizadas.
 
 ## 2026-10-22 · claude/focused-albattani-1w68d0 · sessão 7 (em paralelo com a 6): secções 01–05 refeitas
 - O António deu o hero e a faixa de distinções por concluídos; agora vamos às secções 01–06. A secção 01 estava confusa (antes/depois + áreas + mosaico + CTA sem hierarquia clara).

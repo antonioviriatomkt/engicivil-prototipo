@@ -9,8 +9,8 @@
 document.documentElement.classList.add('js')
 // Ecrã de carregamento só na primeira visita da sessão (ver loader.js)
 try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classList.add('is-loading') } catch (e) {}
-// Propostas de motion (temporário): ?motion=a | b (ver motion.js). Com «reduzir movimento», nenhuma.
-try { var mo = new URLSearchParams(location.search).get('motion'); if ((mo === 'a' || mo === 'b') && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion-' + mo) } catch (e) {}
+// Motion (motion.css / motion.js): só com JS e sem «reduzir movimento»
+try { if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion') } catch (e) {}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

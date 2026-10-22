@@ -290,15 +290,16 @@ html:not(.js) .dev-tablist { display: none; }
 .pred-kv dt { color: var(--g500); }
 .pred-kv dd { margin: 0; color: var(--g700); }
 
-/* ---------- 05 Como trabalhamos ---------- */
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; border-top: 1px solid var(--ink); }
-.step { position: relative; padding-top: 28px; display: flex; flex-direction: column; gap: 12px; }
-.step::before { content: ""; position: absolute; top: -6px; left: 0; width: 11px; height: 11px; background: var(--ink); box-sizing: border-box; }
-.step--last::before { border: 1px solid var(--ink); background: var(--white); }
-.step__n { font-family: var(--f-ui); font-size: 4rem; line-height: 0.9; font-weight: 500; letter-spacing: -0.03em; }
-.step h3 { margin: 0; font-family: var(--f-ui); font-size: 1.375rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; }
+/* ---------- 04 Como trabalhamos: 4 passos numa linha ---------- */
+.proc > .wrap { gap: 56px; }
+.proc-line { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; position: relative; }
+.proc-line::before { content: ""; position: absolute; top: 27px; left: 28px; right: calc((100% - 96px) / 4 - 28px); height: 2px; background: var(--ink); } /* do 1.º ao 4.º círculo */
+.proc-step { position: relative; display: flex; flex-direction: column; gap: 12px; }
+.proc-dot { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 8px; border: 2px solid var(--ink); border-radius: 50%; box-sizing: border-box; background: var(--paper); font-family: var(--f-ui); font-size: 1.375rem; font-weight: 600; }
+.proc-step:last-child .proc-dot { background: var(--ink); color: var(--white); }
+.proc-step h3 { margin: 0; font-family: var(--f-ui); font-size: 1.375rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; }
 
-/* ---------- 06 Contacto ---------- */
+/* ---------- 05 Contacto ---------- */
 .contact-card { font-style: normal; display: flex; flex-direction: column; gap: 24px; }
 .tel-big { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--f-ui); font-size: 1.875rem; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; }
 .contact-biz { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
@@ -363,6 +364,8 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
 
 /* ---------- Ecrãs médios (≤ 1080 px) ---------- */
 @media (max-width: 1080px) {
+  .proc-line { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
+  .proc-line::before { display: none; }
   .dev-panel { grid-template-columns: minmax(0, 1fr); }
   .cons__cards { grid-template-columns: minmax(0, 1fr); }
   .cons-card { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
@@ -388,7 +391,7 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
   .paths-sec { padding-top: 32px; }
   .founders { padding: 72px 0 88px; }
 
-  .steps, .fields, .radios, .foot { grid-template-columns: minmax(0, 1fr); }
+  .fields, .radios, .foot { grid-template-columns: minmax(0, 1fr); }
   .cons > .wrap { gap: 40px; }
   .sec-intro { align-items: flex-start; text-align: left; }
   .cons-card { display: flex; }
@@ -408,6 +411,9 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
   .pred-grid { grid-template-columns: minmax(0, 1fr); }
   .pred-card__body { padding: 18px 20px 20px; }
 
-  .steps { border-top: 0; }
-  .step { border-top: 1px solid var(--ink); }
+  .proc > .wrap { gap: 40px; }
+  .proc-line { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+  .proc-step { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 16px; row-gap: 6px; padding-bottom: 28px; }
+  .proc-dot { grid-row: 1 / span 2; margin: 0; }
+  .proc-step:not(:last-child)::after { content: ""; position: absolute; left: 27px; top: 56px; bottom: 0; width: 2px; background: var(--ink); }
 }

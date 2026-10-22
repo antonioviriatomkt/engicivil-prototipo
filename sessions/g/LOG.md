@@ -34,6 +34,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - **C** — título fixo à esquerda, passos com números grandes à direita.
   - **D** — passo a passo (separadores, reutiliza `main.js`): cada fase mostra texto + foto de obra.
   - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-processo-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
+- **Decisão (António): proposta A** para «Como trabalhamos». Implementada na homepage (`#processo`, fundo papel): título centrado (`.sec-intro`, «04 · Como trabalhamos») + 4 passos numa linha com círculos numerados (`.proc-*`; 2 × 2 no tablet; linha vertical no telemóvel). Apagados `.steps`/`.step` e a página de propostas. Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-processo-{1440,1024,390}.png`.
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

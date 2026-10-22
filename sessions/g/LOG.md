@@ -7,6 +7,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - Homepage: «O que procura?» + dois blocos-link com foto, véu a 60 % e verbo em branco («Construir ou reabilitar» / «Comprar casa»), nome do negócio em pequeno; «Promover um edifício» como botão discreto por baixo. CSS `.path*`/`.hero-third` substituído por `.paths-q`, `.paths`, `.path*`, `.paths-third`.
 - Contraste medido: branco sobre o píxel mais claro de cada foto com véu 60 % ≥ 4,8:1.
 - Página de variantes apagada (e a entrada no `vite.config.js`). Sem scroll horizontal a 390, 768, 1024 e 1440.
+- 2.ª parte (pedido do António): **cabeçalho fixo**, transparente com texto branco por cima do hero e branco depois de passar o hero (`main.js` mede alturas e põe/tira `.is-over`). No telemóvel, quando fica branco esconde a barra dos negócios (decisão minha, para o cabeçalho fixo não ocupar 166 px). Âncoras testadas: a secção fica logo abaixo do cabeçalho.
 - Capturas: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero

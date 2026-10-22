@@ -40,7 +40,7 @@ img { max-width: 100%; }
 .mono { font-family: var(--f-mono); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-.skip { position: absolute; left: 16px; top: -100px; z-index: 10; padding: 12px 16px; background: var(--ink); color: var(--white); font-family: var(--f-ui); font-weight: 500; border-radius: var(--radius); text-decoration: none; }
+.skip { position: absolute; left: 16px; top: -100px; z-index: 60; padding: 12px 16px; background: var(--ink); color: var(--white); font-family: var(--f-ui); font-weight: 500; border-radius: var(--radius); text-decoration: none; }
 .skip:focus { top: 8px; color: var(--white); }
 
 /* ---------- Ecrã de carregamento (loader.js) ----------
@@ -120,6 +120,25 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 /* ---------- Cabeçalho ---------- */
 .site-header { background: var(--paper); }
 .header-bar { min-height: 84px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px; }
+/* Com JS, o cabeçalho fica fixo no topo: transparente sobre o hero (classe .is-over, posta pelo main.js)
+   e branco depois de passar o hero. Sem JS fica estático, como antes.
+   --header-top / --header-solid: alturas medidas pelo main.js (valores aqui = reserva). */
+:root { --header-top: 85px; --header-solid: 85px; }
+.js { scroll-padding-top: var(--header-solid); }
+.js .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--white); box-shadow: 0 1px 0 var(--g200); transition: background-color .25s ease, box-shadow .25s ease; }
+.js .site-header.is-over { background: transparent; box-shadow: none; }
+.js .site-header.is-over .wordmark,
+.js .site-header.is-over .nav-main a,
+.js .site-header.is-over .lang a,
+.js .site-header.is-over .menu-toggle,
+.js .site-header.is-over .biz-bar a { color: var(--white); }
+.js .site-header.is-over .mark--line, .js .site-header.is-over .mark--sq { background: var(--white); }
+.js .site-header.is-over .nav-sep { background: rgb(255 255 255 / 0.5); }
+.js .site-header.is-over .lang a[aria-current] { text-decoration: underline; text-underline-offset: 4px; }
+.js .site-header.is-over .btn { background: var(--white); color: var(--ink); }
+.js .site-header.is-over .btn:hover { background: var(--g200); color: var(--ink); }
+.js .site-header.is-over .menu-toggle, .js .site-header.is-over .biz-bar a { border-color: var(--white); }
+.js .site-header.is-over :focus-visible { outline-color: var(--white); }
 .wordmark { display: inline-flex; align-items: center; gap: 0.28em; font-family: var(--f-ui); font-size: 1.5rem; font-weight: 700; letter-spacing: 0.02em; text-decoration: none; color: var(--ink); }
 .wordmark__mark { display: block; flex: none; height: 1.15em; width: auto; overflow: visible; } /* símbolo da fita (o do loader), na cor do texto */
 .menu { display: contents; } /* no desktop, nav e ferramentas são filhos diretos da barra */
@@ -147,6 +166,8 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgb(20 20 20 / 0.6); }
 .hero-video { position: absolute; inset: 0; z-index: -2; display: block; width: 100%; height: 100%; object-fit: cover; }
 .hero-inner { flex: 1 1 auto; min-width: 0; padding-top: 64px; padding-bottom: 64px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.js .hero { min-height: clamp(calc(480px + var(--header-top)), calc(100svh - 95px - 124px + var(--header-top)), calc(720px + var(--header-top))); }
+.js .hero-inner { padding-top: calc(64px + var(--header-top)); }
 /* Logótipo: nome (wordmark de texto) + símbolo da fita à direita, como no logótipo atual; tamanhos em em */
 .hero-logo { margin: 0; display: flex; align-items: center; gap: 0.28em; font-size: clamp(1.75rem, 5.6vw, 4.55rem); color: var(--white); }
 .hero-logo__name { font-family: var(--f-ui); font-size: 1em; line-height: 0.9; font-weight: 700; letter-spacing: 0.02em; }
@@ -389,6 +410,8 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
   .nav-sep { display: none; }
   .header-tools { margin-top: 16px; justify-content: space-between; }
   .biz-bar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-bottom: 12px; }
+  .js .site-header:not(.is-over) .biz-bar { display: none; } /* fixo e branco: só a barra (os negócios estão no menu) */
+  .js .site-header.is-open { max-height: 100svh; overflow-y: auto; }
 }
 
 /* ---------- Ecrãs médios (≤ 1080 px) ---------- */
@@ -407,6 +430,8 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
 
   .hero { min-height: clamp(520px, calc(100svh - 160px), 720px); }
   .hero-inner { padding-top: 48px; padding-bottom: 48px; }
+  .js .hero { min-height: clamp(calc(520px + var(--header-top)), calc(100svh - 160px + var(--header-top)), calc(720px + var(--header-top))); }
+  .js .hero-inner { padding-top: calc(48px + var(--header-top)); }
   .awards__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
   .award__seal { height: 40px; }
   .paths { grid-template-columns: minmax(0, 1fr); }

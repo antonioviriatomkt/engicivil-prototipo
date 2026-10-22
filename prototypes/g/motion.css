@@ -1,0 +1,92 @@
+/* Protótipo G — motion e micro-animações («Discreta», escolhida pelo António na sessão 8).
+   Entradas em fade curto, fios que se desenham, transições suaves. Tudo sob a classe .motion no <html>
+   (posta no <head>). Sem JS, ou com «reduzir movimento» no sistema, nada disto se aplica: a página fica estática.
+   O botão de pausa do vídeo (.hero-pause) não depende da classe. */
+
+:root {
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-io: cubic-bezier(.65, 0, .35, 1); /* o do loader */
+}
+
+/* Fios que se desenham (réguas por cima das listas): o border-top passa a fundo animado */
+.motion .line-rv { border-top-color: transparent; background: linear-gradient(var(--lc, var(--ink)), var(--lc, var(--ink))) left top / 0% var(--lw, 1.5px) no-repeat border-box; transition: background-size 1.1s var(--ease-io) var(--d, 0ms); }
+.motion .line-rv.is-in { background-size: 100% var(--lw, 1.5px); }
+.motion .spec.line-rv { --lw: 1px; }
+.motion .cta-strip.line-rv { --lw: 1px; --lc: var(--g200); }
+
+/* Separadores Serene | Gaio: o traço desliza para o separador escolhido */
+.motion .dev-tablist { position: relative; }
+.motion .dev-tablist button[aria-selected="true"] { border-bottom-color: transparent; }
+.motion .dev-tablist button { transition: color .25s ease; }
+.motion .dev-tablist::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 50%; height: 4px; background: var(--ink); transition: transform .5s var(--ease-out); }
+.motion .dev-tablist:has(> :nth-child(2)[aria-selected="true"])::after { transform: translateX(100%); }
+html:not(.js) .dev-tablist::after { display: none; }
+
+/* Galeria: a imagem anterior (cópia, motion.js) sai por cima da nova */
+.motion .gallery { position: relative; }
+.gallery__ghost { position: absolute; top: 0; left: 0; z-index: 1; object-fit: cover; pointer-events: none; }
+.motion .gallery__thumbs button { transition: opacity .25s ease, outline-color .25s ease, transform .25s var(--ease-out); }
+
+/* Campos do formulário que aparecem com o tipo de pedido */
+.motion [data-when]:not([hidden]) { animation: mo-field-in .45s var(--ease-out) both; }
+@keyframes mo-field-in { from { opacity: 0; transform: translateY(-6px); } }
+.motion .choice { transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.motion .input { transition: border-color .2s ease, box-shadow .2s ease; }
+.motion .input:hover { border-color: var(--ink); }
+
+/* Menu recolhido (≤ 1200 px): abre a deslizar */
+.motion .site-header.is-open .menu { animation: mo-menu-in .35s var(--ease-out) both; }
+@keyframes mo-menu-in { from { opacity: 0; transform: translateY(-8px); } }
+.motion .menu-toggle__icon { transition: height .25s var(--ease-out), border-width .25s; }
+
+/* Botões */
+.motion .btn { transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, transform .15s ease, background-size .4s var(--ease-out); }
+.motion .btn:active { transform: scale(.98); }
+
+/* Pausa do vídeo do hero (WCAG 2.2.2) — botão discreto, canto inferior direito */
+.hero-pause { position: absolute; right: var(--gutter); bottom: 24px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgb(255 255 255 / .7); border-radius: 50%; background: rgb(20 20 20 / .35); color: var(--white); cursor: pointer; transition: background-color .2s ease, border-color .2s ease, transform .2s var(--ease-out); }
+.hero-pause:hover { background: rgb(20 20 20 / .6); border-color: var(--white); }
+.hero-pause:active { transform: scale(.94); }
+.hero-pause__icon { position: relative; width: 12px; height: 14px; }
+.hero-pause__icon::before, .hero-pause__icon::after { content: ""; position: absolute; top: 0; bottom: 0; width: 4px; background: currentColor; transition: clip-path .25s var(--ease-out), width .25s var(--ease-out); }
+.hero-pause__icon::before { left: 0; }
+.hero-pause__icon::after { right: 0; }
+/* Parado: as duas barras juntam-se num triângulo (play) */
+.hero-pause[aria-pressed="true"] .hero-pause__icon::before { width: 6px; clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%); }
+.hero-pause[aria-pressed="true"] .hero-pause__icon::after { width: 6px; clip-path: polygon(0 25%, 100% 50%, 100% 50%, 0 75%); }
+
+/* Falha de segurança: se o motion.js não correr, o hero aparece ao fim de 9 s */
+@keyframes mo-failsafe { to { opacity: 1; visibility: visible; transform: none; } }
+
+/* ---------- Entradas e hero ---------- */
+/* Entradas: fade + 16 px, uma vez */
+.motion .rv { opacity: 0; transform: translateY(16px); transition: opacity .8s var(--ease-out) var(--d, 0ms), transform .8s var(--ease-out) var(--d, 0ms); }
+.motion .rv.is-in { opacity: 1; transform: none; }
+
+/* Hero: o vídeo «assenta» (1,06 → 1), logótipo e slogan entram em sequência */
+.motion .hero-video { transform: scale(1.06); transition: transform 2.6s var(--ease-out); }
+.motion .hero-logo, .motion .hero-slogan { opacity: 0; transform: translateY(14px); transition: opacity 1s var(--ease-out), transform 1s var(--ease-out); animation: mo-failsafe 0s 9s forwards; }
+.motion .hero.is-in .hero-video { transform: none; }
+.motion .hero.is-in .hero-logo { opacity: 1; transform: none; transition-delay: .15s; }
+.motion .hero.is-in .hero-slogan { opacity: 1; transform: none; transition-delay: .5s; }
+
+/* 04 Como trabalhamos: a linha desenha-se do 1.º ao 4.º círculo; os círculos aparecem em sequência */
+.motion .proc-line::before { transform: scaleX(0); transform-origin: left center; transition: transform 1.4s var(--ease-io) .1s; }
+.motion .proc-line.is-in::before { transform: none; }
+.motion .proc-dot { transform: scale(.6); opacity: 0; transition: transform .6s var(--ease-out) calc(var(--d, 0ms) + 150ms), opacity .4s ease calc(var(--d, 0ms) + 150ms); }
+.motion .proc-step.is-in .proc-dot { transform: none; opacity: 1; }
+.motion .proc-step::after { transform: scaleY(0); transform-origin: top center; transition: transform .8s var(--ease-io) calc(var(--d, 0ms) + 400ms); }
+.motion .proc-step.is-in::after { transform: none; }
+
+/* Ligações de texto: seta que avança ao passar o rato */
+.motion .link::after { content: "→"; display: inline-block; margin-left: .4em; text-decoration: none; transition: transform .3s var(--ease-out); }
+.motion .link:hover::after { transform: translateX(4px); }
+
+/* Painel de empreendimento ao trocar de separador */
+.motion.js .dev-panel:not([hidden]) { animation: mo-fade .5s ease both; }
+@keyframes mo-fade { from { opacity: 0; } }
+
+/* Dois negócios: transições mais longas e suaves */
+.motion .path img { transition: transform 1.2s var(--ease-out); }
+.motion .path::before { transition: background-color .4s ease; }
+.motion .path__go { transition: transform .4s var(--ease-out), background-color .3s ease, color .3s ease; }

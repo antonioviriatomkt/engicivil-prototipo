@@ -95,24 +95,40 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
 
 <main id="conteudo">
 
-  <!-- Hero: vídeo a toda a largura, com o título, o subtítulo e os carimbos por cima -->
-  <section class="hero" aria-labelledby="h-hero">
+  <!-- Hero: vídeo a toda a largura, só com o logótipo (nome + símbolo da fita, versão clara; o símbolo é o do loader) -->
+  <section class="hero" aria-label="ENGICIVIL">
     <video class="hero-video" muted loop playsinline preload="metadata" poster="/video/delabie-percurso-poster.jpg" aria-label="Vídeo: percurso pelo edifício da Delabie, requalificado pela Engicivil. Fachada em ripado de madeira, receção e showroom.">
       <source src="/video/delabie-percurso.mp4" type="video/mp4">
       <source src="/video/delabie-percurso.webm" type="video/webm">
     </video>
     <div class="hero-inner wrap">
-      <div class="hero-intro">
-        <p class="hero-eyebrow">ENGICIVIL · Aveiro, desde 2013</p>
-        <h1 id="h-hero" class="hero-title">Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.</h1>
-      </div>
+      <p class="hero-logo" role="img" aria-label="ENGICIVIL">
+        <span class="hero-logo__name" aria-hidden="true">ENGICIVIL</span>
+        <svg class="hero-logo__mark" viewBox="-2 0 114 100" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="hl0" gradientUnits="userSpaceOnUse" x1="12" y1="17" x2="57" y2="8.5"><stop offset="0" stop-color="#9fa9af"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+            <linearGradient id="hl1" gradientUnits="userSpaceOnUse" x1="57" y1="8.5" x2="103" y2="17"><stop offset="0" stop-color="#9fa9af"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+            <linearGradient id="hl2" gradientUnits="userSpaceOnUse" x1="103" y1="17" x2="103" y2="83"><stop offset="0" stop-color="#9fa9af"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+            <linearGradient id="hl3" gradientUnits="userSpaceOnUse" x1="103" y1="83" x2="57" y2="91.5"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9fa9af"/></linearGradient>
+            <linearGradient id="hl4" gradientUnits="userSpaceOnUse" x1="57" y1="91.5" x2="12" y2="83"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9fa9af"/></linearGradient>
+            <linearGradient id="hl5" gradientUnits="userSpaceOnUse" x1="12" y1="83" x2="40" y2="50"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#9fa9af"/></linearGradient>
+            <linearGradient id="hl6" gradientUnits="userSpaceOnUse" x1="40" y1="50" x2="12" y2="17"><stop offset="0" stop-color="#9fa9af"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+          </defs>
+          <polygon points="24.18,21.31 57.01,15.11 56.99,1.89 -0.18,12.69" fill="url(#hl0)"/>
+          <polygon points="57.01,15.11 96.50,22.41 109.50,11.59 56.99,1.89" fill="url(#hl1)"/>
+          <polygon points="96.50,22.41 96.50,77.59 109.50,88.41 109.50,11.59" fill="url(#hl2)"/>
+          <polygon points="96.50,77.59 57.01,84.89 56.99,98.11 109.50,88.41" fill="url(#hl3)"/>
+          <polygon points="57.01,84.89 24.18,78.69 -0.18,87.31 56.99,98.11" fill="url(#hl4)"/>
+          <polygon points="24.18,78.69 48.52,50.00 31.48,50.00 -0.18,87.31" fill="url(#hl5)"/>
+          <polygon points="48.52,50.00 24.18,21.31 -0.18,12.69 31.48,50.00" fill="url(#hl6)"/>
+        </svg>
+      </p>
     </div>
   </section>
 
   <!-- Distinções e qualificações: faixa clara logo abaixo do hero (prova comum aos dois negócios). Fundo branco = o dos ficheiros dos selos. -->
-  <section class="awards" aria-labelledby="h-awards">
+  <section class="awards" aria-label="Distinções e qualificações">
     <div class="wrap">
-      <h2 id="h-awards" class="awards__label">Distinções e qualificações</h2>
       <dl class="awards__list">
         <div class="award"><dt>Alvará IMPIC</dt><dd class="award__ref">70366-PUB</dd><dd class="award__seal award__seal--type"><span>Classe</span> 5</dd></div>
         <div class="award"><dt>PME Líder</dt><dd class="award__ref">IAPMEI, 2020 a 2022</dd><dd class="award__seal"><img src="/img/selos/pme-lider-2022.png" width="127" height="144" alt=""></dd></div>
@@ -123,9 +139,13 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
     </div>
   </section>
 
-  <!-- Os dois negócios, lado a lado -->
-  <section class="paths-sec" aria-label="Os dois negócios">
+  <!-- Título + os dois negócios, lado a lado -->
+  <section class="paths-sec" aria-labelledby="h-intro">
     <div class="wrap">
+      <div class="intro">
+        <p class="intro__eyebrow">ENGICIVIL · Aveiro, desde 2013</p>
+        <h1 id="h-intro" class="intro__title">Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.</h1>
+      </div>
       <div class="hero-paths grid">
 
         <!-- Caminho 1 -->

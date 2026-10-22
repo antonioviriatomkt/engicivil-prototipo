@@ -1,24 +1,30 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-21** · por: sessão de setup (Claude, conversa do vault)
+> Atualizado: **2026-10-22** · por: sessão 1 (Claude) · branch `claude/wonderful-volta-b4600b`
 
 ## Onde estamos
-- `prototypes/g/index.html` = **homepage** convertida 1:1 do mockup `mockups/G-BD.dc.html` (HTML estático, CSS inline, imagens em `/img/…`). Ainda **não foi trabalhada** em sessão própria.
-- Ideia da direção: hero simétrico (sócios ao centro, Construções | Empreendimentos); antes/depois; mosaico de obra; índice «Onde trabalhamos» com os prédios para terceiros; diagrama «uma empresa, dois negócios».
-- Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados) (Google Fonts, `<link>` no `<head>`).
-- Referência visual congelada: `mockups/G-BD-desktop.jpg` e `mockups/G-BD-mobile.jpg`.
+- `prototypes/g/index.html` = **homepage**, visualmente igual ao mockup `G-BD` a 1440 px (verificado por comparação de capturas), agora **sem estilos inline**.
+- `prototypes/g/styles.css` = CSS partilhado do G: tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`), utilitários de grelha (`.grid` 12 colunas + `.span-N`/`.start-N`) e componentes (`.sec-head`, `.path`, `.dev`, `.spec`, `.ix-*`, `.cred`, `.form`…). **Páginas novas do G devem usar este ficheiro.**
+- `prototypes/g/main.js` = menu recolhido do cabeçalho (abre/fecha, `aria-expanded`, Esc devolve o foco, fecha ao escolher destino). Sem JS o menu fica visível.
+- Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados).
+- Responsivo:
+  - **≤ 1200 px:** botão «Menu» + barra dos dois negócios (Construções | Empreendimentos) sempre à vista.
+  - **761–1080 px (tablet):** os dois cartões de negócio lado a lado, foto dos sócios por baixo; factos em 3 colunas; índice «Onde trabalhamos» com o local por cima das obras.
+  - **≤ 760 px:** uma coluna (como no mockup móvel), factos em 2 colunas com tamanho reduzido (já não transbordam).
+  - Sem scroll horizontal a 390, 768, 1024, 1280 e 1440 px.
+- Acessibilidade acrescentada: link «Saltar para o conteúdo», `<main>`, alvos de 44 px no seletor PT/EN e no rodapé, foco visível no rodapé escuro, borda do rádio «Outro assunto» com contraste 3:1, opção escolhida do formulário destacada.
 
 ## Próximos passos (sugeridos — o António define a ordem)
-1. Abrir a homepage no browser (desktop e 390 px), comparar com o mockup e corrigir o que a conversão estragou.
-2. Extrair o CSS inline para `prototypes/g/styles.css` (tokens de cor/tipo/espaçamento como variáveis CSS) para poder criar mais páginas sem duplicar.
-3. Navegação funcional: menu mobile, âncoras, estados de foco.
-4. Páginas interiores (a confirmar com o António): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** · **Sobre** · **Contactos**.
-5. Formulário de contacto (só front-end; sem envio real).
+1. **Páginas interiores** (a confirmar com o António quais e por que ordem): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** (os links «Ver os N projetos…», «Ver o Serene», «Saber mais» ainda apontam para `#`) · **Sobre** · **Contactos**. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
+2. Formulário de contacto (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-selecionar o tipo de pedido/edifício a partir dos CTAs («Pedir informação» do Serene → «Comprar casa» + Serene).
+3. Opcional: indicar a secção atual no menu (scroll-spy com `aria-current`).
+4. Rever com o António a versão tablet (não existia no mockup; foi decisão desta sessão).
 
 ## Dúvidas em aberto
 - Ver «Por confirmar com o cliente» em `context/decisoes.md`.
+- O CLAUDE.md pede branches `g/<tema>`; esta sessão usou o branch atribuído pela sessão (`claude/wonderful-volta-b4600b`).
 
 ## Carregar na próxima sessão
-- `context/brief.md` · `context/brief-r2.md` · `context/decisoes.md` (primeira sessão deste protótipo)
-- `prototypes/g/index.html` · `mockups/G-BD-desktop.jpg`
+- `prototypes/g/styles.css` · `prototypes/g/index.html` (só as secções relevantes para a página a criar)
+- `context/brief.md` (factos) e `context/assets-manifest.csv` se a página precisar de mais imagens

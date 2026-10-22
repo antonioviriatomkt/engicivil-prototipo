@@ -11,6 +11,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - **D** — título + texto/CTA, faixa de números (30 especialistas · 24 obras · Classe 5), separadores por área com 2 fotos cada.
 - Mais-valias só com factos do brief: engenharia própria, estaleiro e meios de produção próprios + rede de parceiros, gabinete de planeamento e orçamentação («precisão e transparência»), alvará classe 5.
 - Sem scroll horizontal a 390, 768, 1024 e 1440. Capturas: `screenshots/g/2026-10-22-construcoes-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`, a secção como estava).
+- **Decisão (António): proposta A.** Implementada na homepage: a secção `#construcoes` passou a ter título centrado, 3 cartões com foto e a faixa «Porquê a ENGICIVIL» + faixa de CTA. Saíram os 2 antes/depois, o mosaico e o bloco «24 obras publicadas». Fundo branco (mantém a alternância branco/papel com as secções vizinhas). CSS em `styles.css` (secção «01 Construções», classes `.cons*`); apagado o CSS antigo (`.pair`, `.kv`, `.tag`, `.areas`, `.mos`, `.h3--md`…). Página de propostas e entrada do `vite.config.js` apagadas. Sem scroll horizontal a 360, 390, 768, 1024, 1280 e 1440. Capturas: `screenshots/g/2026-10-22-construcoes-{1440,1024,390}.png`.
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

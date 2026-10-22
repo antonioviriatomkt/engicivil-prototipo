@@ -8,7 +8,7 @@
 - `prototypes/g/styles.css` = CSS partilhado do G: tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`), utilitários de grelha (`.grid` 12 colunas + `.span-N`/`.start-N`) e componentes (`.sec-head`, `.path`, `.dev`, `.spec`, `.ix-*`, `.cred`, `.form`…). **Páginas novas do G devem usar este ficheiro.**
 - `prototypes/g/main.js` = menu recolhido do cabeçalho (abre/fecha, `aria-expanded`, Esc devolve o foco, fecha ao escolher destino). Sem JS o menu fica visível.
 - **Hero revisto** (pedidos do António, 22/10):
-  - **Em cima:** à esquerda, «ENGICIVIL · Aveiro, desde 2013», o título (copy do site atual, reduzida e com a promoção: «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.»), o texto e o botão «Ligar 234 060 223»; à direita, a foto dos sócios (4:3, **sem legenda**).
+  - **Em cima:** à esquerda, «ENGICIVIL · Aveiro, desde 2013», o título (copy do site atual, reduzida e com a promoção: «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.»), o texto e o botão «Ligar 234 060 223»; à direita, o **vídeo do site atual** (percurso pela obra da Delabie), 4:3, **sem legenda**. Vídeo em `public/video/` (MP4 H.264 + WebM, 720p, sem som, ~4,3 MB cada, capa `delabie-percurso-poster.jpg`); arranca sem som, com botão «Pausar vídeo»; fica parado na capa com «reduzir movimento» ou poupança de dados. A foto dos sócios saiu do hero (o ficheiro `/img/site/engicivil-3.jpg` continua no repositório).
   - **Em baixo:** os dois negócios lado a lado com a mesma altura. No desktop os cartões são horizontais (imagem à esquerda). Têm linhas de autoidentificação: Construções (Indústria e serviços · Habitação e reabilitação) e Empreendimentos (Serene e Gaio, com link para `#serene` / `#gaio`).
   - Terceiro caminho, mais discreto, para promotores → `#locais`.
   - **Carimbo (faixa de factos) redesenhado:** rótulo escuro «Comum aos dois negócios / ENGICIVIL – Cardoso & Manata, Lda.» + 5 factos (Classe 5 · 2013 · 30 especialistas · PME Líder · TOP 5%), valores numa só linha. **Sem «Valor máximo por obra»** (pedido do António; o valor continua na tabela de credenciais e na secção 01). Mobile: 2×2 + TOP 5% a toda a largura.
@@ -28,7 +28,7 @@
 3. Opcional: indicar a secção atual no menu (scroll-spy com `aria-current`).
 4. Rever com o António a versão tablet (não existia no mockup; foi decisão desta sessão) e o novo hero (capturas `screenshots/g/2026-10-22-hero-antes-*.png` → `-depois-*.png` → `-rev2-*.png`).
 5. A foto dos sócios mostra o logótipo antigo ao fundo — substituir quando houver identidade nova.
-6. **Vídeo do hero do site atual** (pedido do António): por fazer. Este ambiente não consegue aceder a `engicivil.pt` (o proxy bloqueia o host). Opções: autorizar `engicivil.pt` nas definições de rede do ambiente, ou pôr o ficheiro em `public/video/` (de preferência MP4 H.264, sem som, ≤ 8 MB, + uma imagem de poster). Falta decidir onde entra (no lugar da foto dos sócios, ou como fundo do hero).
+6. Vídeo no hero: está à experiência no lugar da foto dos sócios. Decidir com o António se fica, e se a foto dos sócios volta noutro sítio (ex.: «Sobre nós»).
 
 ## Dúvidas em aberto
 - Ver «Por confirmar com o cliente» em `context/decisoes.md`.

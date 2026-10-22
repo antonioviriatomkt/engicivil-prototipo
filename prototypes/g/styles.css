@@ -127,7 +127,11 @@ img { max-width: 100%; }
 .hero-head { row-gap: 20px; }
 .hero-intro { display: flex; flex-direction: column; gap: 16px; }
 .hero-intro .actions { margin-top: 4px; }
-.hero-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 35%; }
+.hero-media { position: relative; }
+.hero-video { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--ink); }
+.video-toggle { display: none; position: absolute; right: 12px; bottom: 12px; min-height: 44px; padding: 0 14px; border: 0; border-radius: 4px; background: var(--white); color: var(--ink); font-family: var(--f-ui); font-size: 0.875rem; font-weight: 600; cursor: pointer; }
+.js .video-toggle { display: inline-flex; align-items: center; }
+.video-toggle:hover { background: var(--paper); }
 .hero-eyebrow { margin: 0; font-family: var(--f-mono); font-size: 13px; color: var(--accent); }
 .hero-title { margin: 0; font-family: var(--f-ui); font-size: clamp(2rem, 3.4vw, 3.125rem); line-height: 1.04; font-weight: 600; letter-spacing: -0.025em; max-width: 22ch; }
 .hero-lead { margin: 0; font-size: clamp(1.125rem, 1.4vw, 1.25rem); line-height: 1.6; color: var(--g700); max-width: 30em; }

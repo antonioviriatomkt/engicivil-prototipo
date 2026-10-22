@@ -14,6 +14,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - 6.ª ronda: o texto «ENGICIVIL» do hero passou a usar o gradiente do símbolo (branco → `#9fa9af`, `background-clip: text`) e a mesma sombra, para o logótipo ficar uniforme.
 - 7.ª ronda: título da página (eyebrow + h1) centrado por cima dos cartões.
 - 8.ª ronda: logótipo do hero 30 % mais pequeno, tudo branco (texto e símbolo, sem gradientes) e sem sombra.
+- 9.ª ronda: slogan «O seu projeto em boas mãos» por baixo do título (do brief); símbolo da fita acrescentado ao wordmark do cabeçalho (cor do texto).
 
 ## 2026-10-22 · g/certificacoes · selos das distinções
 - Faixa de 4 selos (PME Líder 2022, Scoring TOP 5% 2022, Scoring TOP 10 setor 2022, R.U.-I.S.) no fim da secção 04. R.U.-I.S. é o SVG oficial; os outros 3 são recortes provisórios das imagens publicadas pela Engicivil.

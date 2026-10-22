@@ -11,6 +11,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - 3.ª ronda: selos e «5» reduzidos para **metade** (46 px; telemóvel 34 px), sombra proporcional.
 - 4.ª ronda: o António não gostou do layout; mostrei 3 esboços (A faixa no fundo do hero · B coluna à direita · C faixa clara por baixo do hero) e escolheu o **C**. Hero fica só com eyebrow + título; nova `section.awards` «Distinções e qualificações» logo abaixo, fundo branco, selos com as cores e fundos originais, «CLASSE» com o «5» por baixo. Apagadas as versões sem fundo dos selos (`*-transparente.png`, `ruis-aiccopn-branco.svg`), já sem uso. Sem scroll horizontal a 390, 1024 e 1440; a 1440×900 a faixa cabe no primeiro ecrã.
 - 5.ª ronda (pedido do António): o **título** (com o eyebrow) passou para cima dos cartões dos dois negócios; o **hero fica só com o logótipo** — «ENGICIVIL» + símbolo da fita (versão clara do SVG do loader), sem «Cardoso & Manata, Lda.» (pedido explícito). Removido o rótulo visível «Distinções e qualificações» (fica como `aria-label`). Sem scroll horizontal a 360, 390, 1024 e 1440.
+- 6.ª ronda: o texto «ENGICIVIL» do hero passou a usar o gradiente do símbolo (branco → `#9fa9af`, `background-clip: text`) e a mesma sombra, para o logótipo ficar uniforme.
 
 ## 2026-10-22 · g/certificacoes · selos das distinções
 - Faixa de 4 selos (PME Líder 2022, Scoring TOP 5% 2022, Scoring TOP 10 setor 2022, R.U.-I.S.) no fim da secção 04. R.U.-I.S. é o SVG oficial; os outros 3 são recortes provisórios das imagens publicadas pela Engicivil.

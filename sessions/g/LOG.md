@@ -10,6 +10,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - **Decisão (António):** usar o símbolo atual no loader, apesar de a regra geral ser wordmark de texto. Quando houver identidade nova, trocar o SVG no `#loader`.
 - Feito primeiro em `claude/blissful-ritchie-dkgmoi` (PR #5, a partir do `main` antigo) e transposto para este branch, que é a versão mais recente. Merge para `main` a pedido do António.
 - Capturas: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
+- **Decisão (António):** loader **só na primeira visita da sessão** (flag `g-loader` no `sessionStorage`; por separador). Se o armazenamento falhar, o loader não aparece.
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 2: hero com vídeo a toda a largura
 - Continua a partir do PR #3 (`claude/wonderful-volta-b4600b`).

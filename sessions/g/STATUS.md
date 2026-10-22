@@ -1,12 +1,12 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-22** · por: sessão 3 (Claude) · branch `claude/nice-cannon-u8j2zu`, **merged em `main`**
+> Atualizado: **2026-10-22** · por: sessão 3 (Claude) · branch `claude/nice-cannon-u8j2zu`, merged em `main`
 
 ## Onde estamos
 - `prototypes/g/index.html` = **homepage**, sem estilos inline. Igual ao mockup `G-BD` a 1440 px, exceto o hero (revisto, ver abaixo).
 - `prototypes/g/styles.css` = CSS partilhado do G: tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`), utilitários de grelha (`.grid` 12 colunas + `.span-N`/`.start-N`) e componentes (`.sec-head`, `.path`, `.dev`, `.spec`, `.ix-*`, `.cred`, `.form`…). **Páginas novas do G devem usar este ficheiro.**
-- `prototypes/g/loader.js` + bloco `#loader` no início do `<body>` + secção «Ecrã de carregamento» no `styles.css` = **ecrã de carregamento**: o símbolo da fita do logótipo atual (sem texto), em SVG neutro, desenha-se ao longo da fita; repete enquanto a página carrega; sai com fade. Respeita «reduzir movimento»; failsafe aos 8 s. **Páginas novas do G devem copiar o bloco `#loader`, a classe `is-loading` no script do `<head>` e o `<script src="…/loader.js">`.**
+- `prototypes/g/loader.js` + bloco `#loader` no início do `<body>` + secção «Ecrã de carregamento» no `styles.css` = **ecrã de carregamento**: o símbolo da fita do logótipo atual (sem texto), em SVG neutro, desenha-se ao longo da fita; repete enquanto a página carrega; sai com fade. **Só na primeira visita da sessão** (decisão do António): o script do `<head>` só põe `is-loading` se `g-loader` não estiver no `sessionStorage`; recarregar ou navegar no mesmo separador já não o mostra (para o rever: separador novo ou `sessionStorage.removeItem('g-loader')`). Respeita «reduzir movimento»; failsafe aos 8 s. **Páginas novas do G devem copiar o bloco `#loader`, a classe `is-loading` no script do `<head>` e o `<script src="…/loader.js">`.**
 - `prototypes/g/main.js` = menu recolhido do cabeçalho (abre/fecha, `aria-expanded`, Esc devolve o foco, fecha ao escolher destino). Sem JS o menu fica visível.
 - **Topo da homepage (sessão 2, pedidos do António, 22/10)** — por esta ordem:
   1. **Hero = vídeo a toda a largura** (percurso pela obra da Delabie, `public/video/`, 1280×720), em ciclo e sem som. Por cima, em branco: «ENGICIVIL · Aveiro, desde 2013», o título «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.» e, por baixo, **os carimbos** (sem subtítulo — retirado a pedido do António): 3 caixas pequenas com contorno branco (Classe 5 · PME Líder · TOP 5%), lado a lado com a largura do conteúdo; no telemóvel passam a 2 + 1. «2013» e «30 especialistas» saíram (pedido do António). O 2013 está no eyebrow; os «30 especialistas» (com engenharia e estaleiro próprios) passaram para o texto da secção dos sócios. O `<dl>` tem `aria-label` «Comum aos dois negócios: ENGICIVIL – Cardoso & Manata, Lda.».
@@ -35,7 +35,6 @@
 6. A foto dos sócios mostra o logótipo antigo ao fundo — substituir quando houver identidade nova. O mesmo para o **símbolo do loader** (é o do logótipo atual).
 
 ## Dúvidas em aberto
-- Loader: mostrar **em todas as cargas** (atual, bom para demo) ou **só na primeira visita da sessão** (melhor quando houver várias páginas)?
 - Ver «Por confirmar com o cliente» em `context/decisoes.md`.
 - O CLAUDE.md pede branches `g/<tema>`; as sessões 1 e 2 usaram os branches atribuídos (`claude/wonderful-volta-b4600b`, `claude/nice-cannon-u8j2zu`). O PR da sessão 2 inclui os commits do PR #3. A sessão 3 (loader) foi feita neste mesmo branch e o branch foi integrado em `main`.
 - O branch `g/hero` (PR #2, fechado) tinha uma variante com a marca atual (azul) — abandonada; não continuar a partir dele.

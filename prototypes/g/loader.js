@@ -1,9 +1,11 @@
 // Ecrã de carregamento: o símbolo desenha-se uma vez; se a página ainda não acabou de carregar,
 // repete o ciclo (apaga e redesenha) e sai sempre com o símbolo completo.
+// Só na primeira visita da sessão: o <head> só põe .is-loading se 'g-loader' não estiver no sessionStorage.
 const root = document.documentElement
 const loader = document.getElementById('loader')
 
 if (loader && root.classList.contains('is-loading')) {
+  try { sessionStorage.setItem('g-loader', '1') } catch {}
   const trace = loader.querySelector('.loader-trace')
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
   let loaded = document.readyState === 'complete'

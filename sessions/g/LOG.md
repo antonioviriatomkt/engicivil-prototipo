@@ -2,6 +2,14 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 2: hero com vídeo a toda a largura
+- Continua a partir do PR #3 (`claude/wonderful-volta-b4600b`).
+- Pedido do António: o vídeo ocupa o hero todo e contém o título e o subtítulo; a foto dos sócios desce para uma secção própria com o carimbo; os dois negócios mantêm-se, sem imagens.
+- Hero: `<video>` em fundo (object-fit: cover) + véu liso a 60 % + eyebrow, título, texto e «Pausar vídeo». Contraste medido em 17 fotogramas: pior caso 4,8:1 (branco sobre o píxel mais claro).
+- Cartões dos negócios só com texto (sai a regra de cartão horizontal ≥ 1081 px). Nova secção `.founders`: foto + texto + «Ligar», carimbo por baixo.
+- Sem scroll horizontal a 390, 1024 e 1440 px.
+- Capturas: `screenshots/g/2026-10-22-hero-full-1440.png`, `…-hero-full-390.png`, `…-g-desktop.png`, `…-g-mobile.png`. Preview: link do Vercel no PR.
+
 ## 2026-10-22 · claude/wonderful-volta-b4600b · sessão 1 (cont.): vídeo no hero
 - O António enviou o vídeo do hero do site atual (percurso pela obra da Delabie, 1080p, 34 s, 25 MB). Comprimido para 720p sem som: MP4 H.264 (4,3 MB) + WebM VP9 (4,4 MB) + capa JPG, em `public/video/`.
 - Entra à direita do título, no lugar da foto dos sócios, sem legenda (pedido do António). Botão «Pausar vídeo» (WCAG 2.2.2); não arranca com «reduzir movimento» nem com poupança de dados.

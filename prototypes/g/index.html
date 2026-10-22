@@ -67,30 +67,29 @@
 
 <main id="conteudo">
 
-  <!-- Hero: título e sócios em cima, os dois negócios lado a lado em baixo -->
+  <!-- Hero: vídeo a toda a largura, com o título e o subtítulo por cima -->
   <section class="hero" aria-labelledby="h-hero">
-    <div class="wrap">
-      <div class="hero-head grid align-end">
-        <div class="hero-intro span-7">
-          <p class="hero-eyebrow">ENGICIVIL · Aveiro, desde 2013</p>
-          <h1 id="h-hero" class="hero-title">Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.</h1>
-          <p class="hero-lead">Somos 30 especialistas, com engenharia e estaleiro próprios. Fazemos obra para empresas, famílias e promotores, e construímos casas nossas para vender.</p>
-          <div class="actions"><a href="tel:+351234060223" class="btn btn--line">Ligar 234 060 223</a></div>
-        </div>
-        <div class="hero-media span-5 start-8">
-          <video class="hero-video" muted loop playsinline preload="metadata" poster="/video/delabie-percurso-poster.jpg" aria-label="Vídeo: percurso pelo edifício da Delabie, requalificado pela Engicivil. Fachada em ripado de madeira, receção e showroom.">
-            <source src="/video/delabie-percurso.mp4" type="video/mp4">
-            <source src="/video/delabie-percurso.webm" type="video/webm">
-          </video>
-          <button type="button" class="video-toggle">Pausar vídeo</button>
-        </div>
+    <video class="hero-video" muted loop playsinline preload="metadata" poster="/video/delabie-percurso-poster.jpg" aria-label="Vídeo: percurso pelo edifício da Delabie, requalificado pela Engicivil. Fachada em ripado de madeira, receção e showroom.">
+      <source src="/video/delabie-percurso.mp4" type="video/mp4">
+      <source src="/video/delabie-percurso.webm" type="video/webm">
+    </video>
+    <div class="hero-inner wrap">
+      <div class="hero-intro">
+        <p class="hero-eyebrow">ENGICIVIL · Aveiro, desde 2013</p>
+        <h1 id="h-hero" class="hero-title">Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.</h1>
+        <p class="hero-lead">Somos 30 especialistas, com engenharia e estaleiro próprios. Fazemos obra para empresas, famílias e promotores, e construímos casas nossas para vender.</p>
       </div>
+      <button type="button" class="video-toggle">Pausar vídeo</button>
+    </div>
+  </section>
 
+  <!-- Os dois negócios, lado a lado -->
+  <section class="paths-sec" aria-label="Os dois negócios">
+    <div class="wrap">
       <div class="hero-paths grid">
 
         <!-- Caminho 1 -->
         <article class="path span-6" aria-labelledby="h-path-c">
-          <img class="path__img" src="/img/portefolio/construcao/moradia-unifamiliar-oliveira-de-azemeis/moradia-oliveira-de-azemeis.jpg" alt="Moradia em betão e vidro construída pela Engicivil em Oliveira de Azeméis.">
           <div class="path__body">
             <span class="kicker">Para empresas, particulares e promotores</span>
             <h2 id="h-path-c" class="path__title">
@@ -110,7 +109,6 @@
 
         <!-- Caminho 2 -->
         <article class="path span-6" aria-labelledby="h-path-e">
-          <img class="path__img" src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt="Render do Serene Condominium, em Ílhavo, ao entardecer.">
           <div class="path__body">
             <span class="kicker">Para quem procura casa</span>
             <h2 id="h-path-e" class="path__title">
@@ -131,8 +129,23 @@
 
       <!-- Terceiro caminho: promotores e prédios construídos para terceiros -->
       <p class="hero-third"><span class="mark mark--open" aria-hidden="true"></span><span>Vai promover um edifício?</span> <a href="#locais">Veja os prédios que construímos para outros promotores</a></p>
+    </div>
+  </section>
 
-      <!-- Carimbo: prova comum aos dois negócios -->
+  <!-- Os sócios e o carimbo: prova comum aos dois negócios -->
+  <section class="founders" aria-labelledby="h-founders">
+    <div class="wrap">
+      <div class="founders__grid grid align-center">
+        <img class="founders__img span-5" src="/img/site/engicivil-3.jpg" alt="Os dois sócios fundadores da Engicivil, lado a lado, em fotografia a preto e branco.">
+        <div class="founders__text span-6 start-7">
+          <p class="kicker">Quem está à frente</p>
+          <h2 id="h-founders" class="founders__title">Os dois sócios fundadores</h2>
+          <p class="body">Abriram a Engicivil em 2013, com mais de duas décadas de experiência em obra. A mesma equipa constrói para clientes e para os nossos empreendimentos.</p>
+          <div class="actions"><a href="tel:+351234060223" class="btn btn--line">Ligar 234 060 223</a></div>
+        </div>
+      </div>
+
+      <!-- Carimbo -->
       <div class="proof">
         <p class="proof__label"><span class="proof__kicker">Comum aos dois negócios</span><span class="proof__name">ENGICIVIL – Cardoso &amp; Manata, Lda.</span></p>
         <dl class="facts">

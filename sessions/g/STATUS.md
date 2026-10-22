@@ -1,11 +1,18 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-22** · por: sessão 7 (Claude) · branch `claude/focused-albattani-1w68d0` (integrado em `main`). A sessão 6 (`claude/trabalho-em-g-29paml`, em paralelo) fez a secção dos dois negócios e o cabeçalho fixo.
+> Atualizado: **2026-10-22** · por: sessão 8 (Claude) · branch `claude/blissful-cerf-u8l1t1` — **2 propostas de motion à espera da escolha do António**.
 
 > Lembrete do António: é um **protótipo para mostrar o design ao cliente**, não um site de produção.
 
 ## Onde estamos
+**Sessão 8 — motion e micro-animações: 2 propostas, falta escolher.** Na homepage, alternáveis pelo seletor no canto inferior esquerdo (ou `?motion=a` / `?motion=b`; sem parâmetro = «Atual», sem motion):
+- **A — Discreta:** entradas em fade curto (16 px) com sequência nos cartões; o vídeo do hero «assenta» (1,06 → 1) e logótipo/slogan entram; os fios das listas desenham-se; a linha do «Como trabalhamos» desenha-se do 1 ao 4; ligações com seta que avança; troca de imagem da galeria em fade cruzado.
+- **B — Construtiva:** letras do ENGICIVIL sobem e a fita desenha-se (o traço do loader); hero com parallax ao descer; distinções entram como carimbos; títulos palavra a palavra; fotos «erguem-se» (cortina de baixo para cima); números contam (6/12 projetos, 8/12 apartamentos); linha do processo enche com o scroll e cada passo acende; cabeçalho esconde-se ao descer, volta ao subir, com régua de progresso; botões com varrimento, sublinhado que se redesenha; galeria em cortina lateral.
+- **Comum às duas:** traço dos separadores Serene | Gaio desliza; campos do formulário e menu entram suavemente; **botão de pausa do vídeo do hero** (resolve WCAG 2.2.2).
+- Ficheiros: `prototypes/g/motion.css` + `prototypes/g/motion.js` + 2 linhas no `<head>` do `index.html`. Com «reduzir movimento» no sistema ou sem JS: nada se aplica.
+- **Depois da escolha:** apagar a proposta que perdeu e o seletor (`.mo-switch` no JS e CSS), aplicar a vencedora sem parâmetro (a classe `motion-x` passa a ser posta sempre no `<head>`, exceto com «reduzir movimento»), e mover o botão de pausa para fora do bloco das propostas.
+
 **A homepage do G está completa de cima a baixo.** O hero, a faixa de distinções e os sócios ficaram fechados na sessão 5. Os dois negócios e o cabeçalho fixo foram feitos na sessão 6. As secções 01–05 foram refeitas na sessão 7. Em cada secção o António escolheu uma de 4 propostas; as capturas das propostas estão em `screenshots/g/2026-10-22-<secção>-{a,b,c,d}-*.png`.
 
 ### Ficheiros
@@ -37,7 +44,7 @@
    - O item «Onde trabalhamos» leva à 03 (`#locais`).
 2. **Hero:** vídeo a toda a largura com o logótipo branco ao centro e o slogan «O seu projeto em boas mãos».
    - Véu escuro a 60 %.
-   - Sem botão de pausa (⚠️ falha WCAG 2.2.2).
+   - Botão de pausa só nas propostas de motion (sessão 8).
 3. **Faixa de distinções** (fundo branco): Alvará classe 5 · PME Líder 2020–2022 · TOP 5% PME 2022 · TOP 10 PME do setor 2022 · R.U.-I.S. Selos em `public/img/selos/`; 3 deles são provisórios.
 4. **Título da página + os dois negócios** (sessão 6, versão «D2»):
    - `<h1>` centrado;
@@ -73,10 +80,11 @@
 - Capturas da página inteira: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
 
 ## Próximos passos (sugeridos — o António define a ordem)
+0. **Escolher a proposta de motion (A ou B, ou misturar)** e limpar como descrito acima.
 1. **Rever a página inteira com o António**: ritmo entre secções, fundos (branco/papel alternados) e repetição entre as mais-valias da 01 e os passos da 04.
 2. **Páginas interiores** (confirmar quais e a ordem): Construções / portefólio (os «Ver projetos de …» apontam para `#`) · Serene · Gaio (os «Ver o Serene/Gaio» apontam para `#`) · Prédios para promotores · Contactos / Política de Privacidade. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
 3. **Formulário** (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-seleção a partir dos CTAs (ex.: «Pedir informação» do Serene → «Comprar casa» + Serene).
-4. **Pausa do vídeo** (WCAG 2.2.2): propor uma solução discreta.
+4. **Pausa do vídeo** (WCAG 2.2.2): feita nas propostas de motion (botão redondo no canto do hero); fica com a proposta escolhida.
 5. **Selos:** substituir os 3 recortes (PME Líder, Scoring TOP 5%, Scoring TOP 10) pelos ficheiros oficiais e confirmar se há anos mais recentes.
 6. Vídeo do hero em 1080p, se houver o original.
 7. Os dois negócios: a foto da Delabie é a mesma obra do vídeo do hero. Alternativas, se o António quiser variar: `public/img/site/construcao-3.jpg` ou `ribas-i-3.jpg`.
@@ -91,5 +99,6 @@
 - Da Gafanha de Aquém só há fotos em obra. Os ficheiros da Rua do Gravito chamam-se `ed-pedro-cardoso-*` (o nome não é mostrado).
 
 ## Carregar na próxima sessão
+- `prototypes/g/motion.css` · `prototypes/g/motion.js` (propostas de motion)
 - `prototypes/g/styles.css` · `prototypes/g/main.js` · `prototypes/g/index.html` (só as secções relevantes)
 - `context/brief.md` (factos) e `context/assets-manifest.csv` se a página precisar de mais imagens

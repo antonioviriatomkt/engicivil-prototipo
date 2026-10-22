@@ -1,0 +1,202 @@
+/* Protótipo G — propostas de motion e micro-animações (temporário, até o António escolher).
+   A «Discreta»: entradas em fade curto, fios que se desenham, transições suaves.
+   B «Construtiva»: imagens que se erguem (cortina de baixo para cima), títulos palavra a palavra,
+   números que contam, linha do processo ligada ao scroll, carimbos, cabeçalho que se esconde.
+   Escolha por ?motion=a | ?motion=b (classe .motion-a / .motion-b no <html>, posta no <head>).
+   Sem JS, ou com «reduzir movimento» no sistema, nada disto se aplica: a página fica estática. */
+
+:root {
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-io: cubic-bezier(.65, 0, .35, 1); /* o do loader */
+}
+
+/* ======================================================================
+   Comum às duas propostas
+   ====================================================================== */
+
+/* Fios que se desenham (réguas por cima das listas): o border-top passa a fundo animado */
+:is(.motion-a, .motion-b) .line-rv { border-top-color: transparent; background: linear-gradient(var(--lc, var(--ink)), var(--lc, var(--ink))) left top / 0% var(--lw, 1.5px) no-repeat border-box; transition: background-size 1.1s var(--ease-io) var(--d, 0ms); }
+:is(.motion-a, .motion-b) .line-rv.is-in { background-size: 100% var(--lw, 1.5px); }
+:is(.motion-a, .motion-b) .spec.line-rv { --lw: 1px; }
+:is(.motion-a, .motion-b) .cta-strip.line-rv { --lw: 1px; --lc: var(--g200); }
+
+/* Separadores Serene | Gaio: o traço desliza para o separador escolhido */
+:is(.motion-a, .motion-b) .dev-tablist { position: relative; }
+:is(.motion-a, .motion-b) .dev-tablist button[aria-selected="true"] { border-bottom-color: transparent; }
+:is(.motion-a, .motion-b) .dev-tablist button { transition: color .25s ease; }
+:is(.motion-a, .motion-b) .dev-tablist::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 50%; height: 4px; background: var(--ink); transition: transform .5s var(--ease-out); }
+:is(.motion-a, .motion-b) .dev-tablist:has(> :nth-child(2)[aria-selected="true"])::after { transform: translateX(100%); }
+html:not(.js) .dev-tablist::after { display: none; }
+
+/* Galeria: a imagem anterior (cópia, motion.js) sai por cima da nova */
+:is(.motion-a, .motion-b) .gallery { position: relative; }
+.gallery__ghost { position: absolute; top: 0; left: 0; z-index: 1; object-fit: cover; pointer-events: none; }
+:is(.motion-a, .motion-b) .gallery__thumbs button { transition: opacity .25s ease, outline-color .25s ease, transform .25s var(--ease-out); }
+
+/* Campos do formulário que aparecem com o tipo de pedido */
+:is(.motion-a, .motion-b) [data-when]:not([hidden]) { animation: mo-field-in .45s var(--ease-out) both; }
+@keyframes mo-field-in { from { opacity: 0; transform: translateY(-6px); } }
+:is(.motion-a, .motion-b) .choice { transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease; }
+:is(.motion-a, .motion-b) .input { transition: border-color .2s ease, box-shadow .2s ease; }
+:is(.motion-a, .motion-b) .input:hover { border-color: var(--ink); }
+
+/* Menu recolhido (≤ 1200 px): abre a deslizar */
+:is(.motion-a, .motion-b) .site-header.is-open .menu { animation: mo-menu-in .35s var(--ease-out) both; }
+@keyframes mo-menu-in { from { opacity: 0; transform: translateY(-8px); } }
+:is(.motion-a, .motion-b) .menu-toggle__icon { transition: height .25s var(--ease-out), border-width .25s; }
+
+/* Botões */
+:is(.motion-a, .motion-b) .btn { transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, transform .15s ease, background-size .4s var(--ease-out); }
+:is(.motion-a, .motion-b) .btn:active { transform: scale(.98); }
+
+/* Pausa do vídeo do hero (WCAG 2.2.2) — botão discreto, canto inferior direito */
+.hero-pause { position: absolute; right: var(--gutter); bottom: 24px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgb(255 255 255 / .7); border-radius: 50%; background: rgb(20 20 20 / .35); color: var(--white); cursor: pointer; transition: background-color .2s ease, border-color .2s ease, transform .2s var(--ease-out); }
+.hero-pause:hover { background: rgb(20 20 20 / .6); border-color: var(--white); }
+.hero-pause:active { transform: scale(.94); }
+.hero-pause__icon { position: relative; width: 12px; height: 14px; }
+.hero-pause__icon::before, .hero-pause__icon::after { content: ""; position: absolute; top: 0; bottom: 0; width: 4px; background: currentColor; transition: clip-path .25s var(--ease-out), width .25s var(--ease-out); }
+.hero-pause__icon::before { left: 0; }
+.hero-pause__icon::after { right: 0; }
+/* Parado: as duas barras juntam-se num triângulo (play) */
+.hero-pause[aria-pressed="true"] .hero-pause__icon::before { width: 6px; clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%); }
+.hero-pause[aria-pressed="true"] .hero-pause__icon::after { width: 6px; clip-path: polygon(0 25%, 100% 50%, 100% 50%, 0 75%); }
+
+/* Seletor de proposta (só nesta fase de escolha) */
+.mo-switch { position: fixed; left: 12px; bottom: 12px; z-index: 70; display: flex; align-items: center; gap: 4px; padding: 4px 4px 4px 12px; border: 1px solid var(--ink); border-radius: 999px; background: var(--white); box-shadow: 0 6px 24px rgb(20 20 20 / .14); font-family: var(--f-mono); font-size: 12px; color: var(--g700); }
+.mo-switch__label { margin-right: 4px; }
+.mo-switch a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 999px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.mo-switch a:hover { background: var(--paper); }
+.mo-switch a[aria-current="page"] { background: var(--ink); color: var(--white); }
+.mo-switch__long { margin-left: .4em; }
+@media (max-width: 760px) {
+  .mo-switch__long { display: none; }
+  .mo-switch__label { display: none; }
+}
+
+/* Falha de segurança: se o motion.js não correr, o hero aparece ao fim de 9 s */
+@keyframes mo-failsafe { to { opacity: 1; visibility: visible; transform: none; } }
+
+/* ======================================================================
+   A — Discreta
+   ====================================================================== */
+
+/* Entradas: fade + 16 px, uma vez */
+.motion-a .rv { opacity: 0; transform: translateY(16px); transition: opacity .8s var(--ease-out) var(--d, 0ms), transform .8s var(--ease-out) var(--d, 0ms); }
+.motion-a .rv.is-in { opacity: 1; transform: none; }
+
+/* Hero: o vídeo «assenta» (1,06 → 1), logótipo e slogan entram em sequência */
+.motion-a .hero-video { transform: scale(1.06); transition: transform 2.6s var(--ease-out); }
+.motion-a .hero-logo, .motion-a .hero-slogan { opacity: 0; transform: translateY(14px); transition: opacity 1s var(--ease-out), transform 1s var(--ease-out); animation: mo-failsafe 0s 9s forwards; }
+.motion-a .hero.is-in .hero-video { transform: none; }
+.motion-a .hero.is-in .hero-logo { opacity: 1; transform: none; transition-delay: .15s; }
+.motion-a .hero.is-in .hero-slogan { opacity: 1; transform: none; transition-delay: .5s; }
+
+/* 04 Como trabalhamos: a linha desenha-se do 1.º ao 4.º círculo; os círculos aparecem em sequência */
+.motion-a .proc-line::before { transform: scaleX(0); transform-origin: left center; transition: transform 1.4s var(--ease-io) .1s; }
+.motion-a .proc-line.is-in::before { transform: none; }
+.motion-a .proc-dot { transform: scale(.6); opacity: 0; transition: transform .6s var(--ease-out) calc(var(--d, 0ms) + 150ms), opacity .4s ease calc(var(--d, 0ms) + 150ms); }
+.motion-a .proc-step.is-in .proc-dot { transform: none; opacity: 1; }
+.motion-a .proc-step::after { transform: scaleY(0); transform-origin: top center; transition: transform .8s var(--ease-io) calc(var(--d, 0ms) + 400ms); }
+.motion-a .proc-step.is-in::after { transform: none; }
+
+/* Ligações de texto: seta que avança ao passar o rato */
+.motion-a .link::after { content: "→"; display: inline-block; margin-left: .4em; text-decoration: none; transition: transform .3s var(--ease-out); }
+.motion-a .link:hover::after { transform: translateX(4px); }
+
+/* Painel de empreendimento ao trocar de separador */
+.motion-a.js .dev-panel:not([hidden]) { animation: mo-fade .5s ease both; }
+@keyframes mo-fade { from { opacity: 0; } }
+
+/* Dois negócios: transições mais longas e suaves */
+.motion-a .path img { transition: transform 1.2s var(--ease-out); }
+.motion-a .path::before { transition: background-color .4s ease; }
+.motion-a .path__go { transition: transform .4s var(--ease-out), background-color .3s ease, color .3s ease; }
+
+/* ======================================================================
+   B — Construtiva
+   ====================================================================== */
+
+/* Entradas de texto: fade + 24 px */
+.motion-b .rv { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease-out) var(--d, 0ms), transform .9s var(--ease-out) var(--d, 0ms); }
+.motion-b .rv.is-in { opacity: 1; transform: none; }
+
+/* Imagens que se erguem: cortina de baixo para cima + ligeiro zoom a assentar */
+.motion-b .wp { clip-path: inset(100% 0 0 0); transition: clip-path 1.2s var(--ease-io) var(--d, 0ms), transform 1.6s var(--ease-out) var(--d, 0ms); }
+.motion-b img.wp { transform: scale(1.12); }
+.motion-b main { overflow-x: clip; } /* o zoom inicial das imagens não pode criar scroll horizontal */
+.motion-b .wp.is-in { clip-path: inset(-12px); transform: none; }
+
+/* Títulos palavra a palavra (motion.js parte o texto em .w > span) */
+.motion-b .w { display: inline-block; overflow: hidden; padding-bottom: .12em; margin-bottom: -.12em; vertical-align: top; }
+.motion-b .w > span { display: inline-block; transform: translateY(110%); transition: transform .9s var(--ease-out) calc(var(--d, 0ms) + var(--wi, 0) * 45ms); }
+.motion-b .is-in .w > span { transform: none; }
+
+/* Hero: letras do nome sobem uma a uma, a fita desenha-se (como no loader), o slogan entra no fim */
+.motion-b .hero:not(.is-in) .hero-logo, .motion-b .hero:not(.is-in) .hero-slogan { visibility: hidden; animation: mo-failsafe 0s 9s forwards; }
+.motion-b .hero-logo__name { display: inline-flex; overflow: hidden; padding: .06em 0; margin: -.06em 0; }
+.motion-b .hero-logo__name .ch { display: inline-block; transform: translateY(110%); transition: transform .9s var(--ease-out) calc(var(--ci, 0) * 45ms); }
+.motion-b .hero.is-in .hero-logo__name .ch { transform: none; }
+.motion-b .hero-trace { stroke-dasharray: 1 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.3s var(--ease-io) .45s; }
+.motion-b .hero.is-in .hero-trace { stroke-dashoffset: 0; }
+.motion-b .hero-slogan { opacity: 0; transform: translateY(12px); transition: opacity .9s var(--ease-out) 1.2s, transform .9s var(--ease-out) 1.2s; }
+.motion-b .hero.is-in .hero-slogan { opacity: 1; transform: none; }
+/* Ao descer: o vídeo aproxima-se e o logótipo sobe mais devagar (valores do motion.js) */
+.motion-b .hero-video { transform: scale(var(--hero-zoom, 1)); will-change: transform; }
+.motion-b .hero-inner { transform: translateY(var(--hero-shift, 0)); opacity: var(--hero-fade, 1); }
+
+/* Distinções como carimbos: o selo «bate» no papel */
+.motion-b .award__seal { opacity: 0; transform: scale(1.35) rotate(-8deg); transition: opacity .25s ease var(--d, 0ms), transform .5s cubic-bezier(.3, 1.5, .5, 1) var(--d, 0ms); }
+.motion-b .award.is-in .award__seal { opacity: 1; transform: none; }
+.motion-b .award > :not(.award__seal) { opacity: 0; transition: opacity .6s ease calc(var(--d, 0ms) + 250ms); }
+.motion-b .award.is-in > :not(.award__seal) { opacity: 1; }
+
+/* Números que contam (motion.js): largura fixa para o texto à volta não saltar */
+.mo-count { display: inline-block; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* 04 Como trabalhamos: a linha enche com o scroll (--p, motion.js); cada passo acende quando a linha lá chega */
+.motion-b .proc-line::before { transform: scaleX(var(--p, 0)); transform-origin: left center; }
+.motion-b .proc-dot { transition: border-color .3s ease, color .3s ease, background-color .3s ease, transform .5s cubic-bezier(.3, 1.5, .5, 1); }
+.motion-b .proc-step:not(.is-on) .proc-dot { border-color: var(--g400); color: var(--g500); background: var(--paper); transform: scale(.85); }
+.motion-b .proc-step > :not(.proc-dot) { opacity: 0; transform: translateY(12px); transition: opacity .6s ease .1s, transform .7s var(--ease-out) .1s; }
+.motion-b .proc-step.is-on > :not(.proc-dot) { opacity: 1; transform: none; }
+.motion-b .proc-step::after { transform: scaleY(0); transform-origin: top center; transition: transform .9s var(--ease-io) .3s; }
+.motion-b .proc-step.is-on::after { transform: none; }
+
+/* Cabeçalho: esconde-se ao descer, volta ao subir; régua de progresso por baixo */
+.motion-b.js .site-header { transition: background-color .25s ease, box-shadow .25s ease, transform .4s var(--ease-out); }
+.motion-b.js .site-header.is-hidden { transform: translateY(-100%); }
+.motion-b.js .site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--ink); transform: scaleX(var(--progress, 0)); transform-origin: left center; transition: opacity .25s ease; }
+.motion-b.js .site-header.is-over::after { opacity: 0; }
+
+/* Botões: o fundo varre da esquerda */
+.motion-b .btn { background-image: linear-gradient(var(--sweep, var(--g700)), var(--sweep, var(--g700))); background-size: 0% 100%; background-repeat: no-repeat; }
+.motion-b .btn:hover { background-color: var(--ink); background-size: 100% 100%; }
+.motion-b .btn--line { --sweep: var(--ink); }
+.motion-b .btn--line:hover { background-color: transparent; }
+.motion-b.js .site-header.is-over .btn { --sweep: var(--g200); }
+.motion-b.js .site-header.is-over .btn:hover { background-color: var(--white); }
+
+/* Ligações de texto: o sublinhado recolhe e volta a desenhar-se */
+.motion-b .link { text-decoration: none; background: linear-gradient(currentColor, currentColor) right calc(50% + .72em) / 100% 1px no-repeat; }
+.motion-b .link:hover { animation: mo-redraw .6s var(--ease-io) both; }
+@keyframes mo-redraw {
+  0% { background-size: 100% 1px; background-position-x: right; }
+  50% { background-size: 0% 1px; background-position-x: right; }
+  50.1% { background-size: 0% 1px; background-position-x: left; }
+  100% { background-size: 100% 1px; background-position-x: left; }
+}
+
+/* Dois negócios: a seta enche-se de branco */
+.motion-b .path img { transition: transform 1.2s var(--ease-out); }
+.motion-b .path__go { transition: transform .4s var(--ease-out), background-color .3s ease, color .3s ease; }
+.motion-b .path:hover .path__go { background: var(--white); color: var(--ink); transform: translateX(6px); }
+
+/* Miniaturas da galeria sobem ao passar o rato */
+.motion-b .gallery__thumbs button:hover { transform: translateY(-3px); }
+
+/* Painel de empreendimento ao trocar de separador */
+.motion-b.js .dev-panel:not([hidden]) .dev-info { animation: mo-rise .6s var(--ease-out) both; }
+@keyframes mo-rise { from { opacity: 0; transform: translateY(16px); } }
+
+/* Mosaicos do formulário: o escolhido ganha fundo */
+.motion-b .radios--tiles .choice:has(input:checked) { background: var(--white); }

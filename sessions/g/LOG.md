@@ -2,6 +2,15 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · claude/blissful-cerf-u8l1t1 · sessão 8: motion e micro-animações (2 propostas)
+- Pedido do António: a homepage do G está quase final; falta o motion e as micro-animações. **2 propostas**, na própria homepage, alternáveis por um seletor fixo (canto inferior esquerdo) ou por `?motion=a|b`. Sem parâmetro a página fica como estava.
+  - **A — Discreta:** fade + 16 px em sequência; vídeo do hero assenta (1,06 → 1); fios das listas a desenhar; linha do processo desenha-se do 1 ao 4; seta nas ligações; galeria em fade cruzado.
+  - **B — Construtiva:** letras do nome sobem e a fita desenha-se (traço do loader); parallax no hero; distinções como carimbos; títulos palavra a palavra; fotos em cortina de baixo para cima; números a contar (valor real para leitores de ecrã); linha do processo ligada ao scroll; cabeçalho esconde/volta com régua de progresso; botões com varrimento; sublinhado redesenhado; galeria em cortina lateral.
+  - Comum: traço dos separadores desliza; campos do formulário/menu com entrada suave; **botão de pausa do vídeo** (WCAG 2.2.2).
+- `prototypes/g/motion.css` + `motion.js` (novos) e 2 linhas no `<head>`. «Reduzir movimento» ou sem JS → nada se aplica. Sem scroll horizontal a 390 e 1440 nas duas propostas; sem erros na consola.
+- Nota técnica: as cortinas (clip-path) observam o elemento pai — o Chrome conta o recorte do próprio elemento no IntersectionObserver.
+- Capturas: `screenshots/g/2026-10-22-motion-*.png`; vídeos de scroll das duas propostas enviados ao António na conversa (não estão no repo).
+
 ## 2026-10-22 · claude/focused-albattani-1w68d0 · sessão 7 (em paralelo com a 6): secções 01–05 refeitas
 - O António deu o hero e a faixa de distinções por concluídos; agora vamos às secções 01–06. A secção 01 estava confusa (antes/depois + áreas + mosaico + CTA sem hierarquia clara).
 - Pedido: apresentar a ENGICIVIL Construções (o que oferece, mais-valias, diferenciação), simples e moderno como as secções de cima. Criadas **4 propostas** numa página de comparação: `prototypes/g/propostas/construcoes/` (+ entrada `g-propostas-construcoes` no `vite.config.js`). A homepage não foi alterada.

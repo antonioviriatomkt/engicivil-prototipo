@@ -2,7 +2,7 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
-## 2026-10-22 · claude/focused-albattani-1w68d0 · sessão 6: secção 01 Construções — 4 propostas
+## 2026-10-22 · claude/focused-albattani-1w68d0 · sessão 7 (em paralelo com a 6): secções 01–05 refeitas
 - O António deu o hero e a faixa de distinções por concluídos; agora vamos às secções 01–06. A secção 01 estava confusa (antes/depois + áreas + mosaico + CTA sem hierarquia clara).
 - Pedido: apresentar a ENGICIVIL Construções (o que oferece, mais-valias, diferenciação), simples e moderno como as secções de cima. Criadas **4 propostas** numa página de comparação: `prototypes/g/propostas/construcoes/` (+ entrada `g-propostas-construcoes` no `vite.config.js`). A homepage não foi alterada.
   - **A** — título centrado, 3 cartões com foto (Indústria e serviços · Construção · Reabilitação), faixa «Porquê a ENGICIVIL» com 4 mais-valias numeradas, CTA.
@@ -42,7 +42,15 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - **D** — formulário ao centro; a escolha do pedido mostra os campos certos (obra → tipo de obra + local; casa → edifício); contactos numa faixa por baixo.
   - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-contacto-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 - **Decisão (António): proposta D** para o contacto. Implementada na homepage (`#contacto`, fundo branco): título centrado, formulário ao centro com o tipo de pedido em mosaicos (obra → tipo de obra + local; casa → edifício; `main.js`), faixa de contactos por baixo. Apagado o CSS antigo do contacto (`.contact-card`, `.tel-big`, `.contact-biz*`, `.contact-addr`) e o cabeçalho de secção do mockup (`.sec-head`, `.sec-meta*`, `.sec-title*`, `.sec-lead`, `.stack-*`) — todas as secções usam `.sec-intro`. **Rodapé sem sublinhados** nos links (sublinham ao passar o rato / com foco). Capturas: `screenshots/g/2026-10-22-contacto-{1440,390}.png`, página inteira `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
-- Merge para `main` a pedido do António.
+- Merge para `main` a pedido do António. Antes, `main` (com a sessão 6: dois negócios com foto + cabeçalho fixo) foi integrado neste branch sem conflitos no código; só STATUS/LOG/capturas. Verificado: sem scroll horizontal a 360–1440, âncoras ficam logo abaixo do cabeçalho fixo, separadores e campos do formulário funcionam.
+- `scripts/screenshots.mjs`: força o carregamento das imagens `loading="lazy"` antes da captura de página inteira (antes saíam em branco).
+## 2026-10-22 · claude/trabalho-em-g-29paml · sessão 6: secção dos dois negócios
+- Pedido do António: a secção dos dois negócios tinha demasiado texto. Mostrei 4 variantes numa página temporária (A cartão-link · B índice numerado · C faixa escura · D pergunta); gostou de A e D → fiz A2 e D2 com imagem → escolheu **D2**.
+- Homepage: «O que procura?» + dois blocos-link com foto, véu a 60 % e verbo em branco («Construir ou reabilitar» / «Comprar casa»), nome do negócio em pequeno; «Promover um edifício» como botão discreto por baixo. CSS `.path*`/`.hero-third` substituído por `.paths-q`, `.paths`, `.path*`, `.paths-third`.
+- Contraste medido: branco sobre o píxel mais claro de cada foto com véu 60 % ≥ 4,8:1.
+- Página de variantes apagada (e a entrada no `vite.config.js`). Sem scroll horizontal a 390, 768, 1024 e 1440.
+- 2.ª parte (pedido do António): **cabeçalho fixo**, transparente com texto branco por cima do hero e branco depois de passar o hero (`main.js` mede alturas e põe/tira `.is-over`). No telemóvel, quando fica branco esconde a barra dos negócios (decisão minha, para o cabeçalho fixo não ocupar 166 px). Âncoras testadas: a secção fica logo abaixo do cabeçalho.
+- Capturas: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

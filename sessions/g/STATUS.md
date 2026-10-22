@@ -1,12 +1,12 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-22** · por: sessão 6 (Claude) · branch `claude/focused-albattani-1w68d0` (integrado em `main`)
+> Atualizado: **2026-10-22** · por: sessão 7 (Claude) · branch `claude/focused-albattani-1w68d0` (integrado em `main`). A sessão 6 (`claude/trabalho-em-g-29paml`, em paralelo) fez a secção dos dois negócios e o cabeçalho fixo.
 
 > Lembrete do António: é um **protótipo para mostrar o design ao cliente**, não um site de produção.
 
 ## Onde estamos
-**A homepage do G está completa de cima a baixo.** O hero, a faixa de distinções, os dois negócios e os sócios ficaram fechados na sessão 5. As secções 01–05 foram refeitas na sessão 6. Em cada secção o António escolheu uma de 4 propostas; as capturas das propostas estão em `screenshots/g/2026-10-22-<secção>-{a,b,c,d}-*.png`.
+**A homepage do G está completa de cima a baixo.** O hero, a faixa de distinções e os sócios ficaram fechados na sessão 5. Os dois negócios e o cabeçalho fixo foram feitos na sessão 6. As secções 01–05 foram refeitas na sessão 7. Em cada secção o António escolheu uma de 4 propostas; as capturas das propostas estão em `screenshots/g/2026-10-22-<secção>-{a,b,c,d}-*.png`.
 
 ### Ficheiros
 - `prototypes/g/index.html` = homepage (sem estilos inline).
@@ -18,6 +18,7 @@
 
   **Páginas novas do G devem usar este ficheiro.**
 - `prototypes/g/main.js` = JS do G:
+  - cabeçalho fixo: transparente sobre o hero (`.is-over`), branco depois; mede as alturas para `--header-top`/`--header-solid`;
   - menu recolhido (≤ 1200 px);
   - arranque do vídeo do hero;
   - separadores (`[data-tabs]`, padrão ARIA; uma ligação para o id de um painel abre o separador certo);
@@ -28,18 +29,20 @@
   - Páginas novas do G devem copiar o bloco `#loader`, a classe `is-loading` no script do `<head>` e o `<script src="…/loader.js">`.
 
 ### Homepage, por ordem
-1. **Cabeçalho:** wordmark «ENGICIVIL» + símbolo da fita.
-   - ≤ 1200 px: botão «Menu» + barra dos dois negócios.
+1. **Cabeçalho fixo** (sessão 6): wordmark «ENGICIVIL» + símbolo da fita.
+   - Com JS fica fixo no topo: transparente com texto branco por cima do hero, branco depois.
+   - `scroll-padding-top` evita que as âncoras fiquem tapadas. Sem JS fica estático.
+   - ≤ 1200 px: botão «Menu» + barra dos dois negócios, que se esconde quando o cabeçalho fica branco.
    - O item «Sobre nós» leva à secção dos sócios (`#sobre`).
    - O item «Onde trabalhamos» leva à 03 (`#locais`).
 2. **Hero:** vídeo a toda a largura com o logótipo branco ao centro e o slogan «O seu projeto em boas mãos».
    - Véu escuro a 60 %.
    - Sem botão de pausa (⚠️ falha WCAG 2.2.2).
 3. **Faixa de distinções** (fundo branco): Alvará classe 5 · PME Líder 2020–2022 · TOP 5% PME 2022 · TOP 10 PME do setor 2022 · R.U.-I.S. Selos em `public/img/selos/`; 3 deles são provisórios.
-4. **Título da página + os dois negócios**:
+4. **Título da página + os dois negócios** (sessão 6, versão «D2»):
    - `<h1>` centrado;
-   - cartões Construções | Empreendimentos (com links `#serene`/`#gaio`);
-   - linha «Vai promover um edifício?» → `#locais`.
+   - «O que procura?» + dois blocos-link com foto e véu a 60 %: «Construir ou reabilitar» → `#construcoes` · «Comprar casa» → `#empreendimentos`;
+   - botão discreto «Promover um edifício» → `#locais`.
 5. **Os dois sócios fundadores** (`#sobre`): foto, texto e «Ligar».
 6. **01 Construções** (`#construcoes`, branco):
    - título centrado;
@@ -76,7 +79,8 @@
 4. **Pausa do vídeo** (WCAG 2.2.2): propor uma solução discreta.
 5. **Selos:** substituir os 3 recortes (PME Líder, Scoring TOP 5%, Scoring TOP 10) pelos ficheiros oficiais e confirmar se há anos mais recentes.
 6. Vídeo do hero em 1080p, se houver o original.
-7. Quando houver identidade nova, trocar: a foto dos sócios (tem o logótipo antigo ao fundo), o símbolo do loader e o do wordmark.
+7. Os dois negócios: a foto da Delabie é a mesma obra do vídeo do hero. Alternativas, se o António quiser variar: `public/img/site/construcao-3.jpg` ou `ribas-i-3.jpg`.
+8. Quando houver identidade nova, trocar: a foto dos sócios (tem o logótipo antigo ao fundo), o símbolo do loader e o do wordmark.
 
 ## Dúvidas em aberto
 - Ver «Por confirmar com o cliente» em `context/decisoes.md`. Mais específicas do G:

@@ -23,6 +23,9 @@ for (const path of pages) {
     const page = await browser.newPage({ viewport: { width, height: 900 } })
     await page.goto(base + path, { waitUntil: 'networkidle' })
     await page.evaluate(() => document.fonts.ready)
+    // Imagens com loading="lazy" fora do ecrã não carregam numa captura de página inteira: forçar o carregamento
+    await page.evaluate(() => document.querySelectorAll('img[loading="lazy"]').forEach((img) => { img.loading = 'eager' }))
+    await page.waitForLoadState('networkidle')
     // G tem ecrã de carregamento: esperar que saia antes de capturar
     await page.waitForFunction(() => !document.documentElement.classList.contains('is-loading'))
     const file = `${out}/${day}-${slug}-${label}.png`

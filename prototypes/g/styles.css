@@ -159,8 +159,8 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 /* ---------- Os dois negócios (cartões só de texto) ---------- */
 .paths-sec { padding: 56px 0 0; }
 .paths-sec > .wrap { display: flex; flex-direction: column; gap: 40px; }
-/* Título da página, por cima dos cartões dos dois negócios */
-.intro { display: flex; flex-direction: column; gap: 16px; max-width: 920px; }
+/* Título da página, centrado, por cima dos cartões dos dois negócios */
+.intro { display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 920px; margin: 0 auto; text-align: center; }
 .intro__eyebrow { margin: 0; font-family: var(--f-mono); font-size: 13px; color: var(--g700); }
 .intro__title { margin: 0; font-family: var(--f-ui); font-size: clamp(2rem, 4.2vw, 3.75rem); line-height: 1.04; font-weight: 600; letter-spacing: -0.03em; max-width: 22ch; }
 .path { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--ink); }

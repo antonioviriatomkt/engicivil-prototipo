@@ -276,7 +276,7 @@ html:not(.js) .dev-tablist { display: none; }
 .spec dd.with-mark { display: flex; }
 .placeholder { color: var(--g700); }
 
-/* ---------- 03 Prédios para promotores: montra em cartões + locais ---------- */
+/* ---------- 03 Prédios para promotores: montra em cartões ---------- */
 .preds > .wrap { gap: 56px; }
 .pred-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--col-gap); }
 .pred-card { display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--white); }
@@ -289,28 +289,6 @@ html:not(.js) .dev-tablist { display: none; }
 .pred-kv div { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--g200); font-family: var(--f-mono); font-size: 13px; line-height: 1.5; }
 .pred-kv dt { color: var(--g500); }
 .pred-kv dd { margin: 0; color: var(--g700); }
-.places { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; padding-top: 20px; border-top: 1px solid var(--g200); font-family: var(--f-ui); font-size: 1.0625rem; color: var(--g700); }
-.places span { font-family: var(--f-mono); font-size: 13px; line-height: 1.9; color: var(--accent); }
-
-/* ---------- 04 Sobre nós ---------- */
-.org-fig { margin: 0; display: flex; flex-direction: column; gap: 12px; }
-.org { display: flex; flex-direction: column; font-family: var(--f-ui); }
-.org svg { display: block; }
-.org__root { padding: 16px 18px; display: flex; flex-direction: column; gap: 2px; background: var(--ink); color: var(--white); }
-.org__name { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.02em; }
-.org__sub { font-family: var(--f-mono); font-size: 12px; color: var(--g200); }
-.org__kids { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-.org__kid { padding: 14px; display: flex; flex-direction: column; gap: 4px; background: var(--white); border: 1px solid var(--ink); }
-.org__kid-name { font-size: 1.0625rem; font-weight: 600; }
-.org__kid-desc { font-family: var(--f-text); font-size: 0.9375rem; line-height: 1.45; color: var(--g700); }
-
-.cred { padding: 0 20px; background: var(--white); }
-.cred__row { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(0, 1.6fr) minmax(0, 1.6fr); column-gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--g200); font-size: 1.0625rem; line-height: 1.45; }
-.cred__row:last-child { border-bottom: 0; }
-.cred__head { padding: 12px 0 10px; border-bottom-color: var(--ink); font-family: var(--f-mono); font-size: 12px; line-height: normal; color: var(--g500); }
-.cred strong { font-family: var(--f-ui); font-weight: 600; }
-.cred__sub { font-size: 0.9375rem; color: var(--g700); }
-.cred__ref { font-family: var(--f-mono); font-size: 14px; }
 
 /* ---------- 05 Como trabalhamos ---------- */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; border-top: 1px solid var(--ink); }
@@ -424,8 +402,7 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
   .dev-brand { min-height: 56px; padding: 8px 16px; }
   .dev-brand img { height: 30px; }
   .dev-brand--gaio img { height: 40px; }
-  .spec__row, .cred__row { grid-template-columns: minmax(0, 1fr); row-gap: 12px; }
-  .cred__head { display: none; }
+  .spec__row { grid-template-columns: minmax(0, 1fr); row-gap: 12px; }
 
   .preds > .wrap { gap: 40px; }
   .pred-grid { grid-template-columns: minmax(0, 1fr); }

@@ -70,9 +70,12 @@
   <!-- Hero: os sócios ao centro, um negócio de cada lado -->
   <section class="hero" aria-labelledby="h-hero">
     <div class="wrap">
-      <div class="grid align-end">
-        <h1 id="h-hero" class="hero-title span-7">Construímos em Aveiro desde 2013.</h1>
-        <p class="hero-lead span-5 start-8">Somos 30 especialistas, com engenharia e estaleiro próprios. Fazemos obra para empresas, famílias e promotores, e construímos casas nossas para vender.</p>
+      <div class="hero-head grid align-end">
+        <div class="hero-intro span-8">
+          <p class="hero-eyebrow">ENGICIVIL · Aveiro, desde 2013</p>
+          <h1 id="h-hero" class="hero-title">Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.</h1>
+        </div>
+        <p class="hero-lead span-4 start-9">Somos 30 especialistas, com engenharia e estaleiro próprios. Fazemos obra para empresas, famílias e promotores, e construímos casas nossas para vender.</p>
       </div>
 
       <div class="grid align-start">
@@ -86,11 +89,9 @@
               <span class="sb-pre">ENGICIVIL</span>
               <span class="path__name">Construções</span>
             </h2>
-            <p class="path__text">Construímos e reabilitamos edifícios: indústria e serviços, habitação e moradias, casas antigas.</p>
-            <ul class="path__list">
-              <li>Obras até 2.656.000 €</li>
-              <li>24 projetos publicados</li>
-              <li>Engenharia e estaleiro próprios</li>
+            <ul class="path__rows">
+              <li><span class="path__row-name">Indústria e serviços</span><span class="path__row-meta">Delabie, Bresimar, loja ISPM</span></li>
+              <li><span class="path__row-name">Habitação e reabilitação</span><span class="path__row-meta">Edifícios, moradias e fachadas</span></li>
             </ul>
             <div class="actions">
               <a href="#contacto" class="btn">Pedir orçamento</a>
@@ -104,9 +105,9 @@
           <img src="/img/site/engicivil-3.jpg" alt="Os dois sócios fundadores da Engicivil, lado a lado, em fotografia a preto e branco.">
           <figcaption class="fig-cap">
             <span class="fig-cap__n">Fig. 1</span>
-            <span>Os dois sócios fundadores. Abriram a Engicivil em 2013, com mais de duas décadas de experiência em obra. A mesma equipa constrói para clientes e para os nossos empreendimentos.</span>
+            <span>Os dois sócios fundadores, com mais de duas décadas de obra. A mesma equipa constrói para clientes e para os nossos empreendimentos.</span>
           </figcaption>
-          <p class="founders__call">Prefere falar? Ligue para o <a href="tel:+351234060223">234 060 223</a>.</p>
+          <a href="tel:+351234060223" class="btn btn--line founders__call">Ligar 234 060 223</a>
         </figure>
 
         <!-- Caminho 2 -->
@@ -118,11 +119,9 @@
               <span class="sb-pre">ENGICIVIL</span>
               <span class="path__name">Empreendimentos</span>
             </h2>
-            <p class="path__text">Promovemos e construímos edifícios de habitação na região de Aveiro, com apartamentos à venda.</p>
-            <ul class="path__list">
-              <li>Serene, Ílhavo: 8 apartamentos</li>
-              <li>Edifício Gaio, Oliveira do Bairro: 12</li>
-              <li>T1 a T3 duplex</li>
+            <ul class="path__rows">
+              <li><a href="#serene"><span class="path__row-name">Serene Condominium</span><span class="path__row-meta">Ílhavo · 8 apartamentos</span></a></li>
+              <li><a href="#gaio"><span class="path__row-name">Edifício Gaio</span><span class="path__row-meta">Oliveira do Bairro · 12 apartamentos</span></a></li>
             </ul>
             <div class="actions">
               <a href="#empreendimentos" class="btn">Ver casas à venda</a>
@@ -132,16 +131,19 @@
         </article>
       </div>
 
+      <!-- Terceiro caminho: promotores e prédios construídos para terceiros -->
+      <p class="hero-third"><span class="mark mark--open" aria-hidden="true"></span><span>Vai promover um edifício?</span> <a href="#locais">Veja os prédios que construímos para outros promotores</a></p>
+
       <!-- Carimbo: prova comum -->
       <div class="proof">
         <p class="note">Comum aos dois negócios. ENGICIVIL – Cardoso &amp; Manata, Lda.</p>
         <dl class="facts">
           <div><dt>Alvará IMPIC 70366-PUB</dt><dd>Classe 5</dd></div>
-          <div><dt>Valor máximo por obra</dt><dd>2.656.000 €</dd></div>
+          <div class="facts__extra"><dt>Valor máximo por obra</dt><dd>2.656.000 €</dd></div>
           <div><dt>Em atividade desde</dt><dd>2013</dd></div>
           <div><dt>Equipa própria</dt><dd>30 especialistas</dd></div>
           <div><dt>IAPMEI, 2021 a 2023</dt><dd>PME Líder</dd></div>
-          <div><dt>Melhores PME de Portugal, 2022</dt><dd>TOP 5%</dd></div>
+          <div class="facts__extra"><dt>Melhores PME de Portugal, 2022</dt><dd>TOP 5%</dd></div>
         </dl>
       </div>
     </div>
@@ -274,7 +276,7 @@
       </div>
 
       <!-- Ficha E-01 -->
-      <article class="dev grid" aria-labelledby="h-serene">
+      <article id="serene" class="dev grid" aria-labelledby="h-serene">
         <figure class="dev__fig span-5">
           <img src="/img/empreendimentos/serene-condominium/edificio-serene-16.jpg" alt="Render do Serene Condominium à noite, com as varandas iluminadas.">
           <div class="dev__brand">
@@ -303,7 +305,7 @@
       </article>
 
       <!-- Ficha E-02 -->
-      <article class="dev grid" aria-labelledby="h-gaio">
+      <article id="gaio" class="dev grid" aria-labelledby="h-gaio">
         <figure class="dev__fig span-5">
           <img src="/img/empreendimentos/edificio-gaio/edificio-gaio-1.jpg" alt="Render do Edifício Gaio ao pôr do sol, visto da rua.">
           <div class="dev__brand dev__brand--gaio">

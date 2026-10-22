@@ -12,6 +12,12 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - Mais-valias só com factos do brief: engenharia própria, estaleiro e meios de produção próprios + rede de parceiros, gabinete de planeamento e orçamentação («precisão e transparência»), alvará classe 5.
 - Sem scroll horizontal a 390, 768, 1024 e 1440. Capturas: `screenshots/g/2026-10-22-construcoes-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`, a secção como estava).
 - **Decisão (António): proposta A.** Implementada na homepage: a secção `#construcoes` passou a ter título centrado, 3 cartões com foto e a faixa «Porquê a ENGICIVIL» + faixa de CTA. Saíram os 2 antes/depois, o mosaico e o bloco «24 obras publicadas». Fundo branco (mantém a alternância branco/papel com as secções vizinhas). CSS em `styles.css` (secção «01 Construções», classes `.cons*`); apagado o CSS antigo (`.pair`, `.kv`, `.tag`, `.areas`, `.mos`, `.h3--md`…). Página de propostas e entrada do `vite.config.js` apagadas. Sem scroll horizontal a 360, 390, 768, 1024, 1280 e 1440. Capturas: `screenshots/g/2026-10-22-construcoes-{1440,1024,390}.png`.
+- **Secção 02 Empreendimentos — 4 propostas** em `prototypes/g/propostas/empreendimentos/` (+ entrada `g-propostas-empreendimentos` no `vite.config.js`); todas com o mesmo cabeçalho da 01 («02 · ENGICIVIL Empreendimentos» + «Casas que promovemos e construímos.»):
+  - **A** — dois cartões lado a lado (render + faixa escura com o logótipo, estado, lema, local/tipologias, etiquetas, CTAs) + faixa «Plantas, áreas e preços a pedido».
+  - **B** — render grande (16:9) por empreendimento, com painel branco de dados por cima (Serene à direita, Gaio à esquerda).
+  - **C** — separadores Serene | Gaio; galeria com exterior + 3 interiores (miniaturas trocam a imagem principal) e ficha com o logótipo.
+  - **D** — fundo escuro; tabela de comparação (Local, Fogos, Estado, Destaques, Preço) com os renders noturnos no topo de cada coluna.
+  - Sem scroll horizontal a 360, 390, 768, 1024 e 1440. Capturas: `screenshots/g/2026-10-22-empreendimentos-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

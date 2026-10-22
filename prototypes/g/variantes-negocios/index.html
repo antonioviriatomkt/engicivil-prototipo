@@ -30,40 +30,6 @@
 .va-third { margin: -16px 0 0; text-align: center; font-family: var(--f-ui); color: var(--g700); }
 .va-third a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; color: var(--ink); }
 
-/* ---------- B · Índice numerado ---------- */
-.vb { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
-.vb li { border-bottom: 1px solid var(--ink); }
-.vb a { display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 0.9fr) auto; align-items: center; gap: 24px; padding: 28px 0; color: var(--ink); text-decoration: none; }
-.vb a:hover { background: var(--white); }
-.vb a:hover .arrow { transform: translateX(6px); }
-.vb__n { font-family: var(--f-mono); font-size: 13px; color: var(--g500); padding-left: 8px; }
-.vb__name { display: flex; flex-direction: column; gap: 2px; font-family: var(--f-ui); }
-.vb__name strong { font-size: clamp(2rem, 3.6vw, 3.25rem); line-height: 1; font-weight: 600; letter-spacing: -0.02em; }
-.vb__meta { font-family: var(--f-mono); font-size: 13px; line-height: 1.5; color: var(--g700); }
-.vb__cta { display: flex; align-items: center; gap: 12px; padding-right: 8px; font-family: var(--f-ui); font-weight: 500; white-space: nowrap; }
-.vb__cta .arrow { font-size: 1.5rem; }
-.vb li.vb--third { border-bottom-color: var(--g200); }
-.vb--third a { padding: 14px 0; }
-.vb--third .vb__name strong { font-size: 1.125rem; letter-spacing: 0; }
-
-/* ---------- C · Faixa escura ---------- */
-.vc { background: var(--ink); color: var(--white); }
-.vc__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.vc__col { display: flex; flex-direction: column; gap: 20px; padding: 40px; }
-.vc__col + .vc__col { border-left: 1px solid var(--g700); }
-.vc .kicker { color: var(--g200); }
-.vc__title { margin: 0; display: flex; flex-direction: column; gap: 2px; font-family: var(--f-ui); }
-.vc__title strong { font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1; font-weight: 600; letter-spacing: -0.02em; }
-.vc__chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.vc__chips li > * { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border: 1px solid var(--g500); border-radius: 999px; font-family: var(--f-mono); font-size: 13px; color: var(--white); }
-.vc__chips a { min-height: 44px !important; text-decoration: none; }
-.vc__chips a:hover { background: var(--white); color: var(--ink); }
-.vc .btn { align-self: flex-start; margin-top: auto; background: var(--white); color: var(--ink); }
-.vc .btn:hover { background: var(--g200); color: var(--ink); }
-.vc a:focus-visible { outline-color: var(--white); }
-.vc__third { margin: 0; padding: 4px 40px; border-top: 1px solid var(--g700); font-family: var(--f-ui); color: var(--g200); }
-.vc__third a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; color: var(--white); }
-
 /* ---------- D · Pergunta ---------- */
 .vd-q { margin: 0; text-align: center; font-family: var(--f-mono); font-size: 13px; color: var(--g700); }
 .vd { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--col-gap); margin-top: -24px; }
@@ -78,24 +44,36 @@
 .vd-third a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border: 1px solid var(--g200); background: var(--white); font-family: var(--f-ui); font-weight: 500; color: var(--ink); text-decoration: none; }
 .vd-third a:hover { border-color: var(--ink); }
 
-@media (prefers-reduced-motion: reduce) { .arrow, .vd-tile__circle { transition: none; } }
+/* ---------- A2 · Cartão-link com imagem ---------- */
+.va-card--img { padding: 0; gap: 0; overflow: hidden; }
+.va-card__media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-bottom: 1px solid var(--ink); background: var(--g200); }
+.va-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.va-card--img:hover .va-card__media img { transform: scale(1.03); }
+.va-card__inner { display: flex; flex-direction: column; gap: 40px; padding: 28px; }
+.va-card__head { display: flex; flex-direction: column; gap: 10px; }
+
+/* ---------- D2 · Pergunta com imagem (foto de fundo + véu, como o hero) ---------- */
+.vd-tile--img { position: relative; isolation: isolate; min-height: 360px; overflow: hidden; color: var(--white); border-color: var(--ink); }
+.vd-tile--img img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.vd-tile--img::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(20, 20, 20, .6); transition: background .2s ease; }
+.vd-tile--img:hover { background: transparent; }
+.vd-tile--img:hover::before { background: rgba(20, 20, 20, .72); }
+.vd-tile--img:hover img { transform: scale(1.03); }
+.vd-tile--img:hover, .vd-tile--img:hover * { color: var(--white); }
+.vd-tile--img:focus-visible { outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) { .arrow, .vd-tile__circle, .va-card__media img, .vd-tile--img img { transition: none; } }
 
 @media (max-width: 760px) {
   .v-sec { padding: 32px 0 48px; }
-  .va, .vd, .vc__grid { grid-template-columns: minmax(0, 1fr); }
+  .va, .vd { grid-template-columns: minmax(0, 1fr); }
   .va-card { gap: 40px; padding: 24px; }
-  .vb a { grid-template-columns: 40px minmax(0, 1fr) auto; grid-template-areas: "n name cta" ". meta cta"; gap: 8px 12px; padding: 20px 0; }
-  .vb__n { grid-area: n; align-self: start; padding: 6px 0 0; }
-  .vb__name { grid-area: name; }
-  .vb__meta { grid-area: meta; }
-  .vb__cta { grid-area: cta; padding-right: 0; }
-  .vb__cta span:not(.arrow) { display: none; }
-  .vc__col { padding: 28px 20px; }
-  .vc__col + .vc__col { border-left: 0; border-top: 1px solid var(--g700); }
-  .vc__third { padding: 4px 20px; }
   .vd { margin-top: -24px; }
   .vd-tile { min-height: 150px; padding: 24px; }
   .vd-tile__circle { width: 48px; height: 48px; }
+  .va-card--img { padding: 0; gap: 0; }
+  .va-card__inner { gap: 32px; padding: 24px; }
+  .vd-tile--img { min-height: 260px; }
 }
 </style>
 </head>
@@ -132,54 +110,33 @@
   </div>
 </section>
 
-<!-- ===== B ===== -->
-<div class="v-label"><div class="wrap"><b>B · Índice numerado</b>Sem caixas: linhas a toda a largura, como as tabelas técnicas do resto da página.</div></div>
+<!-- ===== A2 ===== -->
+<div class="v-label"><div class="wrap"><b>A2 · Cartão-link com imagem</b>A, com uma foto por cima: obra feita (Delabie) e o Serene.</div></div>
 <section class="v-sec">
   <div class="wrap">
-    <ol class="vb">
-      <li><a href="#construcoes">
-        <span class="vb__n">01</span>
-        <span class="vb__name"><span class="sb-pre">ENGICIVIL</span><strong>Construções</strong></span>
-        <span class="vb__meta">Indústria, habitação e reabilitação, para terceiros</span>
-        <span class="vb__cta"><span>Pedir orçamento</span> <span class="arrow" aria-hidden="true">→</span></span>
-      </a></li>
-      <li><a href="#empreendimentos">
-        <span class="vb__n">02</span>
-        <span class="vb__name"><span class="sb-pre">ENGICIVIL</span><strong>Empreendimentos</strong></span>
-        <span class="vb__meta">Serene · Ílhavo<br>Gaio · Oliveira do Bairro</span>
-        <span class="vb__cta"><span>Ver casas à venda</span> <span class="arrow" aria-hidden="true">→</span></span>
-      </a></li>
-      <li class="vb--third"><a href="#locais">
-        <span class="vb__n">03</span>
-        <span class="vb__name"><strong>Para promotores</strong></span>
-        <span class="vb__meta">Prédios que construímos para terceiros</span>
-        <span class="vb__cta"><span>Ver prédios</span> <span class="arrow" aria-hidden="true">→</span></span>
-      </a></li>
-    </ol>
-  </div>
-</section>
-
-<!-- ===== C ===== -->
-<div class="v-label"><div class="wrap"><b>C · Faixa escura</b>Um só bloco escuro (eco do hero), dividido ao meio. Detalhe em etiquetas curtas.</div></div>
-<section class="v-sec">
-  <div class="wrap">
-    <div class="vc">
-      <div class="vc__grid">
-        <div class="vc__col">
-          <span class="kicker">Para empresas e particulares</span>
-          <h2 class="vc__title"><span class="sb-pre">ENGICIVIL</span><strong>Construções</strong></h2>
-          <ul class="vc__chips"><li><span>Indústria</span></li><li><span>Habitação</span></li><li><span>Reabilitação</span></li></ul>
-          <a href="#contacto" class="btn">Pedir orçamento</a>
-        </div>
-        <div class="vc__col">
-          <span class="kicker">Para quem procura casa</span>
-          <h2 class="vc__title"><span class="sb-pre">ENGICIVIL</span><strong>Empreendimentos</strong></h2>
-          <ul class="vc__chips"><li><a href="#serene">Serene · Ílhavo</a></li><li><a href="#gaio">Gaio · Oliveira do Bairro</a></li></ul>
-          <a href="#empreendimentos" class="btn">Ver casas à venda</a>
-        </div>
-      </div>
-      <p class="vc__third">Vai promover um edifício? <a href="#locais">Veja os prédios que construímos</a></p>
+    <div class="va">
+      <a class="va-card va-card--img" href="#construcoes">
+        <span class="va-card__media"><img src="/img/portefolio/industria-e-servicos/requalificacao-de-unidade-industrial-delabie/delabie.jpg" alt=""></span>
+        <span class="va-card__inner">
+          <span class="va-card__head">
+            <span class="kicker">Obra para empresas, particulares e promotores</span>
+            <h2 class="va-card__title"><span class="sb-pre">ENGICIVIL</span><span class="va-card__name">Construções</span></h2>
+          </span>
+          <span class="va-card__foot">Pedir orçamento <span class="arrow" aria-hidden="true">→</span></span>
+        </span>
+      </a>
+      <a class="va-card va-card--img" href="#empreendimentos">
+        <span class="va-card__media"><img src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt=""></span>
+        <span class="va-card__inner">
+          <span class="va-card__head">
+            <span class="kicker">Casas à venda em Ílhavo e Oliveira do Bairro</span>
+            <h2 class="va-card__title"><span class="sb-pre">ENGICIVIL</span><span class="va-card__name">Empreendimentos</span></h2>
+          </span>
+          <span class="va-card__foot">Ver casas à venda <span class="arrow" aria-hidden="true">→</span></span>
+        </span>
+      </a>
     </div>
+    <p class="va-third">Vai promover um edifício? <a href="#locais">Veja os prédios que construímos</a></p>
   </div>
 </section>
 
@@ -197,6 +154,33 @@
         <span class="vd-tile__circle" aria-hidden="true">→</span>
       </a>
       <a class="vd-tile" href="#empreendimentos">
+        <span class="vd-tile__text">
+          <span class="vd-tile__verb">Comprar casa</span>
+          <span class="vd-tile__biz"><span class="sb-pre">ENGICIVIL</span> Empreendimentos</span>
+        </span>
+        <span class="vd-tile__circle" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <p class="vd-third"><a href="#locais"><span class="mark mark--open" aria-hidden="true"></span>Promover um edifício</a></p>
+  </div>
+</section>
+
+<!-- ===== D2 ===== -->
+<div class="v-label"><div class="wrap"><b>D2 · Pergunta com imagem</b>D, com a foto a encher o bloco e véu escuro a 60 % (o mesmo do hero).</div></div>
+<section class="v-sec">
+  <div class="wrap">
+    <p class="vd-q">O que procura?</p>
+    <div class="vd">
+      <a class="vd-tile vd-tile--img" href="#construcoes">
+        <img src="/img/portefolio/industria-e-servicos/requalificacao-de-unidade-industrial-delabie/delabie.jpg" alt="">
+        <span class="vd-tile__text">
+          <span class="vd-tile__verb">Construir ou reabilitar</span>
+          <span class="vd-tile__biz"><span class="sb-pre">ENGICIVIL</span> Construções</span>
+        </span>
+        <span class="vd-tile__circle" aria-hidden="true">→</span>
+      </a>
+      <a class="vd-tile vd-tile--img" href="#empreendimentos">
+        <img src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt="">
         <span class="vd-tile__text">
           <span class="vd-tile__verb">Comprar casa</span>
           <span class="vd-tile__biz"><span class="sb-pre">ENGICIVIL</span> Empreendimentos</span>

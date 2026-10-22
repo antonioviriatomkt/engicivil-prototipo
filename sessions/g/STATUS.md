@@ -1,7 +1,7 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-22** · por: sessão 5 (Claude) · branch `claude/nice-cannon-u8j2zu`
+> Atualizado: **2026-10-22** · por: sessão 6 (Claude) · branch `claude/focused-albattani-1w68d0`
 
 ## Onde estamos
 - `prototypes/g/index.html` = **homepage**, sem estilos inline. Igual ao mockup `G-BD` a 1440 px, exceto o hero (revisto, ver abaixo).
@@ -33,6 +33,7 @@
 - Acessibilidade acrescentada: link «Saltar para o conteúdo», `<main>`, alvos de 44 px no seletor PT/EN e no rodapé, foco visível no rodapé escuro, borda do rádio «Outro assunto» com contraste 3:1, opção escolhida do formulário destacada.
 
 ## Próximos passos (sugeridos — o António define a ordem)
+- **EM CURSO — secções 01–06** (o António deu o hero e a faixa de distinções por concluídos). Secção 01 Construções: 4 propostas em `prototypes/g/propostas/construcoes/` (CSS e JS próprios, capturas `screenshots/g/2026-10-22-construcoes-*`). **À espera da escolha do António.** Depois: passar a proposta escolhida para `index.html` + `styles.css` (substituir a secção 01 atual), apagar a página de propostas e a entrada no `vite.config.js`, e seguir para a secção 02.
 0. **Selos:** substituir os 3 recortes (PME Líder, Scoring TOP 5%, Scoring TOP 10) pelos ficheiros oficiais quando a Engicivil os enviar; confirmar se têm estatutos mais recentes (PME Líder 2023–2025, Scoring 2023+) — se sim, atualizar ano, tabela e carimbo.
 1. **Páginas interiores** (a confirmar com o António quais e por que ordem): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** (os links «Ver os N projetos…», «Ver o Serene», «Saber mais» ainda apontam para `#`) · **Sobre** · **Contactos**. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
 2. Formulário de contacto (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-selecionar o tipo de pedido/edifício a partir dos CTAs («Pedir informação» do Serene → «Comprar casa» + Serene).

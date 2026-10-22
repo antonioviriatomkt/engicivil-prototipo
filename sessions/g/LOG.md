@@ -2,6 +2,16 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · claude/focused-albattani-1w68d0 · sessão 6: secção 01 Construções — 4 propostas
+- O António deu o hero e a faixa de distinções por concluídos; agora vamos às secções 01–06. A secção 01 estava confusa (antes/depois + áreas + mosaico + CTA sem hierarquia clara).
+- Pedido: apresentar a ENGICIVIL Construções (o que oferece, mais-valias, diferenciação), simples e moderno como as secções de cima. Criadas **4 propostas** numa página de comparação: `prototypes/g/propostas/construcoes/` (+ entrada `g-propostas-construcoes` no `vite.config.js`). A homepage não foi alterada.
+  - **A** — título centrado, 3 cartões com foto (Indústria e serviços · Construção · Reabilitação), faixa «Porquê a ENGICIVIL» com 4 mais-valias numeradas, CTA.
+  - **B** — fundo escuro; à esquerda (fixa) título + 4 mais-valias + CTA; à direita as 3 áreas com foto grande.
+  - **C** — comparador antes/depois arrastável (Vitor Guimarães & Filhos) ao lado do título e de uma tabela de mais-valias; áreas num índice de 3 links.
+  - **D** — título + texto/CTA, faixa de números (30 especialistas · 24 obras · Classe 5), separadores por área com 2 fotos cada.
+- Mais-valias só com factos do brief: engenharia própria, estaleiro e meios de produção próprios + rede de parceiros, gabinete de planeamento e orçamentação («precisão e transparência»), alvará classe 5.
+- Sem scroll horizontal a 390, 768, 1024 e 1440. Capturas: `screenshots/g/2026-10-22-construcoes-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`, a secção como estava).
+
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.
 - Carimbos = 5 tiles brancos com o selo (Classe 5 fica em texto, não há selo) + legenda mono branca por baixo: Alvará IMPIC 70366-PUB · IAPMEI, 2020 a 2022 · Melhores PME de Portugal, 2022 · Melhores PME do setor, 2022 · AICCOPN, 2022. Os selos não têm transparência → tile branco em vez de pô-los diretamente sobre o vídeo.

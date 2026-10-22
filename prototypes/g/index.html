@@ -165,7 +165,7 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
   </section>
 
   <!-- Os sócios fundadores -->
-  <section class="founders" aria-labelledby="h-founders">
+  <section id="sobre" class="founders" aria-labelledby="h-founders">
     <div class="wrap">
       <div class="founders__grid grid align-center">
         <img class="founders__img span-5" src="/img/site/engicivil-3.jpg" alt="Os dois sócios fundadores da Engicivil, lado a lado, em fotografia a preto e branco.">
@@ -179,114 +179,58 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
     </div>
   </section>
 
-  <!-- 01 Construções -->
-  <section id="construcoes" class="section section--white" aria-labelledby="h-c">
-    <div class="wrap stack-l">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">01 / 06</span><span class="sec-meta__name">ENGICIVIL Construções</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-c" class="sec-title sec-title--18">Como estava. Como ficou.</h2>
-          <p class="sec-lead">Duas obras fotografadas antes e depois da intervenção. É a forma mais simples de mostrar o que fazemos para os nossos clientes.</p>
-        </div>
-      </div>
+  <!-- 01 Construções: o que oferece (3 áreas) e porquê a ENGICIVIL -->
+  <section id="construcoes" class="section section--white cons" aria-labelledby="h-c">
+    <div class="wrap">
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">01 · <span class="sb-pre">ENGICIVIL</span> Construções</p>
+        <h2 id="h-c" class="sec-intro__title">Construímos para empresas, particulares e promotores.</h2>
+        <p class="sec-intro__lead">Indústria, habitação e reabilitação. Soluções completas, do seu projeto à sua execução.</p>
+      </header>
 
-      <!-- Antes/depois 1 -->
-      <div class="grid align-end">
-        <div class="ba__text span-4">
-          <h3 class="h3">Vitor Guimarães &amp; Filhos</h3>
-          <p class="body">Intervenção no exterior do edifício. O mesmo enquadramento, antes da obra e depois da entrega.</p>
-          <dl class="kv">
-            <dt>Área</dt><dd>[Área de obra]</dd>
-            <dt>Local</dt><dd>[Local]</dd>
-          </dl>
-        </div>
-        <div class="pair span-8 start-5">
-          <figure>
-            <img class="ratio-1" src="/img/portefolio/industria-e-servicos/requalificacao-de-unidade-industrial-vitor-guimaraes-filhos/requalificacao-de-unidade-industrial-vitor-guimaraes-filhos-1.jpg" alt="Antes: exterior do edifício da Vitor Guimarães &amp; Filhos antes da intervenção.">
-            <figcaption class="figno">Fig. 1a. Antes</figcaption>
-          </figure>
-          <figure>
-            <img class="ratio-1" src="/img/portefolio/industria-e-servicos/requalificacao-de-unidade-industrial-vitor-guimaraes-filhos/requalificacao-de-unidade-industrial-vitor-guimaraes-filhos-10.jpg" alt="Depois: exterior do edifício da Vitor Guimarães &amp; Filhos após a intervenção.">
-            <figcaption class="figno">Fig. 1b. Depois</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- Antes/depois 2 -->
-      <div class="grid align-end">
-        <div class="pair span-8">
-          <figure>
-            <div class="tagged">
-              <img class="ratio-16-9" src="/img/portefolio/reabilitacao/reabilitacao-de-moradia-kleya/cleia-6.jpg" alt="Antes: a moradia Kleya em ruína, vista da rua.">
-              <span class="tag" aria-hidden="true">Antes</span>
-            </div>
-            <figcaption class="figno">Fig. 2a. Antes</figcaption>
-          </figure>
-          <figure>
-            <div class="tagged">
-              <img class="ratio-16-9" src="/img/portefolio/reabilitacao/reabilitacao-de-moradia-kleya/cleia.jpg" alt="Depois: a moradia Kleya reabilitada, com fachada branca.">
-              <span class="tag tag--ink" aria-hidden="true">Depois</span>
-            </div>
-            <figcaption class="figno">Fig. 2b. Depois</figcaption>
-          </figure>
-        </div>
-        <div class="ba__text ba__text--low span-4 start-9">
-          <h3 class="h3">Moradia Kleya</h3>
-          <p class="body">Reabilitação de uma casa em ruína, até voltar a ser casa.</p>
-          <dl class="kv">
-            <dt>Área</dt><dd>Reabilitação</dd>
-            <dt>Local</dt><dd>[Local]</dd>
-          </dl>
-        </div>
-      </div>
-
-      <!-- Áreas -->
-      <div class="areas-block">
-        <h3 class="h3 h3--md">24 obras publicadas, em três áreas</h3>
-        <div class="areas">
-          <div class="area">
+      <ul class="cons__cards" role="list">
+        <li class="cons-card">
+          <img src="/img/portefolio/industria-e-servicos/requalificacao-de-unidade-industrial-delabie/delabie-8.jpg" alt="Fachada negra do edifício da Delabie ao entardecer." loading="lazy">
+          <div class="cons-card__body">
             <span class="kicker">6 projetos</span>
-            <h4>Indústria e serviços</h4>
+            <h3 class="cons-card__title">Indústria e serviços</h3>
             <p class="body">Requalificamos unidades industriais e fazemos escritórios, showrooms, lojas e ginásios.</p>
-            <p class="area__refs">Delabie, Bresimar, loja ISPM</p>
-            <a href="#" class="link">Ver os 6 projetos de indústria</a>
+            <p class="cons-card__refs">Delabie · Bresimar · loja ISPM</p>
+            <a href="#" class="link">Ver projetos de indústria</a>
           </div>
-          <div class="area">
+        </li>
+        <li class="cons-card">
+          <img src="/img/portefolio/construcao/moradia-unifamiliar-oliveira-de-azemeis/moradia-oliveira-de-azemeis.jpg" alt="Moradia em betão e vidro, com relvado, em Oliveira de Azeméis." loading="lazy">
+          <div class="cons-card__body">
             <span class="kicker">12 projetos</span>
-            <h4>Construção</h4>
+            <h3 class="cons-card__title">Construção</h3>
             <p class="body">Edifícios de habitação e moradias de raiz, com a nossa engenharia e o nosso estaleiro.</p>
-            <p class="area__refs">Viaduto de Esgueira, Ribas I e II, Viela do Canto</p>
-            <a href="#" class="link">Ver os 12 projetos de construção</a>
+            <p class="cons-card__refs">Viaduto de Esgueira · Ribas I e II · Viela do Canto</p>
+            <a href="#" class="link">Ver projetos de construção</a>
           </div>
-          <div class="area">
+        </li>
+        <li class="cons-card">
+          <img src="/img/portefolio/reabilitacao/reabilitacao-de-residencia-universitaria-coimbra/residencia-universitaria-coimbra.jpg" alt="Residência universitária reabilitada em Coimbra, com fachada amarela." loading="lazy">
+          <div class="cons-card__body">
             <span class="kicker">6 projetos</span>
-            <h4>Reabilitação</h4>
-            <p class="body">Moradias, fachadas e uma residência universitária. Trabalhamos com o arquiteto ou designer que escolher.</p>
-            <p class="area__refs">Moradia Kleya, moradia Rossio, residência em Coimbra</p>
-            <a href="#" class="link">Ver os 6 projetos de reabilitação</a>
+            <h3 class="cons-card__title">Reabilitação</h3>
+            <p class="body">Moradias, fachadas e uma residência universitária, com o arquiteto ou designer que escolher.</p>
+            <p class="cons-card__refs">Moradia Kleya · moradia Rossio · Coimbra</p>
+            <a href="#" class="link">Ver projetos de reabilitação</a>
           </div>
-        </div>
+        </li>
+      </ul>
+
+      <div class="cons__why">
+        <h3 class="cons__why-title">Porquê a ENGICIVIL</h3>
+        <ol class="cons__list">
+          <li><span class="cons__n">01</span><strong>Engenharia própria</strong><span>Os nossos engenheiros acompanham a obra até à execução.</span></li>
+          <li><span class="cons__n">02</span><strong>Estaleiro e meios próprios</strong><span>Meios de produção integrados e uma rede de parceiros.</span></li>
+          <li><span class="cons__n">03</span><strong>Orçamento rigoroso</strong><span>Gabinete de planeamento e orçamentação, com precisão e transparência.</span></li>
+          <li><span class="cons__n">04</span><strong>Alvará classe 5</strong><span>Obras públicas e particulares, com seguro de responsabilidade civil.</span></li>
+        </ol>
       </div>
 
-      <!-- Mosaico de obra real -->
-      <div class="mos">
-        <figure class="mos__a">
-          <img src="/img/portefolio/industria-e-servicos/requalificacao-de-unidade-industrial-delabie/delabie-8.jpg" alt="Fachada negra do edifício da Delabie ao entardecer.">
-          <figcaption><span class="figno">Fig. 3a</span><br><strong>Delabie</strong>, edifício administrativo e produção</figcaption>
-        </figure>
-        <figure class="mos__b">
-          <img src="/img/portefolio/industria-e-servicos/requalificacao-bresimar/requalificacao-bresimar-6.jpg" alt="Receção e lobby da Bresimar.">
-          <figcaption><span class="figno">Fig. 3b</span><br><strong>Bresimar</strong>, zona comercial e lobby</figcaption>
-        </figure>
-        <figure class="mos__c">
-          <img src="/img/portefolio/industria-e-servicos/requalificacao-de-unidade-industrial-delabie/delabie.jpg" alt="Fachada da Delabie com ripado de madeira.">
-          <figcaption><span class="figno">Fig. 3c</span><br><strong>Delabie</strong>, fachada com ripado</figcaption>
-        </figure>
-        <figure class="mos__d">
-          <img src="/img/portefolio/reabilitacao/reabilitacao-de-residencia-universitaria-coimbra/residencia-universitaria-coimbra.jpg" alt="Residência universitária reabilitada em Coimbra, com fachada amarela.">
-          <figcaption><span class="figno">Fig. 3d</span><br><strong>Residência universitária</strong>, Coimbra</figcaption>
-        </figure>
-      </div>
       <div class="cta-strip">
         <p class="body">Tem uma obra para orçamentar? Diga-nos o local e o tipo de obra.</p>
         <a href="#contacto" class="btn">Pedir orçamento</a>
@@ -294,449 +238,184 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
     </div>
   </section>
 
-  <!-- 02 Empreendimentos -->
-  <section id="empreendimentos" class="section" aria-labelledby="h-e">
+  <!-- 02 Empreendimentos: um de cada vez (separadores), galeria de exterior e interiores + ficha -->
+  <section id="empreendimentos" class="section devs" aria-labelledby="h-e">
     <div class="wrap">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">02 / 06</span><span class="sec-meta__name">ENGICIVIL Empreendimentos</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-e" class="sec-title sec-title--18">Casas que promovemos e construímos</h2>
-          <p class="sec-lead">Dois edifícios na região de Aveiro, da promoção à obra pela mesma equipa. Peça plantas, áreas e preços à nossa equipa comercial.</p>
-        </div>
-      </div>
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">02 · <span class="sb-pre">ENGICIVIL</span> Empreendimentos</p>
+        <h2 id="h-e" class="sec-intro__title">Casas que promovemos e construímos.</h2>
+        <p class="sec-intro__lead">Dois edifícios na região de Aveiro, promovidos e construídos pela mesma equipa.</p>
+      </header>
 
-      <!-- Ficha E-01 -->
-      <article id="serene" class="dev grid" aria-labelledby="h-serene">
-        <figure class="dev__fig span-5">
-          <img src="/img/empreendimentos/serene-condominium/edificio-serene-16.jpg" alt="Render do Serene Condominium à noite, com as varandas iluminadas.">
-          <div class="dev__brand">
-            <img class="dev__logo" src="/img/logos/serene-logo.png" alt="Serene Condominium">
-            <span class="figno">Fig. 4</span>
+      <!-- Sem JS os dois painéis ficam visíveis, um por baixo do outro. Os ids #serene e #gaio abrem o separador certo (main.js). -->
+      <div class="dev-tabs" data-tabs>
+        <div class="dev-tablist" role="tablist" aria-label="Empreendimentos">
+          <button type="button" role="tab" id="tab-serene" aria-controls="serene" aria-selected="true"><strong>Serene Condominium</strong><span>Ílhavo · 8 apartamentos</span></button>
+          <button type="button" role="tab" id="tab-gaio" aria-controls="gaio" aria-selected="false" tabindex="-1"><strong>Edifício Gaio</strong><span>Oliveira do Bairro · 12 apartamentos</span></button>
+        </div>
+
+        <div class="dev-panel" role="tabpanel" id="serene" aria-labelledby="tab-serene">
+          <div class="gallery" data-gallery>
+            <img class="gallery__main" src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt="Render do Serene Condominium ao entardecer, visto da rua.">
+            <div class="gallery__thumbs">
+            <button type="button" aria-pressed="true" aria-label="Exterior"><img src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt="Render do Serene Condominium ao entardecer, visto da rua."></button>
+            <button type="button" aria-pressed="false" aria-label="Sala e cozinha"><img src="/img/empreendimentos/serene-condominium/edificio-serene-20.jpg" alt="Render da sala e cozinha de um apartamento do Serene."></button>
+            <button type="button" aria-pressed="false" aria-label="Quarto"><img src="/img/empreendimentos/serene-condominium/edificio-serene-21.jpg" alt="Render de um quarto do Serene."></button>
+            <button type="button" aria-pressed="false" aria-label="Casa de banho"><img src="/img/empreendimentos/serene-condominium/edificio-serene-22.jpg" alt="Render de uma casa de banho do Serene."></button>
+            </div>
           </div>
-        </figure>
-        <div class="dev__body span-7">
-          <div class="dev__head">
-            <span class="kicker">E-01</span>
-            <h3 id="h-serene" class="dev__title">Serene Condominium</h3>
-            <p class="dev__motto">«Projeto ímpar de design, conforto e luz.»</p>
-          </div>
-          <dl class="spec">
+          <div class="dev-info">
+            <h3 class="dev-brand"><img src="/img/logos/serene-logo.png" alt="Serene Condominium"></h3>
+            <p class="dev-motto">«Projeto ímpar de design, conforto e luz.»</p>
+            <dl class="spec">
             <div class="spec__row"><dt>Local</dt><dd>Rua Vasco da Gama, Ílhavo. Entre Aveiro, as praias e a ria.</dd></div>
             <div class="spec__row"><dt>Fogos</dt><dd class="mono">8 apartamentos: 4 × T2, 4 × T3 duplex</dd></div>
             <div class="spec__row"><dt>Estado</dt><dd class="with-mark"><span class="mark mark--accent" aria-hidden="true"></span>Em construção / finalizado</dd></div>
             <div class="spec__row"><dt>Inclui</dt><dd>Varandas e terraços a nascente e poente, elevador a todos os pisos, fotovoltaico em todos os apartamentos, carregamento elétrico, fachada em lâmina porcelânica e zinco patinado, condomínio fechado</dd></div>
             <div class="spec__row"><dt>Áreas e preço</dt><dd class="mono placeholder">[Área m²] · [Preço sob consulta]</dd></div>
-          </dl>
-          <div class="actions">
-            <a href="#contacto" class="btn">Pedir informação</a>
-            <a href="#" class="link">Ver o Serene</a>
+            </dl>
+            <div class="actions">
+              <a href="#contacto" class="btn">Pedir informação</a>
+              <a href="#" class="link">Ver o Serene</a>
+            </div>
           </div>
         </div>
-      </article>
 
-      <!-- Ficha E-02 -->
-      <article id="gaio" class="dev grid" aria-labelledby="h-gaio">
-        <figure class="dev__fig span-5">
-          <img src="/img/empreendimentos/edificio-gaio/edificio-gaio-1.jpg" alt="Render do Edifício Gaio ao pôr do sol, visto da rua.">
-          <div class="dev__brand dev__brand--gaio">
-            <img class="dev__logo dev__logo--gaio" src="/img/logos/gaio-logo.png" alt="Edifício Gaio">
-            <span class="figno">Fig. 5</span>
+        <div class="dev-panel" role="tabpanel" id="gaio" aria-labelledby="tab-gaio">
+          <div class="gallery" data-gallery>
+            <img class="gallery__main" src="/img/empreendimentos/edificio-gaio/edificio-gaio-17.jpg" alt="Render do Edifício Gaio à noite, visto da rua.">
+            <div class="gallery__thumbs">
+            <button type="button" aria-pressed="true" aria-label="Exterior"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-17.jpg" alt="Render do Edifício Gaio à noite, visto da rua."></button>
+            <button type="button" aria-pressed="false" aria-label="Sala"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-22.jpg" alt="Render da sala de um apartamento do Gaio."></button>
+            <button type="button" aria-pressed="false" aria-label="Sala com escada (duplex)"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-13.jpg" alt="Render da sala com escada de um duplex do Gaio."></button>
+            <button type="button" aria-pressed="false" aria-label="Quarto"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-20.jpg" alt="Render de um quarto do Gaio."></button>
+            </div>
           </div>
-        </figure>
-        <div class="dev__body span-7">
-          <div class="dev__head">
-            <span class="kicker">E-02</span>
-            <h3 id="h-gaio" class="dev__title">Edifício Gaio</h3>
-            <p class="dev__motto">«Escolher onde viver é escolher como viver.»</p>
-          </div>
-          <dl class="spec">
+          <div class="dev-info">
+            <h3 class="dev-brand dev-brand--gaio"><img src="/img/logos/gaio-logo.png" alt="Edifício Gaio"></h3>
+            <p class="dev-motto">«Escolher onde viver é escolher como viver.»</p>
+            <dl class="spec">
             <div class="spec__row"><dt>Local</dt><dd>Oliveira do Bairro</dd></div>
             <div class="spec__row"><dt>Fogos</dt><dd class="mono">12 apartamentos: T1, T2, T3 duplex</dd></div>
             <div class="spec__row"><dt>Estado</dt><dd class="with-mark"><span class="mark mark--accent-open" aria-hidden="true"></span>Em construção</dd></div>
             <div class="spec__row"><dt>Inclui</dt><dd>Varandas amplas, estacionamento interior com elevador, terraços nos duplex</dd></div>
             <div class="spec__row"><dt>Áreas e preço</dt><dd class="mono placeholder">[Área m²] · [Preço sob consulta]</dd></div>
-          </dl>
-          <div class="actions">
-            <a href="#contacto" class="btn">Pedir informação</a>
-            <a href="#" class="link">Ver o Gaio</a>
+            </dl>
+            <div class="actions">
+              <a href="#contacto" class="btn">Pedir informação</a>
+              <a href="#" class="link">Ver o Gaio</a>
+            </div>
           </div>
         </div>
-      </article>
-      <p class="note dev-note">Fig. 4 e 5: imagens de projeto. Plantas e áreas a pedido: comercial@engicivil.pt</p>
+      </div>
+      <p class="note">Imagens de projeto. Plantas e áreas a pedido: <a href="mailto:comercial@engicivil.pt">comercial@engicivil.pt</a></p>
     </div>
   </section>
 
-  <!-- 03 Onde trabalhamos + prédios para terceiros -->
-  <section id="locais" class="section section--white" aria-labelledby="h-l">
-    <div class="wrap stack-s">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">03 / 06</span><span class="sec-meta__name">Os dois negócios</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-l" class="sec-title">Onde trabalhamos</h2>
-          <p class="sec-lead">A sede é em Aveiro. Daqui saímos para obra na região, até ao Porto e a Coimbra. Em cada local, o que lá construímos, incluindo os prédios que fizemos para outros promotores.</p>
-        </div>
-      </div>
+  <!-- 03 Prédios construídos para outros promotores (montra) -->
+  <section id="locais" class="section section--white preds" aria-labelledby="h-l">
+    <div class="wrap">
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">03 · Prédios para promotores</p>
+        <h2 id="h-l" class="sec-intro__title">Prédios que construímos para outros promotores.</h2>
+        <p class="sec-intro__lead">Edifícios de habitação que a ENGICIVIL construiu na região de Aveiro. Alguns estão à venda pelos seus promotores.</p>
+      </header>
 
-      <!-- Legenda -->
-      <ul class="legend" aria-label="Legenda do tipo de obra">
-        <li><span class="mark mark--line" aria-hidden="true"></span>Obra para cliente</li>
-        <li><span class="mark mark--sq" aria-hidden="true"></span>Empreendimento próprio</li>
-        <li><span class="mark mark--open" aria-hidden="true"></span>Prédio construído para um promotor</li>
+      <ul class="pred-grid" role="list">
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-viaduto-de-esgueira/viaduto-de-esgueira-12.jpg" alt="Edifício de habitação no Viaduto de Esgueira, em Aveiro." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Viaduto de Esgueira</h3>
+            <p class="pred-card__loc">Aveiro · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/construcao-de-edificio-peralta-e-rios/construcao-de-edificio-peralta-e-rios-4.jpg" alt="Edifício de habitação Peralta e Rios, com fachada branca e grelhas escuras." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Peralta e Rios</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-viela-do-canto/edificio-de-habitacao-viela-do-canto.jpg" alt="Edifício de habitação de gaveto na Viela do Canto." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Viela do Canto</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-ribas-i/ribas-i-3.jpg" alt="Edifício de habitação Ribas I, com varandas de vidro." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Ribas I e II</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-rua-do-gravito/ed-pedro-cardoso-15.jpg" alt="Fachada do edifício de habitação da Rua do Gravito." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Rua do Gravito</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/construcao-de-edificio-gafanha-de-aquem/construcao-de-edificio-gafanha-de-aquem-9.jpg" alt="Edifício da Gafanha de Aquém em obra, com a estrutura de betão." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Gafanha de Aquém</h3>
+            <p class="pred-card__loc">Gafanhas · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
       </ul>
-
-      <div>
-        <!-- Cabeçalho do índice -->
-        <div class="ix-head" aria-hidden="true">
-          <span>Local</span>
-          <div class="ix-cols">
-            <span>Imagem</span><span>Obra</span><span>Tipo de obra</span><span>Promotor</span><span>Estado</span><span></span>
-          </div>
-        </div>
-
-        <ul class="ix-list">
-
-          <!-- Aveiro -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Aveiro</h3>
-              <span class="ix-place__note">Sede, Rua Eng.º Von Haff</span>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/edificio-de-habitacao-viaduto-de-esgueira/viaduto-de-esgueira-12.jpg" alt="Edifício de habitação no Viaduto de Esgueira, em Aveiro.">
-                <div><h4>Viaduto de Esgueira</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Ílhavo -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Ílhavo</h3>
-              <span class="ix-place__note">Entre Aveiro, as praias e a ria</span>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/empreendimentos/serene-condominium/edificio-serene-19.jpg" alt="Vista aérea dos terraços do Serene Condominium, render.">
-                <div><h4>Serene Condominium</h4><p class="ix-entry__desc">8 apartamentos, T2 e T3 duplex.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--sq" aria-hidden="true"></span>Empreendimento próprio</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>ENGICIVIL Empreendimentos</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>À venda</div>
-                <div><a href="#empreendimentos" class="link link--sm">Ver ficha</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Gafanhas -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Gafanhas</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>Gafanha de Aquém</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Oliveira do Bairro -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Oliveira do Bairro</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/empreendimentos/edificio-gaio/edificio-gaio-18.jpg" alt="Pormenor das varandas do Edifício Gaio contra o céu, render.">
-                <div><h4>Edifício Gaio</h4><p class="ix-entry__desc">12 apartamentos, T1 a T3 duplex.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--sq" aria-hidden="true"></span>Empreendimento próprio</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>ENGICIVIL Empreendimentos</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>Em construção</div>
-                <div><a href="#empreendimentos" class="link link--sm">Ver ficha</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Oliveira de Azeméis -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Oliveira de Azeméis</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/moradia-unifamiliar-oliveira-de-azemeis/moradia-oliveira-de-azemeis-7.jpg" alt="Moradia em betão e vidro em Oliveira de Azeméis.">
-                <div><h4>Moradia em betão e vidro</h4><p class="ix-entry__desc">Construção de raiz.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--line" aria-hidden="true"></span>Obra para cliente</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>Cliente particular</div>
-                <div class="ix-cell ix-cell--muted"><span class="m-label">Estado</span>Não se aplica</div>
-                <div><a href="#" class="link link--sm">Ver projeto</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Porto -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Porto</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>[Obra no Porto]</h4><p class="ix-entry__desc">[A confirmar com a Engicivil]</p></div>
-                <div class="ix-cell"><span class="m-label">Tipo de obra</span>[Tipo de obra]</div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[Estado]</div>
-                <div></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Coimbra -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Coimbra</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/site/reabilitacao-2.jpg" alt="Residência universitária em Coimbra, edifício amarelo reabilitado.">
-                <div><h4>Residência universitária</h4><p class="ix-entry__desc">Reabilitação de edifício.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--line" aria-hidden="true"></span>Obra para cliente</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Dono de obra]</div>
-                <div class="ix-cell ix-cell--muted"><span class="m-label">Estado</span>Não se aplica</div>
-                <div><a href="#" class="link link--sm">Ver projeto</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Região, concelho a confirmar -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Região de Aveiro</h3>
-              <span class="ix-place__note">[Concelho de cada obra a confirmar]</span>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/edificio-de-habitacao-ribas-i/ribas-i-3.jpg" alt="Edifício de habitação Ribas I.">
-                <div><h4>Ribas I e II</h4><p class="ix-entry__desc">Edifícios de habitação. Construídos pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/edificio-de-habitacao-viela-do-canto/viela-do-canto-12.jpg" alt="Fachada com azulejo do edifício da Viela do Canto.">
-                <div><h4>Viela do Canto</h4><p class="ix-entry__desc">Edifício de habitação com fachada em azulejo.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>Rua do Gravito</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>Peralta e Rios</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Para promotores -->
-      <div class="boxes">
-        <div class="box">
-          <h3>Procura casa num destes prédios?</h3>
-          <p class="body">Alguns estão à venda pelos seus promotores. Indicamos-lhe quem os vende.</p>
-          <a href="#contacto" class="link">Pedir contacto do promotor</a>
-        </div>
-        <div class="box">
-          <h3>É promotor e tem um prédio para construir?</h3>
-          <p class="body">Construímos com engenharia e estaleiro próprios, e damos a conhecer a obra aqui.</p>
-          <a href="#contacto" class="link">Pedir orçamento</a>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- 04 Sobre nós e credenciais -->
-  <section id="sobre" class="section" aria-labelledby="h-s">
+  <!-- 04 Como trabalhamos: 4 passos numa linha (vertical no telemóvel) -->
+  <section id="processo" class="section proc" aria-labelledby="h-p">
     <div class="wrap">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">04 / 06</span><span class="sec-meta__name">Os dois negócios</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-s" class="sec-title sec-title--20">Uma empresa, as mesmas credenciais</h2>
-          <p class="sec-lead">A ENGICIVIL Construções e a ENGICIVIL Empreendimentos são a mesma empresa. O alvará, o seguro e as distinções valem para as duas.</p>
-        </div>
-      </div>
-
-      <div class="grid grid--loose">
-        <!-- Organização -->
-        <figure class="org-fig span-4">
-          <div class="org">
-            <div class="org__root">
-              <span class="org__name">ENGICIVIL</span>
-              <span class="org__sub">Cardoso &amp; Manata, Lda. Aveiro, 2013</span>
-            </div>
-            <svg aria-hidden="true" width="100%" height="32" viewBox="0 0 100 32" preserveAspectRatio="none">
-              <line x1="50" y1="0" x2="50" y2="16" stroke="#141414" stroke-width="1" vector-effect="non-scaling-stroke"></line>
-              <line x1="25" y1="16" x2="75" y2="16" stroke="#141414" stroke-width="1" vector-effect="non-scaling-stroke"></line>
-              <line x1="25" y1="16" x2="25" y2="32" stroke="#141414" stroke-width="1" vector-effect="non-scaling-stroke"></line>
-              <line x1="75" y1="16" x2="75" y2="32" stroke="#141414" stroke-width="1" vector-effect="non-scaling-stroke"></line>
-            </svg>
-            <div class="org__kids">
-              <div class="org__kid">
-                <span class="org__kid-name">Construções</span>
-                <span class="org__kid-desc">Obra para clientes e promotores</span>
-              </div>
-              <div class="org__kid">
-                <span class="org__kid-name">Empreendimentos</span>
-                <span class="org__kid-desc">Promoção própria de habitação</span>
-              </div>
-            </div>
-          </div>
-          <figcaption class="fig-cap">
-            <span class="fig-cap__n">Fig. 6</span>
-            <span>Dois negócios com nomes de trabalho, uma só empresa. Engenharia, planeamento e estaleiro são partilhados.</span>
-          </figcaption>
-        </figure>
-
-        <!-- Tabela de credenciais -->
-        <div class="cred span-8 start-5" role="table" aria-label="Registo, seguro e distinções">
-          <div class="cred__row cred__head" role="row">
-            <span role="columnheader">Credencial</span><span role="columnheader">Entidade</span><span role="columnheader">Referência</span>
-          </div>
-          <div class="cred__row" role="row">
-            <div role="cell"><strong>Alvará de construção, classe 5</strong><br><span class="cred__sub">Obras públicas e particulares até 2.656.000 €</span></div>
-            <div role="cell"><span class="m-label">Entidade</span>IMPIC</div>
-            <div role="cell" class="cred__ref"><span class="m-label">Referência</span>70366-PUB</div>
-          </div>
-          <div class="cred__row" role="row">
-            <div role="cell"><strong>Seguro de responsabilidade civil</strong></div>
-            <div role="cell"><span class="m-label">Entidade</span>Tranquilidade</div>
-            <div role="cell" class="cred__ref"><span class="m-label">Referência</span>Capital de 670.000 €</div>
-          </div>
-          <div class="cred__row" role="row">
-            <div role="cell"><strong>PME Líder</strong><br><span class="cred__sub">Três anos consecutivos</span></div>
-            <div role="cell"><span class="m-label">Entidade</span>IAPMEI</div>
-            <div role="cell" class="cred__ref"><span class="m-label">Referência</span>2020, 2021, 2022</div>
-          </div>
-          <div class="cred__row" role="row">
-            <div role="cell"><strong>TOP 5% Melhores PME de Portugal</strong></div>
-            <div role="cell"><span class="m-label">Entidade</span>Scoring / Executive Digest</div>
-            <div role="cell" class="cred__ref"><span class="m-label">Referência</span>2022</div>
-          </div>
-          <div class="cred__row" role="row">
-            <div role="cell"><strong>TOP 10 Melhores PME do Setor</strong><br><span class="cred__sub">Construção, reabilitação e remodelações. Segundo ano consecutivo</span></div>
-            <div role="cell"><span class="m-label">Entidade</span>Scoring</div>
-            <div role="cell" class="cred__ref"><span class="m-label">Referência</span>Edição 2022</div>
-          </div>
-          <div class="cred__row" role="row">
-            <div role="cell"><strong>Marca R.U.-I.S.</strong><br><span class="cred__sub">Reabilitação Urbana Inteligente e Sustentável</span></div>
-            <div role="cell"><span class="m-label">Entidade</span>AICCOPN</div>
-            <div role="cell" class="cred__ref"><span class="m-label">Referência</span>Qualificada em 2022</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 05 Como trabalhamos -->
-  <section id="processo" class="section section--white" aria-labelledby="h-p">
-    <div class="wrap">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">05 / 06</span><span class="sec-meta__name">Como trabalhamos</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-p" class="sec-title">Do orçamento à entrega</h2>
-          <p class="sec-lead">Quem orçamenta, quem calcula e quem constrói trabalham na mesma empresa. É assim na obra para clientes e nos nossos empreendimentos.</p>
-        </div>
-      </div>
-      <ol class="steps">
-        <li class="step">
-          <span class="step__n" aria-hidden="true">1</span>
-          <h3>Orçamento e planeamento</h3>
-          <p class="body">O nosso gabinete prepara a proposta e o plano de obra, com precisão e transparência.</p>
-        </li>
-        <li class="step">
-          <span class="step__n" aria-hidden="true">2</span>
-          <h3>Engenharia própria</h3>
-          <p class="body">A engenharia é feita pela nossa equipa. Na reabilitação, trabalhamos com o arquiteto ou designer que indicar.</p>
-        </li>
-        <li class="step">
-          <span class="step__n" aria-hidden="true">3</span>
-          <h3>Estaleiro e meios próprios</h3>
-          <p class="body">Construímos com estaleiro e meios de produção nossos, e com uma rede de parceiros.</p>
-        </li>
-        <li class="step step--last">
-          <span class="step__n" aria-hidden="true">4</span>
-          <h3>Acompanhamento até ao fim</h3>
-          <p class="body">Acompanhamos a obra até à execução final, do seu projeto à entrega.</p>
-        </li>
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">04 · Como trabalhamos</p>
+        <h2 id="h-p" class="sec-intro__title">Do orçamento à entrega.</h2>
+        <p class="sec-intro__lead">Quem orçamenta, quem calcula e quem constrói trabalham na mesma empresa. É assim na obra para clientes e nos nossos empreendimentos.</p>
+      </header>
+      <ol class="proc-line" role="list">
+        <li class="proc-step"><span class="proc-dot" aria-hidden="true">1</span><h3>Orçamento e planeamento</h3><p class="body">O nosso gabinete prepara a proposta e o plano de obra, com precisão e transparência.</p></li>
+        <li class="proc-step"><span class="proc-dot" aria-hidden="true">2</span><h3>Engenharia própria</h3><p class="body">A engenharia é feita pela nossa equipa. Na reabilitação, trabalhamos com o arquiteto ou designer que indicar.</p></li>
+        <li class="proc-step"><span class="proc-dot" aria-hidden="true">3</span><h3>Estaleiro e meios próprios</h3><p class="body">Construímos com estaleiro e meios de produção nossos, e com uma rede de parceiros.</p></li>
+        <li class="proc-step"><span class="proc-dot" aria-hidden="true">4</span><h3>Acompanhamento até ao fim</h3><p class="body">Acompanhamos a obra até à execução final, do seu projeto à entrega.</p></li>
       </ol>
     </div>
   </section>
 
-  <!-- 06 Contacto -->
-  <section id="contacto" class="section section--last" aria-labelledby="h-k">
-    <div class="wrap stack-s">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">06 / 06</span><span class="sec-meta__name">Contacto</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-k" class="sec-title">Fale connosco</h2>
-          <p class="sec-lead">Diga-nos se é uma obra ou uma casa, e encaminhamos o pedido para a equipa certa. Respondemos em [prazo] dias úteis.</p>
-        </div>
-      </div>
+  <!-- 05 Contacto: formulário ao centro (a escolha do pedido mostra os campos certos, main.js) + contactos numa faixa -->
+  <section id="contacto" class="section section--white section--last contact" aria-labelledby="h-k">
+    <div class="wrap">
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">05 · Contacto</p>
+        <h2 id="h-k" class="sec-intro__title">Fale connosco.</h2>
+        <p class="sec-intro__lead">Diga-nos se é uma obra ou uma casa, e encaminhamos o pedido para a equipa certa. Respondemos em [prazo] dias úteis.</p>
+      </header>
 
-      <div class="grid grid--loose align-start">
-        <address class="contact-card span-4">
-          <a href="tel:+351234060223" class="tel-big">234 060 223</a>
-          <div class="contact-biz">
-            <div>
-              <span class="sb-pre">ENGICIVIL</span>
-              <span class="contact-biz__name">Construções</span>
-              <span class="contact-biz__what">Obra e orçamentos</span>
-              <a href="mailto:geral@engicivil.pt">geral@engicivil.pt</a>
-            </div>
-            <div>
-              <span class="sb-pre">ENGICIVIL</span>
-              <span class="contact-biz__name">Empreendimentos</span>
-              <span class="contact-biz__what">Casas à venda</span>
-              <a href="mailto:comercial@engicivil.pt">comercial@engicivil.pt</a>
-            </div>
-          </div>
-          <div class="contact-addr">
-            <span class="note">Morada</span>
-            <span>Rua Eng.º Von Haff, 47, 1.º B<br>3800-177 Aveiro</span>
-          </div>
-        </address>
-
-        <form class="form span-8 start-5" action="#" method="post">
+      <div class="contact__form">
+        <form class="form" action="#" method="post" data-dyn>
           <fieldset>
             <legend>Qual é o seu pedido?</legend>
-            <div class="radios">
-              <label class="choice" for="g-obra"><input type="radio" id="g-obra" name="tipo" value="obra" checked> Fazer uma obra</label>
-              <label class="choice" for="g-casa"><input type="radio" id="g-casa" name="tipo" value="casa"> Comprar casa</label>
-              <label class="choice choice--muted" for="g-outro"><input type="radio" id="g-outro" name="tipo" value="outro"> Outro assunto</label>
+            <div class="radios radios--tiles">
+              <label class="choice" for="g-obra"><input type="radio" id="g-obra" name="tipo" value="obra" checked> <span>Fazer uma obra<small>ENGICIVIL Construções</small></span></label>
+              <label class="choice" for="g-casa"><input type="radio" id="g-casa" name="tipo" value="casa"> <span>Comprar casa<small>ENGICIVIL Empreendimentos</small></span></label>
+              <label class="choice choice--muted" for="g-outro"><input type="radio" id="g-outro" name="tipo" value="outro"> <span>Outro assunto</span></label>
             </div>
           </fieldset>
-
           <div class="fields">
             <div class="field">
               <label for="g-nome">Nome</label>
@@ -750,22 +429,33 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
               <label for="g-tel">Telefone <span class="opt">(opcional)</span></label>
               <input class="input" id="g-tel" name="telefone" type="tel" autocomplete="tel">
             </div>
-            <div class="field">
-              <label for="g-emp">Edifício <span class="opt">(se for compra)</span></label>
+            <div class="field" data-when="obra">
+              <label for="g-tipo-obra">Tipo de obra</label>
+              <select class="input" id="g-tipo-obra" name="tipo_obra">
+                <option value="">Escolher</option>
+                <option>Indústria e serviços</option>
+                <option>Construção</option>
+                <option>Reabilitação</option>
+              </select>
+            </div>
+            <div class="field" data-when="obra">
+              <label for="g-local">Local da obra</label>
+              <input class="input" id="g-local" name="local" type="text" autocomplete="address-level2">
+            </div>
+            <div class="field" data-when="casa">
+              <label for="g-emp">Edifício</label>
               <select class="input" id="g-emp" name="edificio">
-                <option value="">Não se aplica</option>
+                <option value="">Ainda não sei</option>
                 <option value="serene">Serene Condominium, Ílhavo</option>
                 <option value="gaio">Edifício Gaio, Oliveira do Bairro</option>
                 <option value="terceiros">Um prédio construído para um promotor</option>
               </select>
             </div>
           </div>
-
           <div class="field">
             <label for="g-msg">Mensagem</label>
             <textarea class="input" id="g-msg" name="mensagem" rows="5" placeholder="Tipo de obra, local e prazo, ou a tipologia que procura."></textarea>
           </div>
-
           <div class="form-foot">
             <label class="check" for="g-priv">
               <input id="g-priv" type="checkbox" name="privacidade" required>
@@ -775,6 +465,13 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
           </div>
         </form>
       </div>
+
+      <address class="contact-strip">
+        <div><span class="contact-strip__label">Telefone</span><a href="tel:+351234060223">234 060 223</a></div>
+        <div><span class="contact-strip__label">Construções</span><a href="mailto:geral@engicivil.pt">geral@engicivil.pt</a></div>
+        <div><span class="contact-strip__label">Empreendimentos</span><a href="mailto:comercial@engicivil.pt">comercial@engicivil.pt</a></div>
+        <div><span class="contact-strip__label">Morada</span><span>Rua Eng.º Von Haff, 47, 1.º B, 3800-177 Aveiro</span></div>
+      </address>
     </div>
   </section>
 

@@ -35,6 +35,12 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - **D** — passo a passo (separadores, reutiliza `main.js`): cada fase mostra texto + foto de obra.
   - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-processo-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 - **Decisão (António): proposta A** para «Como trabalhamos». Implementada na homepage (`#processo`, fundo papel): título centrado (`.sec-intro`, «04 · Como trabalhamos») + 4 passos numa linha com círculos numerados (`.proc-*`; 2 × 2 no tablet; linha vertical no telemóvel). Apagados `.steps`/`.step` e a página de propostas. Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-processo-{1440,1024,390}.png`.
+- **Secção 05 Contacto — 4 propostas** em `prototypes/g/propostas/contacto/` (+ entrada `g-propostas-contacto` no `vite.config.js`); todas com o formulário atual (tipo de pedido, nome, email, telefone, edifício, mensagem, privacidade) e os contactos do brief (emails por negócio = hipótese a confirmar):
+  - **A** — título centrado; contactos em lista à esquerda, formulário à direita.
+  - **B** — fundo escuro; telefone em grande e contactos à esquerda, formulário branco à direita.
+  - **C** — duas «portas» (Construções / Empreendimentos, com email e botão que marca o tipo de pedido) + linha comum (telefone, morada) + formulário.
+  - **D** — formulário ao centro; a escolha do pedido mostra os campos certos (obra → tipo de obra + local; casa → edifício); contactos numa faixa por baixo.
+  - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-contacto-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

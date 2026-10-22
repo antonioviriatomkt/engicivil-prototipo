@@ -1,0 +1,94 @@
+/* Protótipo G — Secção 05 Contacto: 4 propostas (página de comparação).
+   Usa tokens, .sec-intro e o formulário (.form, .radios, .choice, .fields, .field, .input…) de ../../styles.css. */
+
+/* ---------- Página de comparação ---------- */
+.pp-bar { position: sticky; top: 0; z-index: 20; background: var(--ink); color: var(--white); font-family: var(--f-ui); }
+.pp-bar__in { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; min-height: 56px; }
+.pp-bar a { color: var(--white); }
+.pp-bar__back { display: inline-flex; align-items: center; min-height: 44px; }
+.pp-bar__t { flex: 1; font-family: var(--f-mono); font-size: 13px; color: var(--g200); }
+.pp-bar__list { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+.pp-bar__list a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; font-weight: 600; text-decoration: none; border: 1px solid var(--g500); border-radius: var(--radius); }
+.pp-bar__list a:hover { background: var(--white); color: var(--ink); }
+.pp-bar :focus-visible { outline-color: var(--white); }
+.pp-label { scroll-margin-top: 56px; padding: 14px 0; background: var(--g200); font-family: var(--f-mono); font-size: 13px; color: var(--ink); }
+.pp-label strong { font-family: var(--f-ui); font-size: 1rem; }
+
+/* ---------- Comum ---------- */
+.kx { padding: 104px 0 112px; background: var(--white); }
+.kx > .wrap { display: flex; flex-direction: column; gap: 56px; }
+.sec-intro--left { align-items: flex-start; text-align: left; }
+.ka-label { font-family: var(--f-mono); font-size: 12px; color: var(--g500); }
+.kx address { font-style: normal; }
+[data-when][hidden] { display: none; }
+
+/* ---------- A ---------- */
+.ka-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 48px; align-items: start; }
+.ka-grid .form { background: var(--paper); }
+.ka-info { display: flex; flex-direction: column; border-top: 1.5px solid var(--ink); }
+.ka-row { display: flex; flex-direction: column; gap: 2px; padding: 16px 0; border-bottom: 1px solid var(--g200); font-size: 1.0625rem; line-height: 1.5; }
+.ka-row a { display: inline-flex; align-items: center; min-height: 44px; align-self: flex-start; font-family: var(--f-mono); font-size: 14px; }
+.ka-row .ka-tel { font-family: var(--f-ui); font-size: 2rem; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; }
+.ka-biz { font-family: var(--f-ui); font-weight: 600; }
+
+/* ---------- B: escuro ---------- */
+.kx-b { background: var(--ink); color: var(--white); }
+.kx-b .sec-intro__eyebrow, .kx-b .sec-intro__lead { color: var(--g200); }
+.kx-b .kb-side a { color: var(--white); }
+.kx-b .kb-side :focus-visible { outline-color: var(--white); }
+.kb-grid { display: grid !important; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: start; }
+.kb-side { display: flex; flex-direction: column; gap: 32px; }
+.kb-tel { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--f-ui); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; font-weight: 600; letter-spacing: -0.03em; text-decoration: none; }
+.kb-list { display: flex; flex-direction: column; border-top: 1px solid var(--g500); }
+.kb-list > div { display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-bottom: 1px solid var(--g700); font-size: 1.0625rem; line-height: 1.5; color: var(--g200); }
+.kb-list a { display: inline-flex; align-items: center; min-height: 44px; align-self: flex-start; font-family: var(--f-mono); font-size: 14px; }
+.kb-label { font-family: var(--f-ui); font-size: 0.9375rem; font-weight: 600; color: var(--white); }
+.kb-label .sb-pre { font-size: 0.75rem; }
+.kx-b .form { border-color: var(--white); color: var(--ink); }
+
+/* ---------- C: duas portas ---------- */
+.kc-doors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--col-gap); }
+.kc-door { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 28px; border: 1px solid var(--ink); background: var(--paper); }
+.kc-for { margin: 0; font-family: var(--f-mono); font-size: 13px; color: var(--accent); }
+.kc-name { margin: 0; display: flex; flex-direction: column; gap: 2px; font-family: var(--f-ui); font-size: clamp(1.75rem, 2.8vw, 2.5rem); line-height: 1; font-weight: 600; letter-spacing: -0.02em; }
+.kc-name .sb-pre { font-size: 0.875rem; letter-spacing: 0.04em; }
+.kc-mail { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--f-mono); font-size: 14px; }
+.kc-door .btn { margin-top: 8px; }
+.kc-common { margin: -24px 0 0; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; font-family: var(--f-ui); font-size: 1rem; color: var(--g700); }
+.kc-common span { font-family: var(--f-mono); font-size: 12px; color: var(--g500); }
+.kc-common a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+.kc-common em { font-style: normal; }
+.kc-form { scroll-margin-top: 72px; }
+
+/* ---------- D: formulário ao centro ---------- */
+.kd-form { width: 100%; max-width: 820px; margin: 0 auto; }
+.kd-form .form { background: var(--paper); }
+.radios--tiles .choice { min-height: 72px; align-items: flex-start; padding: 14px; }
+.radios--tiles .choice input { margin-top: 3px; }
+.radios--tiles .choice span { display: flex; flex-direction: column; gap: 2px; font-weight: 600; }
+.radios--tiles small { font-family: var(--f-mono); font-size: 11px; font-weight: 400; color: var(--g700); }
+.kd-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1.5px solid var(--ink); }
+.kd-strip > div { display: flex; flex-direction: column; gap: 2px; padding: 16px 20px 0; border-left: 1px solid var(--g200); font-size: 1rem; line-height: 1.5; }
+.kd-strip > div:first-child { padding-left: 0; border-left: 0; }
+.kd-strip a { display: inline-flex; align-items: center; min-height: 44px; align-self: flex-start; font-family: var(--f-ui); font-weight: 600; overflow-wrap: anywhere; }
+
+/* ---------- ≤ 1080 px ---------- */
+@media (max-width: 1080px) {
+  .ka-grid, .kb-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .kd-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 16px; }
+  .kd-strip > div:nth-child(3) { padding-left: 0; border-left: 0; }
+}
+
+/* ---------- Telemóvel (≤ 760 px) ---------- */
+@media (max-width: 760px) {
+  .pp-bar__t { display: none; }
+  .kx { padding: 72px 0 88px; }
+  .kx > .wrap { gap: 40px; }
+  .form { padding: 20px; }
+  .kc-doors { grid-template-columns: minmax(0, 1fr); }
+  .kc-door { padding: 20px; }
+  .kc-common { margin-top: -16px; }
+  .radios--tiles .choice { min-height: 56px; }
+  .kd-strip { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+  .kd-strip > div, .kd-strip > div:nth-child(3) { padding: 12px 0; border-left: 0; border-bottom: 1px solid var(--g200); }
+}

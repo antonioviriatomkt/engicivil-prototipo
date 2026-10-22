@@ -131,7 +131,6 @@ img { max-width: 100%; }
 .hero-intro { display: flex; flex-direction: column; gap: 20px; max-width: 920px; }
 .hero-eyebrow { margin: 0; font-family: var(--f-mono); font-size: 13px; color: var(--white); }
 .hero-title { margin: 0; font-family: var(--f-ui); font-size: clamp(2.25rem, 4.6vw, 4.25rem); line-height: 1.02; font-weight: 600; letter-spacing: -0.03em; max-width: 20ch; }
-.hero-lead { margin: 0; font-size: clamp(1.125rem, 1.5vw, 1.3125rem); line-height: 1.6; color: var(--white); max-width: 34em; }
 .hero :focus-visible { outline-color: var(--white); }
 
 /* ---------- Os dois negócios (cartões só de texto) ---------- */

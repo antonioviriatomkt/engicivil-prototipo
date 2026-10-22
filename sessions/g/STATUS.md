@@ -8,7 +8,7 @@
 - `prototypes/g/styles.css` = CSS partilhado do G: tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`), utilitários de grelha (`.grid` 12 colunas + `.span-N`/`.start-N`) e componentes (`.sec-head`, `.path`, `.dev`, `.spec`, `.ix-*`, `.cred`, `.form`…). **Páginas novas do G devem usar este ficheiro.**
 - `prototypes/g/main.js` = menu recolhido do cabeçalho (abre/fecha, `aria-expanded`, Esc devolve o foco, fecha ao escolher destino). Sem JS o menu fica visível.
 - **Topo da homepage (sessão 2, pedidos do António, 22/10)** — por esta ordem:
-  1. **Hero = vídeo a toda a largura** (percurso pela obra da Delabie, `public/video/`, 1280×720), em ciclo e sem som. Por cima, em branco: «ENGICIVIL · Aveiro, desde 2013», o título «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.», o subtítulo dos 30 especialistas e, por baixo, **os carimbos**: 5 caixas com contorno branco (Classe 5 · 2013 · 30 · PME Líder · TOP 5%), 5 colunas no desktop/tablet e 2 no telemóvel (TOP 5% a toda a largura). O `<dl>` tem `aria-label` «Comum aos dois negócios: ENGICIVIL – Cardoso & Manata, Lda.».
+  1. **Hero = vídeo a toda a largura** (percurso pela obra da Delabie, `public/video/`, 1280×720), em ciclo e sem som. Por cima, em branco: «ENGICIVIL · Aveiro, desde 2013», o título «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.», o subtítulo dos 30 especialistas e, por baixo, **os carimbos**: 3 caixas pequenas com contorno branco (Classe 5 · PME Líder · TOP 5%), lado a lado com a largura do conteúdo; no telemóvel passam a 2 + 1. «2013» e «30 especialistas» saíram (pedido do António; já estão no eyebrow e no subtítulo). O `<dl>` tem `aria-label` «Comum aos dois negócios: ENGICIVIL – Cardoso & Manata, Lda.».
      - Véu escuro liso a 60 % (sem gradiente) → texto branco com ≥ 4,8:1 mesmo sobre o píxel mais claro do vídeo (medido em 17 fotogramas).
      - **Sem botão de pausa** (retirado a pedido do António). ⚠️ Falha o critério WCAG 2.2.2 (nível A: movimento automático > 5 s tem de poder ser pausado). Continua a respeitar «reduzir movimento» e poupança de dados (fica parado na capa). Ver próximos passos.
      - Altura: ecrã inteiro menos o cabeçalho (560–820 px; telemóvel 520–720 px).
@@ -19,7 +19,7 @@
 - Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados).
 - Responsivo:
   - **≤ 1200 px:** botão «Menu» + barra dos dois negócios (Construções | Empreendimentos) sempre à vista.
-  - **761–1080 px (tablet):** cartões de negócio lado a lado; sócios foto | texto; carimbos em 5 colunas; índice «Onde trabalhamos» com o local por cima das obras.
+  - **761–1080 px (tablet):** cartões de negócio lado a lado; sócios foto | texto; carimbos numa linha; índice «Onde trabalhamos» com o local por cima das obras.
   - **≤ 760 px:** uma coluna (como no mockup móvel), factos em 2 colunas com tamanho reduzido (já não transbordam).
   - Sem scroll horizontal a 390, 768, 1024, 1280 e 1440 px.
 - Acessibilidade acrescentada: link «Saltar para o conteúdo», `<main>`, alvos de 44 px no seletor PT/EN e no rodapé, foco visível no rodapé escuro, borda do rádio «Outro assunto» com contraste 3:1, opção escolhida do formulário destacada.

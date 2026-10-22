@@ -168,10 +168,10 @@ img { max-width: 100%; }
 .founders__text .actions { margin-top: 4px; }
 
 /* Carimbos: um por facto, por baixo do subtítulo do hero (contorno branco sobre o véu) */
-.stamps { margin: 8px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
-.stamps > div { padding: 12px 14px 14px; border: 1px solid var(--white); border-radius: 2px; display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px; }
+.stamps { margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.stamps > div { padding: 8px 12px 10px; border: 1px solid var(--white); border-radius: 2px; display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 4px; }
 .stamps dt { font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--white); }
-.stamps dd { margin: 0; font-family: var(--f-ui); font-size: 1.5rem; line-height: 1; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+.stamps dd { margin: 0; font-family: var(--f-ui); font-size: 1.125rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
 
 /* ---------- Cabeçalho de secção ---------- */
 .sec-head { row-gap: 16px; border-top: 2px solid var(--ink); padding-top: 20px; }
@@ -379,9 +379,6 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
   .path__name { font-size: 2.25rem; }
   .paths-sec { padding-top: 32px; }
   .founders { padding: 72px 0 88px; }
-  .stamps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stamps > div:last-child { grid-column: 1 / -1; }
-  .stamps dd { font-size: 1.25rem; }
 
   .pair, .areas, .boxes, .steps, .fields, .radios, .foot { grid-template-columns: minmax(0, 1fr); }
   .areas { gap: 32px; }

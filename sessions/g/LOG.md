@@ -13,6 +13,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - 5.ª ronda (pedido do António): o **título** (com o eyebrow) passou para cima dos cartões dos dois negócios; o **hero fica só com o logótipo** — «ENGICIVIL» + símbolo da fita (versão clara do SVG do loader), sem «Cardoso & Manata, Lda.» (pedido explícito). Removido o rótulo visível «Distinções e qualificações» (fica como `aria-label`). Sem scroll horizontal a 360, 390, 1024 e 1440.
 - 6.ª ronda: o texto «ENGICIVIL» do hero passou a usar o gradiente do símbolo (branco → `#9fa9af`, `background-clip: text`) e a mesma sombra, para o logótipo ficar uniforme.
 - 7.ª ronda: título da página (eyebrow + h1) centrado por cima dos cartões.
+- 8.ª ronda: logótipo do hero 30 % mais pequeno, tudo branco (texto e símbolo, sem gradientes) e sem sombra.
 
 ## 2026-10-22 · g/certificacoes · selos das distinções
 - Faixa de 4 selos (PME Líder 2022, Scoring TOP 5% 2022, Scoring TOP 10 setor 2022, R.U.-I.S.) no fim da secção 04. R.U.-I.S. é o SVG oficial; os outros 3 são recortes provisórios das imagens publicadas pela Engicivil.

@@ -7,12 +7,12 @@
 - `prototypes/g/index.html` = **homepage**, sem estilos inline. Igual ao mockup `G-BD` a 1440 px, exceto o hero (revisto, ver abaixo).
 - `prototypes/g/styles.css` = CSS partilhado do G: tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`), utilitários de grelha (`.grid` 12 colunas + `.span-N`/`.start-N`) e componentes (`.sec-head`, `.path`, `.dev`, `.spec`, `.ix-*`, `.cred`, `.form`…). **Páginas novas do G devem usar este ficheiro.**
 - `prototypes/g/main.js` = menu recolhido do cabeçalho (abre/fecha, `aria-expanded`, Esc devolve o foco, fecha ao escolher destino). Sem JS o menu fica visível.
-- **Hero revisto** (pedido do António, 22/10):
-  - Título com a copy do site atual, reduzida e com a promoção: «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.» Por cima, «ENGICIVIL · Aveiro, desde 2013».
-  - Cartões mais baixos, com linhas de autoidentificação: Construções (Indústria e serviços · Habitação e reabilitação) e Empreendimentos (Serene e Gaio, com link para cada ficha `#serene` / `#gaio`).
-  - Sócios ao centro com botão «Ligar 234 060 223».
-  - Terceiro caminho, mais discreto, para promotores: «Vai promover um edifício? Veja os prédios que construímos para outros promotores» → `#locais`.
-  - Os dois botões principais ficam no primeiro ecrã a 1440×900 e 1280×800. No telemóvel, os cartões vêm antes da foto, e a faixa de factos mostra só 4 itens.
+- **Hero revisto** (pedidos do António, 22/10):
+  - **Em cima:** à esquerda, «ENGICIVIL · Aveiro, desde 2013», o título (copy do site atual, reduzida e com a promoção: «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.»), o texto e o botão «Ligar 234 060 223»; à direita, a foto dos sócios (4:3, **sem legenda**).
+  - **Em baixo:** os dois negócios lado a lado com a mesma altura. No desktop os cartões são horizontais (imagem à esquerda). Têm linhas de autoidentificação: Construções (Indústria e serviços · Habitação e reabilitação) e Empreendimentos (Serene e Gaio, com link para `#serene` / `#gaio`).
+  - Terceiro caminho, mais discreto, para promotores → `#locais`. Faixa de factos com só 4 itens no telemóvel.
+  - Botões principais: visíveis a 1440×900 (846 px); a 1280×800 ficam logo abaixo da dobra (809 px).
+  - Sem a Fig. 1, as figuras foram renumeradas (antes/depois = Fig. 1–2, mosaico = Fig. 3, Serene/Gaio = Fig. 4–5, diagrama = Fig. 6).
 - Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados).
 - Responsivo:
   - **≤ 1200 px:** botão «Menu» + barra dos dois negócios (Construções | Empreendimentos) sempre à vista.
@@ -25,7 +25,7 @@
 1. **Páginas interiores** (a confirmar com o António quais e por que ordem): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** (os links «Ver os N projetos…», «Ver o Serene», «Saber mais» ainda apontam para `#`) · **Sobre** · **Contactos**. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
 2. Formulário de contacto (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-selecionar o tipo de pedido/edifício a partir dos CTAs («Pedir informação» do Serene → «Comprar casa» + Serene).
 3. Opcional: indicar a secção atual no menu (scroll-spy com `aria-current`).
-4. Rever com o António a versão tablet (não existia no mockup; foi decisão desta sessão) e o novo hero (capturas `screenshots/g/2026-10-22-hero-antes-*.png` / `-depois-*.png`).
+4. Rever com o António a versão tablet (não existia no mockup; foi decisão desta sessão) e o novo hero (capturas `screenshots/g/2026-10-22-hero-antes-*.png` → `-depois-*.png` → `-rev2-*.png`).
 5. A foto dos sócios mostra o logótipo antigo ao fundo — substituir quando houver identidade nova.
 
 ## Dúvidas em aberto

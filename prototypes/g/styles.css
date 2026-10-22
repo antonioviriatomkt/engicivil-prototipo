@@ -49,6 +49,7 @@ img { max-width: 100%; }
 .span-3 { grid-column-end: span 3; }
 .span-4 { grid-column-end: span 4; }
 .span-5 { grid-column-end: span 5; }
+.span-6 { grid-column-end: span 6; }
 .span-7 { grid-column-end: span 7; }
 .span-8 { grid-column-end: span 8; }
 .span-9 { grid-column-end: span 9; }
@@ -125,8 +126,10 @@ img { max-width: 100%; }
 .hero > .wrap { display: flex; flex-direction: column; gap: 40px; }
 .hero-head { row-gap: 20px; }
 .hero-intro { display: flex; flex-direction: column; gap: 16px; }
+.hero-intro .actions { margin-top: 4px; }
+.hero-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 35%; }
 .hero-eyebrow { margin: 0; font-family: var(--f-mono); font-size: 13px; color: var(--accent); }
-.hero-title { margin: 0; font-family: var(--f-ui); font-size: clamp(2rem, 3vw, 2.75rem); line-height: 1.06; font-weight: 600; letter-spacing: -0.025em; max-width: 30ch; }
+.hero-title { margin: 0; font-family: var(--f-ui); font-size: clamp(2rem, 3.4vw, 3.125rem); line-height: 1.04; font-weight: 600; letter-spacing: -0.025em; max-width: 22ch; }
 .hero-lead { margin: 0; font-size: clamp(1.125rem, 1.4vw, 1.25rem); line-height: 1.6; color: var(--g700); max-width: 30em; }
 
 .path { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--ink); }
@@ -145,10 +148,10 @@ img { max-width: 100%; }
 .path__row-name { font-family: var(--f-ui); font-size: 1rem; font-weight: 600; color: var(--ink); }
 .path__row-meta { font-family: var(--f-mono); font-size: 13px; line-height: 1.4; color: var(--g700); }
 .path .actions { margin-top: 6px; }
-
-.founders { margin: 0; display: flex; flex-direction: column; gap: 12px; }
-.founders img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 35%; }
-.founders__call { align-self: flex-start; margin-top: 4px; }
+@media (min-width: 1081px) {
+  .hero-paths .path { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  .hero-paths .path__img { height: 100%; aspect-ratio: auto; }
+}
 
 .hero-third { margin: -16px 0 0; padding: 4px 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; background: var(--white); border: 1px solid var(--g200); font-family: var(--f-ui); font-size: 1rem; color: var(--g700); }
 .hero-third a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; color: var(--ink); }
@@ -358,16 +361,6 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
   .ix-entry .m-label { display: block; }
 }
 
-/* ---------- Tablet (761–1080 px): os dois negócios lado a lado, sócios por baixo ---------- */
-@media (min-width: 761px) and (max-width: 1080px) {
-  .hero-head > * { grid-column: 1 / -1; }
-  .hero .path { grid-column-end: span 6; }
-  .founders { grid-column: 1 / -1; order: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--col-gap); align-content: end; }
-  .founders img { grid-row: 1 / span 3; }
-  .founders figcaption, .founders__call { align-self: start; }
-  .founders__call { justify-self: start; }
-}
-
 /* ---------- Telemóvel (≤ 760 px) ---------- */
 @media (max-width: 760px) {
   :root { --gutter: 16px; }
@@ -375,7 +368,6 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
   .grid > * { grid-column: 1 / -1; }
   .m-label { display: block; }
 
-  .founders { order: 1; }
   .facts > .facts__extra { display: none; }
   .path__name { font-size: 2.25rem; }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }

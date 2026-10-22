@@ -2,6 +2,12 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · claude/wonderful-volta-b4600b · sessão 1 (cont.): hero, 2.ª revisão
+- Pedido do António: foto dos sócios em cima, à direita do título; as duas opções em baixo; sem a legenda da Fig. 1.
+- Cabeça: título + texto + «Ligar 234 060 223» (span 7) | foto 4:3 (span 5). Cartões lado a lado (span 6), horizontais no desktop (imagem 1/3), com a mesma altura.
+- Figuras renumeradas (Fig. 1–6). CTAs: 846 px a 1440×900 (visíveis); 809 px a 1280×800 (logo abaixo da dobra).
+- Capturas: `screenshots/g/2026-10-22-hero-rev2-*.png`.
+
 ## 2026-10-22 · claude/wonderful-volta-b4600b · sessão 1 (cont.): hero revisto
 - Título: copy do site atual da Engicivil, reduzida e com a promoção (decisão do António): «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.» + linha «ENGICIVIL · Aveiro, desde 2013».
 - Cartões: imagens 5:2, linhas de autoidentificação (tipos de obra / Serene e Gaio com link para a ficha), CTAs alinhados. Sócios: foto 4:3 + botão «Ligar». Novo terceiro caminho para promotores → «Onde trabalhamos».

@@ -43,6 +43,24 @@ img { max-width: 100%; }
 .skip { position: absolute; left: 16px; top: -100px; z-index: 10; padding: 12px 16px; background: var(--ink); color: var(--white); font-family: var(--f-ui); font-weight: 500; border-radius: var(--radius); text-decoration: none; }
 .skip:focus { top: 8px; color: var(--white); }
 
+/* ---------- Ecrã de carregamento (loader.js) ----------
+   Símbolo da fita dobrada do logótipo atual, redesenhado em SVG com a base neutra.
+   Só aparece com JS (classe .is-loading no <html>); failsafe: some aos 8 s. */
+.loader { display: none; }
+html.is-loading { overflow: hidden; }
+html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: var(--paper); transition: opacity .5s ease, visibility 0s linear .5s; animation: loader-failsafe 0s linear 8s forwards; }
+.loader svg { width: clamp(88px, 14vw, 128px); height: auto; overflow: visible; transition: transform .5s ease; }
+.loader-trace { stroke-dasharray: 1 1; stroke-dashoffset: 1; animation: loader-draw 1.3s cubic-bezier(.65, 0, .35, 1) .15s forwards; }
+.loader.is-looping .loader-trace { animation: loader-loop 2.2s cubic-bezier(.65, 0, .35, 1) infinite; }
+.loader.is-done { opacity: 0; visibility: hidden; }
+.loader.is-done svg { transform: scale(.94); }
+@keyframes loader-draw { to { stroke-dashoffset: 0; } }
+@keyframes loader-loop { 0% { stroke-dashoffset: 0; } 45% { stroke-dashoffset: -1; } 50% { stroke-dashoffset: 1; } 100% { stroke-dashoffset: 0; } }
+@keyframes loader-failsafe { to { opacity: 0; visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) {
+  .loader-trace, .loader.is-looping .loader-trace { animation: none; stroke-dashoffset: 0; }
+}
+
 /* ---------- Layout ---------- */
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
 .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); row-gap: 24px; }

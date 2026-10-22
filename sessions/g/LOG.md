@@ -2,6 +2,15 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 3: ecrã de carregamento
+- **Loader** na homepage G: só o **símbolo** do logótipo atual (a fita dobrada em «Σ»), sem o texto. Redesenhado em **SVG** (7 facetas com gradiente) a partir de `public/img/logos/engicivil-logo.png`, nas **cinzas/ardósia da base neutra** — não usa o azul da marca atual.
+- Animação: o símbolo «desenha-se» ao longo da fita (máscara com `stroke-dashoffset`, ~1,3 s) sobre um fantasma a 12 %. Se a página ainda não carregou, apaga e redesenha em ciclo; sai sempre com o símbolo completo (fade + ligeira redução). Failsafe CSS: desaparece aos 8 s.
+- Ficheiros: markup no início do `<body>` de `prototypes/g/index.html` (bloco `#loader`), CSS em `prototypes/g/styles.css` (secção «Ecrã de carregamento»), lógica em `prototypes/g/loader.js`. Só aparece com JS (classe `is-loading` posta no `<html>` pelo script inline do `<head>`). «Reduzir movimento»: símbolo estático, ~0,5 s. `role="status"` + «A carregar…».
+- `scripts/screenshots.mjs` espera que o loader saia antes de capturar (não afeta o F).
+- **Decisão (António):** usar o símbolo atual no loader, apesar de a regra geral ser wordmark de texto. Quando houver identidade nova, trocar o SVG no `#loader`.
+- Feito primeiro em `claude/blissful-ritchie-dkgmoi` (PR #5, a partir do `main` antigo) e transposto para este branch, que é a versão mais recente. Merge para `main` a pedido do António.
+- Capturas: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
+
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 2: hero com vídeo a toda a largura
 - Continua a partir do PR #3 (`claude/wonderful-volta-b4600b`).
 - Pedido do António: o vídeo ocupa o hero todo e contém o título e o subtítulo; a foto dos sócios desce para uma secção própria com o carimbo; os dois negócios mantêm-se, sem imagens.

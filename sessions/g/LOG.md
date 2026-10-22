@@ -19,6 +19,13 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - **D** — fundo escuro; tabela de comparação (Local, Fogos, Estado, Destaques, Preço) com os renders noturnos no topo de cada coluna.
   - Sem scroll horizontal a 360, 390, 768, 1024 e 1440. Capturas: `screenshots/g/2026-10-22-empreendimentos-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 - **Decisão (António): proposta C** para a 02. Implementada na homepage: separadores Serene | Gaio (os painéis mantêm os ids `#serene` e `#gaio`; uma ligação para eles abre o separador certo — `main.js`), galeria com exterior + 3 interiores (miniaturas trocam a imagem principal) e ficha com o logótipo dentro do `<h3>`, lema e a tabela `.spec` com os factos completos (local, fogos, estado, inclui, `[Área m²] · [Preço sob consulta]`). Sem JS os dois painéis aparecem um por baixo do outro. Saiu o antigo `.dev` (e `.dev-note`); o cabeçalho centrado passou a classe genérica `.sec-intro` (usada pela 01 e pela 02). Página de propostas e entrada do `vite.config.js` apagadas. Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-empreendimentos-{1440,1024,390}.png`.
+- **Secção 03 Onde trabalhamos + prédios para promotores — 4 propostas** em `prototypes/g/propostas/locais/` (+ entrada `g-propostas-locais` no `vite.config.js`):
+  - **A** — montra dos 6 prédios para promotores em cartões (foto, «Construído pela ENGICIVIL», local, `[Promotor]`, `[À venda / vendido]`, «Saber mais») + as 2 caixas (procura casa / é promotor) + linha com os locais.
+  - **B** — «linha» norte → sul (Porto … Coimbra, sede em Aveiro destacada) com as obras em cada paragem e a legenda dos 3 tipos de obra; texto fixo à esquerda.
+  - **C** — um prédio em destaque (foto grande + legenda) e a lista dos 6 ao lado para escolher.
+  - **D** — as 11 obras em grelha com filtro por tipo (prédios para promotores · empreendimentos próprios · obras para clientes).
+  - Fotos novas (exteriores do portefólio): Peralta e Rios (`construcao-de-edificio-peralta-e-rios-4`), Viela do Canto (`edificio-de-habitacao-viela-do-canto`), Rua do Gravito (`ed-pedro-cardoso-15`), Gafanha de Aquém (`construcao-de-edificio-gafanha-de-aquem-9`, em obra — não há foto do prédio acabado), moradia no Porto (`reabilitacao-de-moradia-no-porto`). A obra do Porto deixou de ser placeholder: «Moradia no Porto» (reabilitação, do portefólio).
+  - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-locais-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

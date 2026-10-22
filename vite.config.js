@@ -13,6 +13,7 @@ export default defineConfig({
         hub: resolve(__dirname, 'index.html'),
         f: resolve(__dirname, 'prototypes/f/index.html'),
         g: resolve(__dirname, 'prototypes/g/index.html'),
+        'g-propostas-locais': resolve(__dirname, 'prototypes/g/propostas/locais/index.html'),
         'mockup-f': resolve(__dirname, 'mockups/F-BC.html'),
         'mockup-g': resolve(__dirname, 'mockups/G-BD.html'),
       },

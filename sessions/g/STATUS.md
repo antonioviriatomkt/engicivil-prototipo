@@ -1,7 +1,7 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-22** · por: sessão 3 (Claude) · branch `claude/nice-cannon-u8j2zu`, merged em `main`
+> Atualizado: **2026-10-22** · por: sessão 4 (Claude, conversa do vault) · branch `g/certificacoes`
 
 ## Onde estamos
 - `prototypes/g/index.html` = **homepage**, sem estilos inline. Igual ao mockup `G-BD` a 1440 px, exceto o hero (revisto, ver abaixo).
@@ -17,6 +17,11 @@
   3. **Secção «Os dois sócios fundadores»**: foto (span 5, sem legenda) + título, texto factual (2013, mais de duas décadas de experiência, 30 especialistas com engenharia e estaleiro próprios, constrói para clientes e para os empreendimentos) e botão «Ligar 234 060 223».
   - **Régua do cabeçalho removida** (pedido do António).
   - A barra do carimbo (`.proof`/`.facts`) deixou de existir; foi substituída por `.stamps` no hero.
+- **Selos das distinções (sessão 4, pedido do António, 22/10):** faixa de 4 selos no fim da secção 04 «Uma empresa, as mesmas credenciais» (`ul.seals`, CSS «Selos das distinções» no `styles.css`; 4 colunas → 2 no telemóvel). Ficheiros em `public/img/selos/`:
+  - `pme-lider-2022.png` — recortado do diploma PME Líder 2022 que a Engicivil publica no site (142×160, baixa resolução). ⚠️ **Provisório:** o IAPMEI só envia o logótipo oficial (com o ano obrigatório) por email à empresa → **pedir à Engicivil** o ficheiro do último ano que tenham.
+  - `scoring-top5-2022.png` e `scoring-top10-setor-2022.png` — recortados das imagens da própria Engicivil (selos personalizados Scoring 2022, com NIF e nome). ⚠️ Provisórios, baixa resolução → pedir os originais.
+  - `ruis-aiccopn.svg` — logótipo oficial R.U.-I.S., vetorial, do site da AICCOPN (ruis.aiccopn.pt). Definitivo.
+  - **Correções de factos feitas ao mesmo tempo:** PME Líder = **2020, 2021, 2022** (não 2021–2023: o diploma «PME Líder 2022» e a notícia de 01/2023 «3.º ano consecutivo»; corrigido na tabela e no carimbo do hero). «Prémio de Excelência» passou a **TOP 10 Melhores PME do Setor** (construção, reabilitação e remodelações; 2.º ano consecutivo; Edição 2022) — é o que diz o selo.
 - Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados).
 - Responsivo:
   - **≤ 1200 px:** botão «Menu» + barra dos dois negócios (Construções | Empreendimentos) sempre à vista.
@@ -26,6 +31,7 @@
 - Acessibilidade acrescentada: link «Saltar para o conteúdo», `<main>`, alvos de 44 px no seletor PT/EN e no rodapé, foco visível no rodapé escuro, borda do rádio «Outro assunto» com contraste 3:1, opção escolhida do formulário destacada.
 
 ## Próximos passos (sugeridos — o António define a ordem)
+0. **Selos:** substituir os 3 recortes (PME Líder, Scoring TOP 5%, Scoring TOP 10) pelos ficheiros oficiais quando a Engicivil os enviar; confirmar se têm estatutos mais recentes (PME Líder 2023–2025, Scoring 2023+) — se sim, atualizar ano, tabela e carimbo.
 1. **Páginas interiores** (a confirmar com o António quais e por que ordem): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** (os links «Ver os N projetos…», «Ver o Serene», «Saber mais» ainda apontam para `#`) · **Sobre** · **Contactos**. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
 2. Formulário de contacto (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-selecionar o tipo de pedido/edifício a partir dos CTAs («Pedir informação» do Serene → «Comprar casa» + Serene).
 3. Opcional: indicar a secção atual no menu (scroll-spy com `aria-current`).

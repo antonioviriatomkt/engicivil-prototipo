@@ -306,6 +306,21 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 .cred strong { font-family: var(--f-ui); font-weight: 600; }
 .cred__sub { font-size: 0.9375rem; color: var(--g700); }
 .cred__ref { font-family: var(--f-mono); font-size: 14px; }
+/* Selos das distinções (secção 04) */
+.seals { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.seal { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 16px; min-height: 196px; padding: 24px 16px 16px; background: var(--white); border-top: 1px solid var(--ink); }
+.seal__img { display: block; height: 104px; width: auto; max-width: 100%; object-fit: contain; margin: auto 0; }
+.seal__img--wide { height: 112px; }
+.seal__img--round { height: 120px; }
+.seal__cap { font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--g700); text-align: center; }
+@media (max-width: 760px) {
+  .seals { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .seal { min-height: 164px; }
+  .seal__img { height: 84px; }
+  .seal__img--wide { height: 88px; }
+  .seal__img--round { height: 96px; }
+}
+
 
 /* ---------- 05 Como trabalhamos ---------- */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; border-top: 1px solid var(--ink); }

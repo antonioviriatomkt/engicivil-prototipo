@@ -2,6 +2,12 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · g/certificacoes · selos das distinções
+- Faixa de 4 selos (PME Líder 2022, Scoring TOP 5% 2022, Scoring TOP 10 setor 2022, R.U.-I.S.) no fim da secção 04. R.U.-I.S. é o SVG oficial; os outros 3 são recortes provisórios das imagens publicadas pela Engicivil.
+- Factos corrigidos: PME Líder 2020–2022 (tabela + carimbo do hero); «Prémio de Excelência» → «TOP 10 Melhores PME do Setor».
+- Decisão: usar só selos com o ano efetivamente atribuído (regra do IAPMEI; os selos Scoring também são datados e personalizados).
+- Preview: branch `g/certificacoes` no Vercel.
+
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 3: ecrã de carregamento
 - **Loader** na homepage G: só o **símbolo** do logótipo atual (a fita dobrada em «Σ»), sem o texto. Redesenhado em **SVG** (7 facetas com gradiente) a partir de `public/img/logos/engicivil-logo.png`, nas **cinzas/ardósia da base neutra** — não usa o azul da marca atual.
 - Animação: o símbolo «desenha-se» ao longo da fita (máscara com `stroke-dashoffset`, ~1,3 s) sobre um fantasma a 12 %. Se a página ainda não carregou, apaga e redesenha em ciclo; sai sempre com o símbolo completo (fade + ligeira redução). Failsafe CSS: desaparece aos 8 s.

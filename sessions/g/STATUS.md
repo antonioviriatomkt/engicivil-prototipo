@@ -4,7 +4,7 @@
 > Atualizado: **2026-10-22** · por: sessão 1 (Claude) · branch `claude/wonderful-volta-b4600b`
 
 ## Onde estamos
-- `prototypes/g/index.html` = **homepage**, visualmente igual ao mockup `G-BD` a 1440 px (verificado por comparação de capturas), agora **sem estilos inline**.
+- `prototypes/g/index.html` = **homepage**, sem estilos inline. Igual ao mockup `G-BD` a 1440 px, exceto o hero (revisto, ver abaixo).
 - `prototypes/g/styles.css` = CSS partilhado do G: tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`), utilitários de grelha (`.grid` 12 colunas + `.span-N`/`.start-N`) e componentes (`.sec-head`, `.path`, `.dev`, `.spec`, `.ix-*`, `.cred`, `.form`…). **Páginas novas do G devem usar este ficheiro.**
 - `prototypes/g/main.js` = menu recolhido do cabeçalho (abre/fecha, `aria-expanded`, Esc devolve o foco, fecha ao escolher destino). Sem JS o menu fica visível.
 - **Hero revisto** (pedido do António, 22/10):

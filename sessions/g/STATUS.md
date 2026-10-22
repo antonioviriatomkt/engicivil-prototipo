@@ -1,7 +1,7 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-22** · por: sessão 5 (Claude) · branch `claude/nice-cannon-u8j2zu`
+> Atualizado: **2026-10-22** · por: sessão 6 (Claude) · branch `claude/trabalho-em-g-29paml`
 
 ## Onde estamos
 - `prototypes/g/index.html` = **homepage**, sem estilos inline. Igual ao mockup `G-BD` a 1440 px, exceto o hero (revisto, ver abaixo).
@@ -15,7 +15,10 @@
      - Véu escuro liso a 60 % (sem gradiente) → texto branco com ≥ 4,8:1 mesmo sobre o píxel mais claro do vídeo (medido em 17 fotogramas).
      - **Sem botão de pausa** (retirado a pedido do António). ⚠️ Falha o critério WCAG 2.2.2 (nível A: movimento automático > 5 s tem de poder ser pausado). Continua a respeitar «reduzir movimento» e poupança de dados (fica parado na capa). Ver próximos passos.
      - Altura: ecrã inteiro menos o cabeçalho e a faixa de distinções (480–720 px; telemóvel 520–720 px).
-  2. **Título da página** (`.intro`, por cima dos cartões, dentro de `section.paths-sec`): eyebrow «ENGICIVIL · Aveiro, desde 2013» + `<h1>` «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.», em tinta sobre papel, **centrado** (passou do hero para aqui na sessão 5). Por baixo, **Os dois negócios** lado a lado, **sem imagens** (cartões só de texto, mesma altura): Construções (Indústria e serviços · Habitação e reabilitação) e Empreendimentos (Serene e Gaio, link para `#serene` / `#gaio`). Por baixo, o terceiro caminho para promotores → `#locais`.
+  2. **Título da página** (`.intro`, por cima dos cartões, dentro de `section.paths-sec`): eyebrow «ENGICIVIL · Aveiro, desde 2013» + `<h1>` «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.», em tinta sobre papel, **centrado**.
+     - **Os dois negócios (sessão 6, versão «D2» escolhida pelo António entre 6 variantes):** pergunta mono «O que procura?» + **dois blocos com foto**, lado a lado, mesma altura (360 px; telemóvel 260 px, um por baixo do outro). Cada bloco é um único link: foto de fundo + véu liso a 60 % (como o hero) + verbo em branco («Construir ou reabilitar» → `#construcoes` · «Comprar casa» → `#empreendimentos`) + «ENGICIVIL Construções/Empreendimentos» pequeno + círculo com seta. Fotos: fachada da Delabie (770 px) e render do Serene (`edificio-serene-11.jpg`). Contraste do branco sobre o píxel mais claro de cada foto com o véu: ≥ 4,8:1. Hover: véu a 72 % e foto com zoom ligeiro.
+     - Por baixo, botão discreto «Promover um edifício» (marca quadrada aberta) → `#locais`.
+     - Saíram desta secção (estão nas secções de baixo): lista de tipos de obra e clientes, Serene/Gaio com local e n.º de apartamentos, botões «Pedir orçamento» / «Pedir informação».
   3. **Secção «Os dois sócios fundadores»**: foto (span 5, sem legenda) + título, texto factual (2013, mais de duas décadas de experiência, 30 especialistas com engenharia e estaleiro próprios, constrói para clientes e para os empreendimentos) e botão «Ligar 234 060 223».
   - **Régua do cabeçalho removida** (pedido do António).
   - A barra do carimbo (`.proof`/`.facts`) e os carimbos do hero (`.stamps`) deixaram de existir; substituídos pela faixa `.awards`.
@@ -33,6 +36,7 @@
 - Acessibilidade acrescentada: link «Saltar para o conteúdo», `<main>`, alvos de 44 px no seletor PT/EN e no rodapé, foco visível no rodapé escuro, borda do rádio «Outro assunto» com contraste 3:1, opção escolhida do formulário destacada.
 
 ## Próximos passos (sugeridos — o António define a ordem)
+- **Os dois negócios:** a foto da Delabie também é o vídeo do hero — se o António preferir variar, alternativas: `public/img/site/construcao-3.jpg` (casa em betão) ou `ribas-i-3.jpg`.
 0. **Selos:** substituir os 3 recortes (PME Líder, Scoring TOP 5%, Scoring TOP 10) pelos ficheiros oficiais quando a Engicivil os enviar; confirmar se têm estatutos mais recentes (PME Líder 2023–2025, Scoring 2023+) — se sim, atualizar ano, tabela e carimbo.
 1. **Páginas interiores** (a confirmar com o António quais e por que ordem): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** (os links «Ver os N projetos…», «Ver o Serene», «Saber mais» ainda apontam para `#`) · **Sobre** · **Contactos**. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
 2. Formulário de contacto (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-selecionar o tipo de pedido/edifício a partir dos CTAs («Pedir informação» do Serene → «Comprar casa» + Serene).

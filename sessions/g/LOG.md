@@ -2,6 +2,13 @@
 
 Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões · link do preview.
 
+## 2026-10-22 · claude/trabalho-em-g-29paml · sessão 6: secção dos dois negócios
+- Pedido do António: a secção dos dois negócios tinha demasiado texto. Mostrei 4 variantes numa página temporária (A cartão-link · B índice numerado · C faixa escura · D pergunta); gostou de A e D → fiz A2 e D2 com imagem → escolheu **D2**.
+- Homepage: «O que procura?» + dois blocos-link com foto, véu a 60 % e verbo em branco («Construir ou reabilitar» / «Comprar casa»), nome do negócio em pequeno; «Promover um edifício» como botão discreto por baixo. CSS `.path*`/`.hero-third` substituído por `.paths-q`, `.paths`, `.path*`, `.paths-third`.
+- Contraste medido: branco sobre o píxel mais claro de cada foto com véu 60 % ≥ 4,8:1.
+- Página de variantes apagada (e a entrada no `vite.config.js`). Sem scroll horizontal a 390, 768, 1024 e 1440.
+- Capturas: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
+
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.
 - Carimbos = 5 tiles brancos com o selo (Classe 5 fica em texto, não há selo) + legenda mono branca por baixo: Alvará IMPIC 70366-PUB · IAPMEI, 2020 a 2022 · Melhores PME de Portugal, 2022 · Melhores PME do setor, 2022 · AICCOPN, 2022. Os selos não têm transparência → tile branco em vez de pô-los diretamente sobre o vídeo.

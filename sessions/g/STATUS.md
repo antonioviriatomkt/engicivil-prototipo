@@ -1,53 +1,91 @@
 # Estado — Protótipo G — Rigor local (B+D)
 
 > **Este ficheiro é o estado ATUAL** — reescreve-o no fim de cada sessão (não acumules histórico aqui; isso vai para `LOG.md`).
-> Atualizado: **2026-10-22** · por: sessão 6 (Claude) · branch `claude/focused-albattani-1w68d0`
+> Atualizado: **2026-10-22** · por: sessão 6 (Claude) · branch `claude/focused-albattani-1w68d0` (integrado em `main`)
+
+> Lembrete do António: é um **protótipo para mostrar o design ao cliente**, não um site de produção.
 
 ## Onde estamos
-- `prototypes/g/index.html` = **homepage**, sem estilos inline. Igual ao mockup `G-BD` a 1440 px, exceto o hero (revisto, ver abaixo).
-- `prototypes/g/styles.css` = CSS partilhado do G: tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`), utilitários de grelha (`.grid` 12 colunas + `.span-N`/`.start-N`) e componentes (`.sec-head`, `.path`, `.dev`, `.spec`, `.ix-*`, `.cred`, `.form`…). **Páginas novas do G devem usar este ficheiro.**
-- `prototypes/g/loader.js` + bloco `#loader` no início do `<body>` + secção «Ecrã de carregamento» no `styles.css` = **ecrã de carregamento**: o símbolo da fita do logótipo atual (sem texto), em SVG neutro, desenha-se ao longo da fita; repete enquanto a página carrega; sai com fade. **Só na primeira visita da sessão** (decisão do António): o script do `<head>` só põe `is-loading` se `g-loader` não estiver no `sessionStorage`; recarregar ou navegar no mesmo separador já não o mostra (para o rever: separador novo ou `sessionStorage.removeItem('g-loader')`). Respeita «reduzir movimento»; failsafe aos 8 s. **Páginas novas do G devem copiar o bloco `#loader`, a classe `is-loading` no script do `<head>` e o `<script src="…/loader.js">`.**
-- **Cabeçalho:** o wordmark «ENGICIVIL» tem o símbolo da fita à direita (`.wordmark__mark`, SVG inline na cor do texto) — sessão 5, pedido do António.
-- `prototypes/g/main.js` = menu recolhido do cabeçalho (abre/fecha, `aria-expanded`, Esc devolve o foco, fecha ao escolher destino). Sem JS o menu fica visível.
-- **Topo da homepage (sessão 2, pedidos do António, 22/10)** — por esta ordem:
-  1. **Hero = vídeo a toda a largura** (percurso pela obra da Delabie, `public/video/`, 1280×720), em ciclo e sem som, **só com o logótipo ao centro** (sessão 5, pedido do António): wordmark «ENGICIVIL» (Bricolage 700) + símbolo da fita à direita (o mesmo SVG do loader), **tudo branco e sem sombra**; tamanho `clamp(1.75rem, 5.6vw, 4.55rem)`. Por baixo, o **slogan** «O seu projeto em boas mãos» (`.hero-slogan`, Source Serif itálico, branco; slogan atual da Engicivil, ver brief), como no logótipo atual mas **sem «Cardoso & Manata, Lda.»** (pedido do António). `p.hero-logo` com `role="img"` e `aria-label` «ENGICIVIL». Altura: ecrã inteiro menos o cabeçalho e a faixa de distinções (480–720 px).
-     - **Faixa de distinções** (`section.awards`, sem título visível — `aria-label` «Distinções e qualificações»; logo abaixo do hero, fundo branco = o dos ficheiros dos selos; sessão 5, opção C escolhida pelo António): 5 itens numa linha separados por fios — selo à esquerda (48 px, cores originais) + nome (Bricolage) e entidade/ano (mono): Alvará IMPIC 70366-PUB («CLASSE» com o «5» por baixo, no lugar do selo) · PME Líder (IAPMEI, 2020 a 2022) · TOP 5% PME de Portugal (Scoring, 2022) · TOP 10 PME do setor (Scoring, 2022) · Marca R.U.-I.S. (AICCOPN, 2022). ≤ 1200 px: grelha de 3 colunas sem fios; ≤ 760 px: 2 colunas. «2013» e «30 especialistas» saíram (pedido do António). O 2013 está no eyebrow; os «30 especialistas» (com engenharia e estaleiro próprios) passaram para o texto da secção dos sócios. O `<dl>` tem `aria-label` «Comum aos dois negócios: ENGICIVIL – Cardoso & Manata, Lda.».
-     - Véu escuro liso a 60 % (sem gradiente) → texto branco com ≥ 4,8:1 mesmo sobre o píxel mais claro do vídeo (medido em 17 fotogramas).
-     - **Sem botão de pausa** (retirado a pedido do António). ⚠️ Falha o critério WCAG 2.2.2 (nível A: movimento automático > 5 s tem de poder ser pausado). Continua a respeitar «reduzir movimento» e poupança de dados (fica parado na capa). Ver próximos passos.
-     - Altura: ecrã inteiro menos o cabeçalho e a faixa de distinções (480–720 px; telemóvel 520–720 px).
-  2. **Título da página** (`.intro`, por cima dos cartões, dentro de `section.paths-sec`): eyebrow «ENGICIVIL · Aveiro, desde 2013» + `<h1>` «Construímos, reabilitamos e promovemos edifícios, com as mais modernas soluções construtivas.», em tinta sobre papel, **centrado** (passou do hero para aqui na sessão 5). Por baixo, **Os dois negócios** lado a lado, **sem imagens** (cartões só de texto, mesma altura): Construções (Indústria e serviços · Habitação e reabilitação) e Empreendimentos (Serene e Gaio, link para `#serene` / `#gaio`). Por baixo, o terceiro caminho para promotores → `#locais`.
-  3. **Secção «Os dois sócios fundadores»**: foto (span 5, sem legenda) + título, texto factual (2013, mais de duas décadas de experiência, 30 especialistas com engenharia e estaleiro próprios, constrói para clientes e para os empreendimentos) e botão «Ligar 234 060 223».
-  - **Régua do cabeçalho removida** (pedido do António).
-  - A barra do carimbo (`.proof`/`.facts`) e os carimbos do hero (`.stamps`) deixaram de existir; substituídos pela faixa `.awards`.
-- **Selos das distinções:** a faixa de selos da secção 04 (sessão 4) foi **apagada** na sessão 5 (pedido do António); os selos estão agora na faixa «Distinções e qualificações» por baixo do hero. A tabela de credenciais da secção 04 mantém-se. Ficheiros em `public/img/selos/` (margens brancas recortadas na sessão 5). Usados na faixa de distinções com o fundo branco original:
-  - `pme-lider-2022.png` — recortado do diploma PME Líder 2022 que a Engicivil publica no site (127×144 depois do recorte, baixa resolução). ⚠️ **Provisório:** o IAPMEI só envia o logótipo oficial (com o ano obrigatório) por email à empresa → **pedir à Engicivil** o ficheiro do último ano que tenham.
-  - `scoring-top5-2022.png` e `scoring-top10-setor-2022.png` — recortados das imagens da própria Engicivil (selos personalizados Scoring 2022, com NIF e nome). ⚠️ Provisórios, baixa resolução → pedir os originais.
-  - `ruis-aiccopn.svg` — logótipo oficial R.U.-I.S., vetorial, do site da AICCOPN (ruis.aiccopn.pt). Definitivo.
-  - **Correções de factos feitas ao mesmo tempo:** PME Líder = **2020, 2021, 2022** (não 2021–2023: o diploma «PME Líder 2022» e a notícia de 01/2023 «3.º ano consecutivo»; corrigido na tabela e no carimbo do hero). «Prémio de Excelência» passou a **TOP 10 Melhores PME do Setor** (construção, reabilitação e remodelações; 2.º ano consecutivo; Edição 2022) — é o que diz o selo.
+**A homepage do G está completa de cima a baixo.** O hero, a faixa de distinções, os dois negócios e os sócios ficaram fechados na sessão 5. As secções 01–05 foram refeitas na sessão 6. Em cada secção o António escolheu uma de 4 propostas; as capturas das propostas estão em `screenshots/g/2026-10-22-<secção>-{a,b,c,d}-*.png`.
+
+### Ficheiros
+- `prototypes/g/index.html` = homepage (sem estilos inline).
+- `prototypes/g/styles.css` = CSS partilhado do G. Contém:
+  - tokens (`--ink`, `--g700`…`--g200`, `--paper`, `--accent`, `--f-ui/--f-text/--f-mono`, `--wrap`, `--gutter`);
+  - a grelha `.grid`;
+  - o cabeçalho de secção centrado `.sec-intro` (eyebrow «0N · …» + título + texto), usado em todas as secções;
+  - os componentes de cada secção.
+
+  **Páginas novas do G devem usar este ficheiro.**
+- `prototypes/g/main.js` = JS do G:
+  - menu recolhido (≤ 1200 px);
+  - arranque do vídeo do hero;
+  - separadores (`[data-tabs]`, padrão ARIA; uma ligação para o id de um painel abre o separador certo);
+  - galeria (`[data-gallery]`);
+  - campos do formulário que dependem do tipo de pedido (`form[data-dyn]` + `[data-when]`).
+- `prototypes/g/loader.js` + bloco `#loader` = ecrã de carregamento (símbolo da fita).
+  - Só aparece na primeira visita da sessão (`sessionStorage` `g-loader`). Para o rever: abrir um separador novo.
+  - Páginas novas do G devem copiar o bloco `#loader`, a classe `is-loading` no script do `<head>` e o `<script src="…/loader.js">`.
+
+### Homepage, por ordem
+1. **Cabeçalho:** wordmark «ENGICIVIL» + símbolo da fita.
+   - ≤ 1200 px: botão «Menu» + barra dos dois negócios.
+   - O item «Sobre nós» leva à secção dos sócios (`#sobre`).
+   - O item «Onde trabalhamos» leva à 03 (`#locais`).
+2. **Hero:** vídeo a toda a largura com o logótipo branco ao centro e o slogan «O seu projeto em boas mãos».
+   - Véu escuro a 60 %.
+   - Sem botão de pausa (⚠️ falha WCAG 2.2.2).
+3. **Faixa de distinções** (fundo branco): Alvará classe 5 · PME Líder 2020–2022 · TOP 5% PME 2022 · TOP 10 PME do setor 2022 · R.U.-I.S. Selos em `public/img/selos/`; 3 deles são provisórios.
+4. **Título da página + os dois negócios**:
+   - `<h1>` centrado;
+   - cartões Construções | Empreendimentos (com links `#serene`/`#gaio`);
+   - linha «Vai promover um edifício?» → `#locais`.
+5. **Os dois sócios fundadores** (`#sobre`): foto, texto e «Ligar».
+6. **01 Construções** (`#construcoes`, branco):
+   - título centrado;
+   - 3 cartões com foto (Indústria e serviços · Construção · Reabilitação), com «Ver projetos de …» → `#`;
+   - faixa «Porquê a ENGICIVIL» (4 mais-valias) + faixa «Pedir orçamento».
+   - Classes `.cons*`.
+7. **02 Empreendimentos** (`#empreendimentos`, papel):
+   - separadores Serene | Gaio;
+   - galeria (exterior + 3 interiores) + ficha com logótipo, lema e `.spec` (`[Área m²] · [Preço sob consulta]`).
+   - Os painéis têm `id="serene"`/`id="gaio"`.
+   - Classes `.dev-*`, `.gallery`.
+8. **03 Prédios para promotores** (`#locais`, branco):
+   - 6 cartões (foto, «Construído pela ENGICIVIL», local, `[Promotor]`, `[À venda / vendido]`).
+   - **Sem CTAs** (pedido do António).
+   - Classes `.pred-*`.
+9. **04 Como trabalhamos** (`#processo`, papel): 4 passos numa linha com círculos numerados (vertical no telemóvel). Classes `.proc-*`.
+10. **05 Contacto** (`#contacto`, branco):
+    - formulário ao centro com o tipo de pedido em mosaicos:
+      - «Fazer uma obra» mostra tipo de obra + local;
+      - «Comprar casa» mostra o edifício;
+    - faixa de contactos por baixo (telefone · geral@ · comercial@ · morada).
+    - Ids `g-*`; classes `.contact*`, `.radios--tiles`.
+11. **Rodapé** escuro. Os links não têm sublinhado e sublinham ao passar o rato ou com o foco (pedido do António).
+
+- A antiga secção 04 «Sobre nós e credenciais» foi **removida** (pedido do António). As credenciais ficam na faixa de distinções, nas mais-valias da 01 e no rodapé.
 - Tipografia: Bricolage Grotesque (títulos) + Source Serif 4 (texto) + IBM Plex Mono (dados).
-- Responsivo:
-  - **≤ 1200 px:** botão «Menu» + barra dos dois negócios (Construções | Empreendimentos) sempre à vista.
-  - **761–1080 px (tablet):** cartões de negócio lado a lado; sócios foto | texto; carimbos numa linha; índice «Onde trabalhamos» com o local por cima das obras.
-  - **≤ 760 px:** uma coluna (como no mockup móvel), factos em 2 colunas com tamanho reduzido (já não transbordam).
-  - Sem scroll horizontal a 390, 768, 1024, 1280 e 1440 px.
-- Acessibilidade acrescentada: link «Saltar para o conteúdo», `<main>`, alvos de 44 px no seletor PT/EN e no rodapé, foco visível no rodapé escuro, borda do rádio «Outro assunto» com contraste 3:1, opção escolhida do formulário destacada.
+- Sem scroll horizontal a 360, 390, 768, 1024, 1280 e 1440 px.
+- Capturas da página inteira: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
 
 ## Próximos passos (sugeridos — o António define a ordem)
-- **EM CURSO — secções 01–06** (o António deu o hero e a faixa de distinções por concluídos; método: 4 propostas de layout por secção, o António escolhe). **01 Construções: feita** (proposta A — título centrado, 3 cartões com foto das áreas, faixa «Porquê a ENGICIVIL» com 4 mais-valias, faixa de CTA; classes `.cons*` em `styles.css`). **02 Empreendimentos: feita** (proposta C — separadores Serene | Gaio com galeria de exterior e interiores + ficha; classes `.dev-tabs`, `.dev-panel`, `.gallery`, `.dev-info` em `styles.css`; separadores e galeria em `main.js`; `#serene`/`#gaio` abrem o separador certo). Cabeçalho centrado das secções refeitas = `.sec-intro` (reutilizar nas próximas). **03 Prédios para promotores / Onde trabalhamos: feita** (proposta A sem CTAs — 6 cartões `.pred-*` + linha `.places`; `id="locais"` mantido). Concelhos de Peralta e Rios, Viela do Canto, Ribas e Rua do Gravito continuam `[Concelho]`. **04 Sobre: removida** (pedido do António; «Sobre nós» do menu → secção dos sócios). **04 Como trabalhamos: feita** (proposta A — linha de 4 passos, `.proc-*`, fundo papel). **05 Contacto: 4 propostas** em `prototypes/g/propostas/contacto/` (capturas `screenshots/g/2026-10-22-contacto-*`) — **à espera da escolha do António**; depois passar para `index.html` + `styles.css` (manter `id="contacto"` e os ids `g-*` do formulário; fundo branco, porque a 04 é papel), apagar a página de propostas e a entrada no `vite.config.js`.
-0. **Selos:** substituir os 3 recortes (PME Líder, Scoring TOP 5%, Scoring TOP 10) pelos ficheiros oficiais quando a Engicivil os enviar; confirmar se têm estatutos mais recentes (PME Líder 2023–2025, Scoring 2023+) — se sim, atualizar ano, tabela e carimbo.
-1. **Páginas interiores** (a confirmar com o António quais e por que ordem): **Construções** · **Empreendimentos** (listagem) · **Serene** · **Gaio** · **Prédios construídos para terceiros** · **Obra / portefólio** (os links «Ver os N projetos…», «Ver o Serene», «Saber mais» ainda apontam para `#`) · **Sobre** · **Contactos**. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
-2. Formulário de contacto (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-selecionar o tipo de pedido/edifício a partir dos CTAs («Pedir informação» do Serene → «Comprar casa» + Serene).
-3. Opcional: indicar a secção atual no menu (scroll-spy com `aria-current`).
-4. Rever com o António o novo topo (capturas `screenshots/g/2026-10-22-hero-full-1440.png` / `-390.png`): intensidade do véu (60 %) e altura do hero.
-   - **Pausa do vídeo:** sem o botão, a página falha WCAG 2.2.2. Propor uma solução discreta (ex.: ícone pequeno de pausa num canto, ou o vídeo parar ao fim de um ciclo de 34 s, ou só arrancar ao passar o rato).
-5. Vídeo a toda a largura usa 720p esticado até 1440 px — fica ligeiramente suave em ecrãs grandes. Se o António tiver o original em 1080p, gerar uma versão 1080p (H.264 + WebM) para ≥ 1280 px.
-6. A foto dos sócios mostra o logótipo antigo ao fundo — substituir quando houver identidade nova. O mesmo para o **símbolo do loader** (é o do logótipo atual).
+1. **Rever a página inteira com o António**: ritmo entre secções, fundos (branco/papel alternados) e repetição entre as mais-valias da 01 e os passos da 04.
+2. **Páginas interiores** (confirmar quais e a ordem): Construções / portefólio (os «Ver projetos de …» apontam para `#`) · Serene · Gaio (os «Ver o Serene/Gaio» apontam para `#`) · Prédios para promotores · Contactos / Política de Privacidade. Cada uma: `prototypes/g/<pagina>/index.html` + entrada em `vite.config.js`, usando `../styles.css`.
+3. **Formulário** (só front-end): validação com mensagens em PT, estado «pedido enviado», pré-seleção a partir dos CTAs (ex.: «Pedir informação» do Serene → «Comprar casa» + Serene).
+4. **Pausa do vídeo** (WCAG 2.2.2): propor uma solução discreta.
+5. **Selos:** substituir os 3 recortes (PME Líder, Scoring TOP 5%, Scoring TOP 10) pelos ficheiros oficiais e confirmar se há anos mais recentes.
+6. Vídeo do hero em 1080p, se houver o original.
+7. Quando houver identidade nova, trocar: a foto dos sócios (tem o logótipo antigo ao fundo), o símbolo do loader e o do wordmark.
 
 ## Dúvidas em aberto
-- Ver «Por confirmar com o cliente» em `context/decisoes.md`.
-- O CLAUDE.md pede branches `g/<tema>`; as sessões 1 e 2 usaram os branches atribuídos (`claude/wonderful-volta-b4600b`, `claude/nice-cannon-u8j2zu`). O PR da sessão 2 inclui os commits do PR #3. A sessão 3 (loader) foi feita neste mesmo branch e o branch foi integrado em `main`.
-- O branch `g/hero` (PR #2, fechado) tinha uma variante com a marca atual (azul) — abandonada; não continuar a partir dele.
+- Ver «Por confirmar com o cliente» em `context/decisoes.md`. Mais específicas do G:
+  - `[prazo]` de resposta no contacto;
+  - `[Concelho]` de Peralta e Rios, Viela do Canto, Ribas e Rua do Gravito;
+  - `[Promotor]` e `[À venda / vendido]` de cada prédio;
+  - que email serve cada negócio (hipótese: geral@ → Construções, comercial@ → Empreendimentos).
+- Da Gafanha de Aquém só há fotos em obra. Os ficheiros da Rua do Gravito chamam-se `ed-pedro-cardoso-*` (o nome não é mostrado).
 
 ## Carregar na próxima sessão
-- `prototypes/g/styles.css` · `prototypes/g/loader.js` · `prototypes/g/index.html` (só as secções relevantes para a página a criar)
+- `prototypes/g/styles.css` · `prototypes/g/main.js` · `prototypes/g/index.html` (só as secções relevantes)
 - `context/brief.md` (factos) e `context/assets-manifest.csv` se a página precisar de mais imagens

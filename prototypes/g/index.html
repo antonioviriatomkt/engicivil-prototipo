@@ -417,50 +417,25 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
     </div>
   </section>
 
-  <!-- 05 Contacto -->
-  <section id="contacto" class="section section--last" aria-labelledby="h-k">
-    <div class="wrap stack-s">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">05 / 05</span><span class="sec-meta__name">Contacto</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-k" class="sec-title">Fale connosco</h2>
-          <p class="sec-lead">Diga-nos se é uma obra ou uma casa, e encaminhamos o pedido para a equipa certa. Respondemos em [prazo] dias úteis.</p>
-        </div>
-      </div>
+  <!-- 05 Contacto: formulário ao centro (a escolha do pedido mostra os campos certos, main.js) + contactos numa faixa -->
+  <section id="contacto" class="section section--white section--last contact" aria-labelledby="h-k">
+    <div class="wrap">
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">05 · Contacto</p>
+        <h2 id="h-k" class="sec-intro__title">Fale connosco.</h2>
+        <p class="sec-intro__lead">Diga-nos se é uma obra ou uma casa, e encaminhamos o pedido para a equipa certa. Respondemos em [prazo] dias úteis.</p>
+      </header>
 
-      <div class="grid grid--loose align-start">
-        <address class="contact-card span-4">
-          <a href="tel:+351234060223" class="tel-big">234 060 223</a>
-          <div class="contact-biz">
-            <div>
-              <span class="sb-pre">ENGICIVIL</span>
-              <span class="contact-biz__name">Construções</span>
-              <span class="contact-biz__what">Obra e orçamentos</span>
-              <a href="mailto:geral@engicivil.pt">geral@engicivil.pt</a>
-            </div>
-            <div>
-              <span class="sb-pre">ENGICIVIL</span>
-              <span class="contact-biz__name">Empreendimentos</span>
-              <span class="contact-biz__what">Casas à venda</span>
-              <a href="mailto:comercial@engicivil.pt">comercial@engicivil.pt</a>
-            </div>
-          </div>
-          <div class="contact-addr">
-            <span class="note">Morada</span>
-            <span>Rua Eng.º Von Haff, 47, 1.º B<br>3800-177 Aveiro</span>
-          </div>
-        </address>
-
-        <form class="form span-8 start-5" action="#" method="post">
+      <div class="contact__form">
+        <form class="form" action="#" method="post" data-dyn>
           <fieldset>
             <legend>Qual é o seu pedido?</legend>
-            <div class="radios">
-              <label class="choice" for="g-obra"><input type="radio" id="g-obra" name="tipo" value="obra" checked> Fazer uma obra</label>
-              <label class="choice" for="g-casa"><input type="radio" id="g-casa" name="tipo" value="casa"> Comprar casa</label>
-              <label class="choice choice--muted" for="g-outro"><input type="radio" id="g-outro" name="tipo" value="outro"> Outro assunto</label>
+            <div class="radios radios--tiles">
+              <label class="choice" for="g-obra"><input type="radio" id="g-obra" name="tipo" value="obra" checked> <span>Fazer uma obra<small>ENGICIVIL Construções</small></span></label>
+              <label class="choice" for="g-casa"><input type="radio" id="g-casa" name="tipo" value="casa"> <span>Comprar casa<small>ENGICIVIL Empreendimentos</small></span></label>
+              <label class="choice choice--muted" for="g-outro"><input type="radio" id="g-outro" name="tipo" value="outro"> <span>Outro assunto</span></label>
             </div>
           </fieldset>
-
           <div class="fields">
             <div class="field">
               <label for="g-nome">Nome</label>
@@ -474,22 +449,33 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
               <label for="g-tel">Telefone <span class="opt">(opcional)</span></label>
               <input class="input" id="g-tel" name="telefone" type="tel" autocomplete="tel">
             </div>
-            <div class="field">
-              <label for="g-emp">Edifício <span class="opt">(se for compra)</span></label>
+            <div class="field" data-when="obra">
+              <label for="g-tipo-obra">Tipo de obra</label>
+              <select class="input" id="g-tipo-obra" name="tipo_obra">
+                <option value="">Escolher</option>
+                <option>Indústria e serviços</option>
+                <option>Construção</option>
+                <option>Reabilitação</option>
+              </select>
+            </div>
+            <div class="field" data-when="obra">
+              <label for="g-local">Local da obra</label>
+              <input class="input" id="g-local" name="local" type="text" autocomplete="address-level2">
+            </div>
+            <div class="field" data-when="casa">
+              <label for="g-emp">Edifício</label>
               <select class="input" id="g-emp" name="edificio">
-                <option value="">Não se aplica</option>
+                <option value="">Ainda não sei</option>
                 <option value="serene">Serene Condominium, Ílhavo</option>
                 <option value="gaio">Edifício Gaio, Oliveira do Bairro</option>
                 <option value="terceiros">Um prédio construído para um promotor</option>
               </select>
             </div>
           </div>
-
           <div class="field">
             <label for="g-msg">Mensagem</label>
             <textarea class="input" id="g-msg" name="mensagem" rows="5" placeholder="Tipo de obra, local e prazo, ou a tipologia que procura."></textarea>
           </div>
-
           <div class="form-foot">
             <label class="check" for="g-priv">
               <input id="g-priv" type="checkbox" name="privacidade" required>
@@ -499,6 +485,13 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
           </div>
         </form>
       </div>
+
+      <address class="contact-strip">
+        <div><span class="contact-strip__label">Telefone</span><a href="tel:+351234060223">234 060 223</a></div>
+        <div><span class="contact-strip__label">Construções</span><a href="mailto:geral@engicivil.pt">geral@engicivil.pt</a></div>
+        <div><span class="contact-strip__label">Empreendimentos</span><a href="mailto:comercial@engicivil.pt">comercial@engicivil.pt</a></div>
+        <div><span class="contact-strip__label">Morada</span><span>Rua Eng.º Von Haff, 47, 1.º B, 3800-177 Aveiro</span></div>
+      </address>
     </div>
   </section>
 

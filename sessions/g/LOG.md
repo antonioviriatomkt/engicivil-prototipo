@@ -41,6 +41,8 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - **C** — duas «portas» (Construções / Empreendimentos, com email e botão que marca o tipo de pedido) + linha comum (telefone, morada) + formulário.
   - **D** — formulário ao centro; a escolha do pedido mostra os campos certos (obra → tipo de obra + local; casa → edifício); contactos numa faixa por baixo.
   - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-contacto-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
+- **Decisão (António): proposta D** para o contacto. Implementada na homepage (`#contacto`, fundo branco): título centrado, formulário ao centro com o tipo de pedido em mosaicos (obra → tipo de obra + local; casa → edifício; `main.js`), faixa de contactos por baixo. Apagado o CSS antigo do contacto (`.contact-card`, `.tel-big`, `.contact-biz*`, `.contact-addr`) e o cabeçalho de secção do mockup (`.sec-head`, `.sec-meta*`, `.sec-title*`, `.sec-lead`, `.stack-*`) — todas as secções usam `.sec-intro`. **Rodapé sem sublinhados** nos links (sublinham ao passar o rato / com foco). Capturas: `screenshots/g/2026-10-22-contacto-{1440,390}.png`, página inteira `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
+- Merge para `main` a pedido do António.
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

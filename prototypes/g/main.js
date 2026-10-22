@@ -87,3 +87,13 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
     })
   })
 })
+
+// Formulário de contacto: mostra só os campos do pedido escolhido (data-when="obra" | "casa").
+document.querySelectorAll('form[data-dyn]').forEach((form) => {
+  const update = () => {
+    const tipo = form.querySelector('input[name="tipo"]:checked')?.value
+    form.querySelectorAll('[data-when]').forEach((el) => { el.hidden = el.dataset.when !== tipo })
+  }
+  form.addEventListener('change', update)
+  update()
+})

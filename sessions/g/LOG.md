@@ -9,6 +9,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - Sem scroll horizontal a 390, 768 e 1440 px. Capturas: `screenshots/g/2026-10-22-g-desktop.png` / `-mobile.png`.
 - 2.ª ronda (pedido do António): **sem fundos brancos, aspeto de prémio**. Selos com transparência real (versões `*-transparente.png` e `ruis-aiccopn-branco.svg`, geradas dos ficheiros existentes), diretamente sobre o vídeo, com sombra de medalha; nome + entidade/ano centrados por baixo. Alvará: «CLASSE / 5» tipográfico no lugar do selo (não existe selo), nome «Alvará IMPIC», ref. «70366-PUB».
 - 3.ª ronda: selos e «5» reduzidos para **metade** (46 px; telemóvel 34 px), sombra proporcional.
+- 4.ª ronda: o António não gostou do layout; mostrei 3 esboços (A faixa no fundo do hero · B coluna à direita · C faixa clara por baixo do hero) e escolheu o **C**. Hero fica só com eyebrow + título; nova `section.awards` «Distinções e qualificações» logo abaixo, fundo branco, selos com as cores e fundos originais, «CLASSE» com o «5» por baixo. Apagadas as versões sem fundo dos selos (`*-transparente.png`, `ruis-aiccopn-branco.svg`), já sem uso. Sem scroll horizontal a 390, 1024 e 1440; a 1440×900 a faixa cabe no primeiro ecrã.
 
 ## 2026-10-22 · g/certificacoes · selos das distinções
 - Faixa de 4 selos (PME Líder 2022, Scoring TOP 5% 2022, Scoring TOP 10 setor 2022, R.U.-I.S.) no fim da secção 04. R.U.-I.S. é o SVG oficial; os outros 3 são recortes provisórios das imagens publicadas pela Engicivil.

@@ -142,7 +142,7 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 
 /* ---------- Hero: vídeo a toda a largura, título por cima ---------- */
 /* Véu escuro liso (sem gradiente): com 60 %, mesmo um píxel branco do vídeo fica a 4,8:1 contra texto branco (AA). Texto do hero só em branco. */
-.hero { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: clamp(560px, calc(100svh - 95px), 820px); overflow: hidden; background: var(--ink); color: var(--white); }
+.hero { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: clamp(480px, calc(100svh - 95px - 124px), 720px); overflow: hidden; background: var(--ink); color: var(--white); }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgb(20 20 20 / 0.6); }
 .hero-video { position: absolute; inset: 0; z-index: -2; display: block; width: 100%; height: 100%; object-fit: cover; }
 .hero-inner { flex: 1 1 auto; min-width: 0; padding-top: 96px; padding-bottom: 56px; }
@@ -184,15 +184,18 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 .founders__title { margin: 0; font-family: var(--f-ui); font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.04; font-weight: 600; letter-spacing: -0.025em; }
 .founders__text .actions { margin-top: 4px; }
 
-/* Carimbos como prémios: selo sem fundo (com sombra, como medalha) + nome + entidade/ano, centrados. Sem caixa nem contorno. */
-.stamps { margin: 12px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 148px)); gap: 20px 16px; }
-.stamp { display: flex; flex-direction: column; align-items: center; text-align: center; }
-.stamp dt { order: 2; margin-top: 10px; font-family: var(--f-ui); font-size: 0.9375rem; line-height: 1.2; font-weight: 600; color: var(--white); }
-.stamp__ref { order: 3; margin: 4px 0 0; font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--white); }
-.stamp__seal { order: 1; margin: 0; height: 46px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 3px 6px rgb(0 0 0 / 0.45)); }
-.stamp__seal img { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; }
-.stamp__seal--type { flex-direction: column; font-family: var(--f-ui); font-size: 2.25rem; line-height: 0.8; font-weight: 600; letter-spacing: -0.04em; color: var(--white); }
-.stamp__seal--type span { margin-bottom: 4px; font-family: var(--f-mono); font-size: 12px; line-height: 1; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; }
+/* Distinções e qualificações: faixa branca logo abaixo do hero. Selo à esquerda (cores originais) + nome e entidade/ano; itens separados por fios. */
+.awards { background: var(--white); border-bottom: 1px solid var(--g200); }
+.awards__label { margin: 0; padding-top: 22px; font-family: var(--f-mono); font-size: 12px; line-height: 1.4; font-weight: 400; color: var(--g500); }
+.awards__list { margin: 0; padding: 18px 0 24px; display: flex; flex-wrap: wrap; gap: 16px 0; }
+.award { display: grid; grid-template-columns: auto auto; justify-content: start; column-gap: 12px; align-items: center; padding: 0 28px; border-left: 1px solid var(--g200); }
+.award:first-child { padding-left: 0; border-left: 0; }
+.award dt { grid-column: 2; align-self: end; font-family: var(--f-ui); font-size: 0.9375rem; line-height: 1.2; font-weight: 600; color: var(--ink); }
+.award__ref { grid-column: 2; align-self: start; margin: 2px 0 0; font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--g700); }
+.award__seal { grid-column: 1; grid-row: 1 / span 2; margin: 0; height: 48px; display: flex; align-items: center; }
+.award__seal img { display: block; height: 100%; width: auto; }
+.award__seal--type { flex-direction: column; justify-content: center; font-family: var(--f-ui); font-size: 1.75rem; line-height: 0.9; font-weight: 600; letter-spacing: -0.03em; color: var(--ink); }
+.award__seal--type span { margin-bottom: 3px; font-family: var(--f-mono); font-size: 11px; line-height: 1; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--g700); }
 
 /* ---------- Cabeçalho de secção ---------- */
 .sec-head { row-gap: 16px; border-top: 2px solid var(--ink); padding-top: 20px; }
@@ -366,6 +369,8 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
 
 /* ---------- Ecrãs médios (≤ 1200 px): menu recolhido ---------- */
 @media (max-width: 1200px) {
+  .awards__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; }
+  .award { padding: 0; border-left: 0; }
   .menu { display: block; flex-basis: 100%; padding-bottom: 16px; }
   .js .menu { display: none; }
   .js .site-header.is-open .menu { display: block; }
@@ -396,10 +401,8 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
 
   .hero { min-height: clamp(520px, calc(100svh - 160px), 720px); }
   .hero-inner { padding-top: 64px; padding-bottom: 32px; }
-  .stamps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 8px; }
-  .stamp__seal { height: 34px; }
-  .stamp__seal--type { font-size: 1.75rem; }
-  .stamp dt { font-size: 0.875rem; }
+  .awards__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
+  .award__seal { height: 40px; }
   .path__body { padding: 24px; }
   .path__name { font-size: 2.25rem; }
   .paths-sec { padding-top: 32px; }

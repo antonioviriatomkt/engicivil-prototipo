@@ -332,213 +332,73 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
     </div>
   </section>
 
-  <!-- 03 Onde trabalhamos + prédios para terceiros -->
-  <section id="locais" class="section section--white" aria-labelledby="h-l">
-    <div class="wrap stack-s">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">03 / 06</span><span class="sec-meta__name">Os dois negócios</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-l" class="sec-title">Onde trabalhamos</h2>
-          <p class="sec-lead">A sede é em Aveiro. Daqui saímos para obra na região, até ao Porto e a Coimbra. Em cada local, o que lá construímos, incluindo os prédios que fizemos para outros promotores.</p>
-        </div>
-      </div>
+  <!-- 03 Onde trabalhamos: prédios construídos para outros promotores (montra) + locais -->
+  <section id="locais" class="section section--white preds" aria-labelledby="h-l">
+    <div class="wrap">
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">03 · Prédios para promotores</p>
+        <h2 id="h-l" class="sec-intro__title">Prédios que construímos para outros promotores.</h2>
+        <p class="sec-intro__lead">Edifícios de habitação que a ENGICIVIL construiu na região de Aveiro. Alguns estão à venda pelos seus promotores.</p>
+      </header>
 
-      <!-- Legenda -->
-      <ul class="legend" aria-label="Legenda do tipo de obra">
-        <li><span class="mark mark--line" aria-hidden="true"></span>Obra para cliente</li>
-        <li><span class="mark mark--sq" aria-hidden="true"></span>Empreendimento próprio</li>
-        <li><span class="mark mark--open" aria-hidden="true"></span>Prédio construído para um promotor</li>
+      <ul class="pred-grid" role="list">
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-viaduto-de-esgueira/viaduto-de-esgueira-12.jpg" alt="Edifício de habitação no Viaduto de Esgueira, em Aveiro." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Viaduto de Esgueira</h3>
+            <p class="pred-card__loc">Aveiro · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/construcao-de-edificio-peralta-e-rios/construcao-de-edificio-peralta-e-rios-4.jpg" alt="Edifício de habitação Peralta e Rios, com fachada branca e grelhas escuras." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Peralta e Rios</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-viela-do-canto/edificio-de-habitacao-viela-do-canto.jpg" alt="Edifício de habitação de gaveto na Viela do Canto." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Viela do Canto</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-ribas-i/ribas-i-3.jpg" alt="Edifício de habitação Ribas I, com varandas de vidro." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Ribas I e II</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/edificio-de-habitacao-rua-do-gravito/ed-pedro-cardoso-15.jpg" alt="Fachada do edifício de habitação da Rua do Gravito." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Rua do Gravito</h3>
+            <p class="pred-card__loc">[Concelho] · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
+        <li class="pred-card">
+          <img src="/img/portefolio/construcao/construcao-de-edificio-gafanha-de-aquem/construcao-de-edificio-gafanha-de-aquem-9.jpg" alt="Edifício da Gafanha de Aquém em obra, com a estrutura de betão." loading="lazy">
+          <div class="pred-card__body">
+            <span class="pred-badge">Construído pela ENGICIVIL</span>
+            <h3 class="pred-card__title">Gafanha de Aquém</h3>
+            <p class="pred-card__loc">Gafanhas · Edifício de habitação</p>
+            <dl class="pred-kv"><div><dt>Promotor</dt><dd>[Promotor]</dd></div><div><dt>Estado</dt><dd>[À venda / vendido]</dd></div></dl>
+          </div>
+        </li>
       </ul>
 
-      <div>
-        <!-- Cabeçalho do índice -->
-        <div class="ix-head" aria-hidden="true">
-          <span>Local</span>
-          <div class="ix-cols">
-            <span>Imagem</span><span>Obra</span><span>Tipo de obra</span><span>Promotor</span><span>Estado</span><span></span>
-          </div>
-        </div>
-
-        <ul class="ix-list">
-
-          <!-- Aveiro -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Aveiro</h3>
-              <span class="ix-place__note">Sede, Rua Eng.º Von Haff</span>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/edificio-de-habitacao-viaduto-de-esgueira/viaduto-de-esgueira-12.jpg" alt="Edifício de habitação no Viaduto de Esgueira, em Aveiro.">
-                <div><h4>Viaduto de Esgueira</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Ílhavo -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Ílhavo</h3>
-              <span class="ix-place__note">Entre Aveiro, as praias e a ria</span>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/empreendimentos/serene-condominium/edificio-serene-19.jpg" alt="Vista aérea dos terraços do Serene Condominium, render.">
-                <div><h4>Serene Condominium</h4><p class="ix-entry__desc">8 apartamentos, T2 e T3 duplex.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--sq" aria-hidden="true"></span>Empreendimento próprio</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>ENGICIVIL Empreendimentos</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>À venda</div>
-                <div><a href="#empreendimentos" class="link link--sm">Ver ficha</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Gafanhas -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Gafanhas</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>Gafanha de Aquém</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Oliveira do Bairro -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Oliveira do Bairro</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/empreendimentos/edificio-gaio/edificio-gaio-18.jpg" alt="Pormenor das varandas do Edifício Gaio contra o céu, render.">
-                <div><h4>Edifício Gaio</h4><p class="ix-entry__desc">12 apartamentos, T1 a T3 duplex.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--sq" aria-hidden="true"></span>Empreendimento próprio</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>ENGICIVIL Empreendimentos</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>Em construção</div>
-                <div><a href="#empreendimentos" class="link link--sm">Ver ficha</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Oliveira de Azeméis -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Oliveira de Azeméis</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/moradia-unifamiliar-oliveira-de-azemeis/moradia-oliveira-de-azemeis-7.jpg" alt="Moradia em betão e vidro em Oliveira de Azeméis.">
-                <div><h4>Moradia em betão e vidro</h4><p class="ix-entry__desc">Construção de raiz.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--line" aria-hidden="true"></span>Obra para cliente</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>Cliente particular</div>
-                <div class="ix-cell ix-cell--muted"><span class="m-label">Estado</span>Não se aplica</div>
-                <div><a href="#" class="link link--sm">Ver projeto</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Porto -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Porto</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>[Obra no Porto]</h4><p class="ix-entry__desc">[A confirmar com a Engicivil]</p></div>
-                <div class="ix-cell"><span class="m-label">Tipo de obra</span>[Tipo de obra]</div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[Estado]</div>
-                <div></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Coimbra -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Coimbra</h3>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/site/reabilitacao-2.jpg" alt="Residência universitária em Coimbra, edifício amarelo reabilitado.">
-                <div><h4>Residência universitária</h4><p class="ix-entry__desc">Reabilitação de edifício.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--line" aria-hidden="true"></span>Obra para cliente</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Dono de obra]</div>
-                <div class="ix-cell ix-cell--muted"><span class="m-label">Estado</span>Não se aplica</div>
-                <div><a href="#" class="link link--sm">Ver projeto</a></div>
-              </li>
-            </ul>
-          </li>
-
-          <!-- Região, concelho a confirmar -->
-          <li class="ix-place">
-            <div class="ix-place__name">
-              <h3 class="ix-city">Região de Aveiro</h3>
-              <span class="ix-place__note">[Concelho de cada obra a confirmar]</span>
-            </div>
-            <ul class="ix-list">
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/edificio-de-habitacao-ribas-i/ribas-i-3.jpg" alt="Edifício de habitação Ribas I.">
-                <div><h4>Ribas I e II</h4><p class="ix-entry__desc">Edifícios de habitação. Construídos pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-              <li class="ix-entry ix-cols">
-                <img class="ix-thumb" src="/img/portefolio/construcao/edificio-de-habitacao-viela-do-canto/viela-do-canto-12.jpg" alt="Fachada com azulejo do edifício da Viela do Canto.">
-                <div><h4>Viela do Canto</h4><p class="ix-entry__desc">Edifício de habitação com fachada em azulejo.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>Rua do Gravito</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-              <li class="ix-entry ix-cols">
-                <span class="ix-empty" aria-hidden="true"></span>
-                <div><h4>Peralta e Rios</h4><p class="ix-entry__desc">Edifício de habitação. Construído pela Engicivil.</p></div>
-                <div class="ix-cell ix-cell--ink"><span class="m-label">Tipo de obra</span><span class="with-mark"><span class="mark mark--open" aria-hidden="true"></span>Prédio para promotor</span></div>
-                <div class="ix-cell"><span class="m-label">Promotor</span>[Promotor]</div>
-                <div class="ix-cell"><span class="m-label">Estado</span>[À venda / vendido]</div>
-                <div><a href="#" class="link link--sm">Saber mais</a></div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Para promotores -->
-      <div class="boxes">
-        <div class="box">
-          <h3>Procura casa num destes prédios?</h3>
-          <p class="body">Alguns estão à venda pelos seus promotores. Indicamos-lhe quem os vende.</p>
-          <a href="#contacto" class="link">Pedir contacto do promotor</a>
-        </div>
-        <div class="box">
-          <h3>É promotor e tem um prédio para construir?</h3>
-          <p class="body">Construímos com engenharia e estaleiro próprios, e damos a conhecer a obra aqui.</p>
-          <a href="#contacto" class="link">Pedir orçamento</a>
-        </div>
-      </div>
+      <p class="places"><span>Onde trabalhamos</span> Aveiro · Ílhavo · Gafanhas · Oliveira do Bairro · Oliveira de Azeméis · Porto · Coimbra</p>
     </div>
   </section>
 

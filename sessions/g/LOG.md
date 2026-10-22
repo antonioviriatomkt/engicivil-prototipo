@@ -27,6 +27,13 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - Fotos novas (exteriores do portefólio): Peralta e Rios (`construcao-de-edificio-peralta-e-rios-4`), Viela do Canto (`edificio-de-habitacao-viela-do-canto`), Rua do Gravito (`ed-pedro-cardoso-15`), Gafanha de Aquém (`construcao-de-edificio-gafanha-de-aquem-9`, em obra — não há foto do prédio acabado), moradia no Porto (`reabilitacao-de-moradia-no-porto`). A obra do Porto deixou de ser placeholder: «Moradia no Porto» (reabilitação, do portefólio).
   - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-locais-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 - **Decisão (António): proposta A, sem CTAs** para a 03. Implementada na homepage (`#locais`, fundo branco): título centrado (`.sec-intro`, eyebrow «03 · Prédios para promotores»), 6 cartões de prédios para promotores (foto, «Construído pela ENGICIVIL», local, `[Promotor]`, `[À venda / vendido]`) e linha «Onde trabalhamos» com os 7 locais. Sem «Saber mais» nos cartões e sem as caixas «Procura casa…» / «É promotor…». Saiu o índice por local (`.ix-*`), a legenda (`.legend`) e as caixas (`.boxes`/`.box`) — CSS apagado. Página de propostas e entrada do `vite.config.js` apagadas. Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-locais-{1440,1024,390}.png`.
+- Pedido do António: **tirada a linha «Onde trabalhamos»** do fim da 03 (e o CSS `.places`) e **removida a secção 04 «Sobre nós e credenciais»** (organograma + tabela de credenciais; CSS `.org*`/`.cred*` apagado). O item «Sobre nós» do menu passa a levar à secção dos sócios (`id="sobre"`). As credenciais ficam na faixa de distinções e nas mais-valias da 01. Contacto passa a «05 / 05».
+- **Secção «Como trabalhamos» (agora 04) — 4 propostas** em `prototypes/g/propostas/processo/` (+ entrada `g-propostas-processo` no `vite.config.js`); mesmos 4 passos factuais (orçamento e planeamento · engenharia própria · estaleiro e meios próprios · acompanhamento até ao fim):
+  - **A** — linha horizontal com 4 círculos numerados (vertical no telemóvel).
+  - **B** — fundo escuro, passos numerados + foto de obra fixa (betonagem, Ribas II).
+  - **C** — título fixo à esquerda, passos com números grandes à direita.
+  - **D** — passo a passo (separadores, reutiliza `main.js`): cada fase mostra texto + foto de obra.
+  - Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-processo-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

@@ -12,6 +12,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - 2.ª ronda (pedido do António): régua do cabeçalho removida; botão «Pausar vídeo» removido (⚠️ falha WCAG 2.2.2, registado no STATUS); o carimbo passou da secção dos sócios para dentro do hero, por baixo do subtítulo, como 5 carimbos individuais com contorno branco em vez de barra.
 - 3.ª ronda: saíram os carimbos «2013» e «30 especialistas» (já estão no eyebrow e no subtítulo); os 3 restantes ficaram mais pequenos (valor 18 px, largura do conteúdo).
 - 4.ª ronda: saiu o subtítulo do hero («Somos 30 especialistas…»). O hero fica com eyebrow, título e carimbos.
+- «30 especialistas, com engenharia e estaleiro próprios» entra no texto da secção dos sócios (era a única menção que restava fora do hero).
 
 ## 2026-10-22 · claude/wonderful-volta-b4600b · sessão 1 (cont.): vídeo no hero
 - O António enviou o vídeo do hero do site atual (percurso pela obra da Delabie, 1080p, 34 s, 25 MB). Comprimido para 720p sem som: MP4 H.264 (4,3 MB) + WebM VP9 (4,4 MB) + capa JPG, em `public/video/`.

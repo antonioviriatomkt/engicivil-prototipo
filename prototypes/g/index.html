@@ -202,10 +202,10 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
   <!-- 01 Construções: o que oferece (3 áreas) e porquê a ENGICIVIL -->
   <section id="construcoes" class="section section--white cons" aria-labelledby="h-c">
     <div class="wrap">
-      <header class="cons__head">
-        <p class="cons__eyebrow">01 · <span class="sb-pre">ENGICIVIL</span> Construções</p>
-        <h2 id="h-c" class="cons__title">Construímos para empresas, particulares e promotores.</h2>
-        <p class="cons__lead">Indústria, habitação e reabilitação. Soluções completas, do seu projeto à sua execução.</p>
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">01 · <span class="sb-pre">ENGICIVIL</span> Construções</p>
+        <h2 id="h-c" class="sec-intro__title">Construímos para empresas, particulares e promotores.</h2>
+        <p class="sec-intro__lead">Indústria, habitação e reabilitação. Soluções completas, do seu projeto à sua execução.</p>
       </header>
 
       <ul class="cons__cards" role="list">
@@ -258,75 +258,77 @@ try { if (!sessionStorage.getItem('g-loader')) document.documentElement.classLis
     </div>
   </section>
 
-  <!-- 02 Empreendimentos -->
-  <section id="empreendimentos" class="section" aria-labelledby="h-e">
+  <!-- 02 Empreendimentos: um de cada vez (separadores), galeria de exterior e interiores + ficha -->
+  <section id="empreendimentos" class="section devs" aria-labelledby="h-e">
     <div class="wrap">
-      <div class="sec-head grid">
-        <div class="sec-meta span-3"><span class="sec-meta__n">02 / 06</span><span class="sec-meta__name">ENGICIVIL Empreendimentos</span></div>
-        <div class="sec-body span-9">
-          <h2 id="h-e" class="sec-title sec-title--18">Casas que promovemos e construímos</h2>
-          <p class="sec-lead">Dois edifícios na região de Aveiro, da promoção à obra pela mesma equipa. Peça plantas, áreas e preços à nossa equipa comercial.</p>
-        </div>
-      </div>
+      <header class="sec-intro">
+        <p class="sec-intro__eyebrow">02 · <span class="sb-pre">ENGICIVIL</span> Empreendimentos</p>
+        <h2 id="h-e" class="sec-intro__title">Casas que promovemos e construímos.</h2>
+        <p class="sec-intro__lead">Dois edifícios na região de Aveiro, promovidos e construídos pela mesma equipa.</p>
+      </header>
 
-      <!-- Ficha E-01 -->
-      <article id="serene" class="dev grid" aria-labelledby="h-serene">
-        <figure class="dev__fig span-5">
-          <img src="/img/empreendimentos/serene-condominium/edificio-serene-16.jpg" alt="Render do Serene Condominium à noite, com as varandas iluminadas.">
-          <div class="dev__brand">
-            <img class="dev__logo" src="/img/logos/serene-logo.png" alt="Serene Condominium">
-            <span class="figno">Fig. 4</span>
+      <!-- Sem JS os dois painéis ficam visíveis, um por baixo do outro. Os ids #serene e #gaio abrem o separador certo (main.js). -->
+      <div class="dev-tabs" data-tabs>
+        <div class="dev-tablist" role="tablist" aria-label="Empreendimentos">
+          <button type="button" role="tab" id="tab-serene" aria-controls="serene" aria-selected="true"><strong>Serene Condominium</strong><span>Ílhavo · 8 apartamentos</span></button>
+          <button type="button" role="tab" id="tab-gaio" aria-controls="gaio" aria-selected="false" tabindex="-1"><strong>Edifício Gaio</strong><span>Oliveira do Bairro · 12 apartamentos</span></button>
+        </div>
+
+        <div class="dev-panel" role="tabpanel" id="serene" aria-labelledby="tab-serene">
+          <div class="gallery" data-gallery>
+            <img class="gallery__main" src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt="Render do Serene Condominium ao entardecer, visto da rua.">
+            <div class="gallery__thumbs">
+            <button type="button" aria-pressed="true" aria-label="Exterior"><img src="/img/empreendimentos/serene-condominium/edificio-serene-11.jpg" alt="Render do Serene Condominium ao entardecer, visto da rua."></button>
+            <button type="button" aria-pressed="false" aria-label="Sala e cozinha"><img src="/img/empreendimentos/serene-condominium/edificio-serene-20.jpg" alt="Render da sala e cozinha de um apartamento do Serene."></button>
+            <button type="button" aria-pressed="false" aria-label="Quarto"><img src="/img/empreendimentos/serene-condominium/edificio-serene-21.jpg" alt="Render de um quarto do Serene."></button>
+            <button type="button" aria-pressed="false" aria-label="Casa de banho"><img src="/img/empreendimentos/serene-condominium/edificio-serene-22.jpg" alt="Render de uma casa de banho do Serene."></button>
+            </div>
           </div>
-        </figure>
-        <div class="dev__body span-7">
-          <div class="dev__head">
-            <span class="kicker">E-01</span>
-            <h3 id="h-serene" class="dev__title">Serene Condominium</h3>
-            <p class="dev__motto">«Projeto ímpar de design, conforto e luz.»</p>
-          </div>
-          <dl class="spec">
+          <div class="dev-info">
+            <h3 class="dev-brand"><img src="/img/logos/serene-logo.png" alt="Serene Condominium"></h3>
+            <p class="dev-motto">«Projeto ímpar de design, conforto e luz.»</p>
+            <dl class="spec">
             <div class="spec__row"><dt>Local</dt><dd>Rua Vasco da Gama, Ílhavo. Entre Aveiro, as praias e a ria.</dd></div>
             <div class="spec__row"><dt>Fogos</dt><dd class="mono">8 apartamentos: 4 × T2, 4 × T3 duplex</dd></div>
             <div class="spec__row"><dt>Estado</dt><dd class="with-mark"><span class="mark mark--accent" aria-hidden="true"></span>Em construção / finalizado</dd></div>
             <div class="spec__row"><dt>Inclui</dt><dd>Varandas e terraços a nascente e poente, elevador a todos os pisos, fotovoltaico em todos os apartamentos, carregamento elétrico, fachada em lâmina porcelânica e zinco patinado, condomínio fechado</dd></div>
             <div class="spec__row"><dt>Áreas e preço</dt><dd class="mono placeholder">[Área m²] · [Preço sob consulta]</dd></div>
-          </dl>
-          <div class="actions">
-            <a href="#contacto" class="btn">Pedir informação</a>
-            <a href="#" class="link">Ver o Serene</a>
+            </dl>
+            <div class="actions">
+              <a href="#contacto" class="btn">Pedir informação</a>
+              <a href="#" class="link">Ver o Serene</a>
+            </div>
           </div>
         </div>
-      </article>
 
-      <!-- Ficha E-02 -->
-      <article id="gaio" class="dev grid" aria-labelledby="h-gaio">
-        <figure class="dev__fig span-5">
-          <img src="/img/empreendimentos/edificio-gaio/edificio-gaio-1.jpg" alt="Render do Edifício Gaio ao pôr do sol, visto da rua.">
-          <div class="dev__brand dev__brand--gaio">
-            <img class="dev__logo dev__logo--gaio" src="/img/logos/gaio-logo.png" alt="Edifício Gaio">
-            <span class="figno">Fig. 5</span>
+        <div class="dev-panel" role="tabpanel" id="gaio" aria-labelledby="tab-gaio">
+          <div class="gallery" data-gallery>
+            <img class="gallery__main" src="/img/empreendimentos/edificio-gaio/edificio-gaio-17.jpg" alt="Render do Edifício Gaio à noite, visto da rua.">
+            <div class="gallery__thumbs">
+            <button type="button" aria-pressed="true" aria-label="Exterior"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-17.jpg" alt="Render do Edifício Gaio à noite, visto da rua."></button>
+            <button type="button" aria-pressed="false" aria-label="Sala"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-22.jpg" alt="Render da sala de um apartamento do Gaio."></button>
+            <button type="button" aria-pressed="false" aria-label="Sala com escada (duplex)"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-13.jpg" alt="Render da sala com escada de um duplex do Gaio."></button>
+            <button type="button" aria-pressed="false" aria-label="Quarto"><img src="/img/empreendimentos/edificio-gaio/edificio-gaio-20.jpg" alt="Render de um quarto do Gaio."></button>
+            </div>
           </div>
-        </figure>
-        <div class="dev__body span-7">
-          <div class="dev__head">
-            <span class="kicker">E-02</span>
-            <h3 id="h-gaio" class="dev__title">Edifício Gaio</h3>
-            <p class="dev__motto">«Escolher onde viver é escolher como viver.»</p>
-          </div>
-          <dl class="spec">
+          <div class="dev-info">
+            <h3 class="dev-brand dev-brand--gaio"><img src="/img/logos/gaio-logo.png" alt="Edifício Gaio"></h3>
+            <p class="dev-motto">«Escolher onde viver é escolher como viver.»</p>
+            <dl class="spec">
             <div class="spec__row"><dt>Local</dt><dd>Oliveira do Bairro</dd></div>
             <div class="spec__row"><dt>Fogos</dt><dd class="mono">12 apartamentos: T1, T2, T3 duplex</dd></div>
             <div class="spec__row"><dt>Estado</dt><dd class="with-mark"><span class="mark mark--accent-open" aria-hidden="true"></span>Em construção</dd></div>
             <div class="spec__row"><dt>Inclui</dt><dd>Varandas amplas, estacionamento interior com elevador, terraços nos duplex</dd></div>
             <div class="spec__row"><dt>Áreas e preço</dt><dd class="mono placeholder">[Área m²] · [Preço sob consulta]</dd></div>
-          </dl>
-          <div class="actions">
-            <a href="#contacto" class="btn">Pedir informação</a>
-            <a href="#" class="link">Ver o Gaio</a>
+            </dl>
+            <div class="actions">
+              <a href="#contacto" class="btn">Pedir informação</a>
+              <a href="#" class="link">Ver o Gaio</a>
+            </div>
           </div>
         </div>
-      </article>
-      <p class="note dev-note">Fig. 4 e 5: imagens de projeto. Plantas e áreas a pedido: comercial@engicivil.pt</p>
+      </div>
+      <p class="note">Imagens de projeto. Plantas e áreas a pedido: <a href="mailto:comercial@engicivil.pt">comercial@engicivil.pt</a></p>
     </div>
   </section>
 

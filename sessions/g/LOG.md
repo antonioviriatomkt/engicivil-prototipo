@@ -18,6 +18,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
   - **C** — separadores Serene | Gaio; galeria com exterior + 3 interiores (miniaturas trocam a imagem principal) e ficha com o logótipo.
   - **D** — fundo escuro; tabela de comparação (Local, Fogos, Estado, Destaques, Preço) com os renders noturnos no topo de cada coluna.
   - Sem scroll horizontal a 360, 390, 768, 1024 e 1440. Capturas: `screenshots/g/2026-10-22-empreendimentos-{a,b,c,d}-{1440,390}.png` (+ `-atual-1440.png`).
+- **Decisão (António): proposta C** para a 02. Implementada na homepage: separadores Serene | Gaio (os painéis mantêm os ids `#serene` e `#gaio`; uma ligação para eles abre o separador certo — `main.js`), galeria com exterior + 3 interiores (miniaturas trocam a imagem principal) e ficha com o logótipo dentro do `<h3>`, lema e a tabela `.spec` com os factos completos (local, fogos, estado, inclui, `[Área m²] · [Preço sob consulta]`). Sem JS os dois painéis aparecem um por baixo do outro. Saiu o antigo `.dev` (e `.dev-note`); o cabeçalho centrado passou a classe genérica `.sec-intro` (usada pela 01 e pela 02). Página de propostas e entrada do `vite.config.js` apagadas. Sem scroll horizontal a 360–1440. Capturas: `screenshots/g/2026-10-22-empreendimentos-{1440,1024,390}.png`.
 
 ## 2026-10-22 · claude/nice-cannon-u8j2zu · sessão 5: selos nos carimbos do hero
 - Pedido do António: **apagada a faixa de selos** da secção 04 (`ul.seals` + CSS); os selos passam para os **carimbos do hero**, **sem contorno**.

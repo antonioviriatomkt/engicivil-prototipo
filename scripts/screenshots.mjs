@@ -23,6 +23,8 @@ for (const path of pages) {
     const page = await browser.newPage({ viewport: { width, height: 900 } })
     await page.goto(base + path, { waitUntil: 'networkidle' })
     await page.evaluate(() => document.fonts.ready)
+    // G tem ecrã de carregamento: esperar que saia antes de capturar
+    await page.waitForFunction(() => !document.documentElement.classList.contains('is-loading'))
     const file = `${out}/${day}-${slug}-${label}.png`
     await page.screenshot({ path: file, fullPage: true })
     console.log(file)

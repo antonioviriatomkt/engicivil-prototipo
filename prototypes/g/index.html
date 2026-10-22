@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Engicivil — Homepage · Versão G (B+D)</title>
 
+<script>document.documentElement.classList.add('is-loading')</script>
+<script type="module" src="./loader.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
@@ -46,9 +48,60 @@ input[type="radio"],input[type="checkbox"]{accent-color:#141414}
   .radios{grid-template-columns:minmax(0,1fr) !important}
   .foot{grid-template-columns:minmax(0,1fr) !important}
 }
+/* Ecrã de carregamento — símbolo da fita dobrada, redesenhado em SVG com a base neutra */
+.loader{display:none}
+html.is-loading{overflow:hidden}
+html.is-loading .loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#f4f4f1;transition:opacity .5s ease,visibility 0s linear .5s;animation:loader-failsafe 0s linear 8s forwards}
+.loader svg{width:clamp(88px,14vw,128px);height:auto;overflow:visible;transition:transform .5s ease}
+.loader-trace{stroke-dasharray:1 1;stroke-dashoffset:1;animation:loader-draw 1.3s cubic-bezier(.65,0,.35,1) .15s forwards}
+.loader.is-looping .loader-trace{animation:loader-loop 2.2s cubic-bezier(.65,0,.35,1) infinite}
+.loader.is-done{opacity:0;visibility:hidden}
+.loader.is-done svg{transform:scale(.94)}
+@keyframes loader-draw{to{stroke-dashoffset:0}}
+@keyframes loader-loop{0%{stroke-dashoffset:0}45%{stroke-dashoffset:-1}50%{stroke-dashoffset:1}100%{stroke-dashoffset:0}}
+@keyframes loader-failsafe{to{opacity:0;visibility:hidden}}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion: reduce){.loader-trace,.loader.is-looping .loader-trace{animation:none;stroke-dashoffset:0}}
 </style>
 </head>
 <body>
+<!-- Ecrã de carregamento (só com JS; ver loader.js) -->
+<div id="loader" class="loader" role="status">
+  <span class="sr-only">A carregar…</span>
+  <svg viewBox="-2 0 114 100" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="lf0" gradientUnits="userSpaceOnUse" x1="12" y1="17" x2="57" y2="8.5"><stop offset="0" stop-color="#2b3337"/><stop offset="1" stop-color="#8a969d"/></linearGradient>
+      <linearGradient id="lf1" gradientUnits="userSpaceOnUse" x1="57" y1="8.5" x2="103" y2="17"><stop offset="0" stop-color="#2b3337"/><stop offset="1" stop-color="#8a969d"/></linearGradient>
+      <linearGradient id="lf2" gradientUnits="userSpaceOnUse" x1="103" y1="17" x2="103" y2="83"><stop offset="0" stop-color="#2b3337"/><stop offset="1" stop-color="#8a969d"/></linearGradient>
+      <linearGradient id="lf3" gradientUnits="userSpaceOnUse" x1="103" y1="83" x2="57" y2="91.5"><stop offset="0" stop-color="#8a969d"/><stop offset="1" stop-color="#2b3337"/></linearGradient>
+      <linearGradient id="lf4" gradientUnits="userSpaceOnUse" x1="57" y1="91.5" x2="12" y2="83"><stop offset="0" stop-color="#8a969d"/><stop offset="1" stop-color="#2b3337"/></linearGradient>
+      <linearGradient id="lf5" gradientUnits="userSpaceOnUse" x1="12" y1="83" x2="40" y2="50"><stop offset="0" stop-color="#8a969d"/><stop offset="1" stop-color="#2b3337"/></linearGradient>
+      <linearGradient id="lf6" gradientUnits="userSpaceOnUse" x1="40" y1="50" x2="12" y2="17"><stop offset="0" stop-color="#2b3337"/><stop offset="1" stop-color="#8a969d"/></linearGradient>
+      <mask id="loader-mask" maskUnits="userSpaceOnUse" x="-10" y="-10" width="130" height="120">
+        <!-- traço que percorre a fita: começa e acaba a meio do lado direito, com sobreposição para não deixar falha -->
+        <path class="loader-trace" pathLength="1" d="M103,40 L103,83 L57,91.5 L12,83 L40,50 L12,17 L57,8.5 L103,17 L103,60" fill="none" stroke="#fff" stroke-width="15" stroke-linejoin="miter" stroke-miterlimit="10"/>
+      </mask>
+    </defs>
+    <g opacity=".12">
+      <polygon points="24.18,21.31 57.01,15.11 56.99,1.89 -0.18,12.69" fill="url(#lf0)"/>
+      <polygon points="57.01,15.11 96.50,22.41 109.50,11.59 56.99,1.89" fill="url(#lf1)"/>
+      <polygon points="96.50,22.41 96.50,77.59 109.50,88.41 109.50,11.59" fill="url(#lf2)"/>
+      <polygon points="96.50,77.59 57.01,84.89 56.99,98.11 109.50,88.41" fill="url(#lf3)"/>
+      <polygon points="57.01,84.89 24.18,78.69 -0.18,87.31 56.99,98.11" fill="url(#lf4)"/>
+      <polygon points="24.18,78.69 48.52,50.00 31.48,50.00 -0.18,87.31" fill="url(#lf5)"/>
+      <polygon points="48.52,50.00 24.18,21.31 -0.18,12.69 31.48,50.00" fill="url(#lf6)"/>
+    </g>
+    <g mask="url(#loader-mask)">
+      <polygon points="24.18,21.31 57.01,15.11 56.99,1.89 -0.18,12.69" fill="url(#lf0)"/>
+      <polygon points="57.01,15.11 96.50,22.41 109.50,11.59 56.99,1.89" fill="url(#lf1)"/>
+      <polygon points="96.50,22.41 96.50,77.59 109.50,88.41 109.50,11.59" fill="url(#lf2)"/>
+      <polygon points="96.50,77.59 57.01,84.89 56.99,98.11 109.50,88.41" fill="url(#lf3)"/>
+      <polygon points="57.01,84.89 24.18,78.69 -0.18,87.31 56.99,98.11" fill="url(#lf4)"/>
+      <polygon points="24.18,78.69 48.52,50.00 31.48,50.00 -0.18,87.31" fill="url(#lf5)"/>
+      <polygon points="48.52,50.00 24.18,21.31 -0.18,12.69 31.48,50.00" fill="url(#lf6)"/>
+    </g>
+  </svg>
+</div>
 
 
 <div style="min-height:100vh;background:#f4f4f1;color:#141414;">

@@ -33,19 +33,12 @@ if (header && toggle && menu) {
   })
 }
 
-// Vídeo do hero: arranca sem som, com botão de pausa (WCAG 2.2.2).
+// Vídeo do hero: arranca sem som, em ciclo.
 // Se o sistema pedir menos movimento, ou houver poupança de dados, fica parado na imagem de capa.
 const video = document.querySelector('.hero-video')
-const videoToggle = document.querySelector('.video-toggle')
 
-if (video && videoToggle) {
-  const setLabel = () => { videoToggle.textContent = video.paused ? 'Reproduzir vídeo' : 'Pausar vídeo' }
-  video.addEventListener('play', setLabel)
-  video.addEventListener('pause', setLabel)
-  videoToggle.addEventListener('click', () => (video.paused ? video.play() : video.pause()))
-
+if (video) {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
   const saveData = navigator.connection?.saveData
-  if (reduce || saveData) setLabel()
-  else video.play().catch(setLabel)
+  if (!reduce && !saveData) video.play().catch(() => {})
 }

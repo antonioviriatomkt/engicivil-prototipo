@@ -9,6 +9,7 @@ Entrada nova **no topo**. Formato: data · branch · o que mudou · decisões ·
 - Cartões dos negócios só com texto (sai a regra de cartão horizontal ≥ 1081 px). Nova secção `.founders`: foto + texto + «Ligar», carimbo por baixo.
 - Sem scroll horizontal a 390, 1024 e 1440 px.
 - Capturas: `screenshots/g/2026-10-22-hero-full-1440.png`, `…-hero-full-390.png`, `…-g-desktop.png`, `…-g-mobile.png`. Preview: link do Vercel no PR.
+- 2.ª ronda (pedido do António): régua do cabeçalho removida; botão «Pausar vídeo» removido (⚠️ falha WCAG 2.2.2, registado no STATUS); o carimbo passou da secção dos sócios para dentro do hero, por baixo do subtítulo, como 5 carimbos individuais com contorno branco em vez de barra.
 
 ## 2026-10-22 · claude/wonderful-volta-b4600b · sessão 1 (cont.): vídeo no hero
 - O António enviou o vídeo do hero do site atual (percurso pela obra da Delabie, 1080p, 34 s, 25 MB). Comprimido para 720p sem som: MP4 H.264 (4,3 MB) + WebM VP9 (4,4 MB) + capa JPG, em `public/video/`.

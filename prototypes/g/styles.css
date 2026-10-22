@@ -184,14 +184,15 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 .founders__title { margin: 0; font-family: var(--f-ui); font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.04; font-weight: 600; letter-spacing: -0.025em; }
 .founders__text .actions { margin-top: 4px; }
 
-/* Carimbos: um por facto, por baixo do título do hero — selo em tile branco (sem contorno) + legenda branca */
-.stamps { margin: 4px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 152px)); gap: 16px 12px; }
-.stamps > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 8px; }
-.stamps dt { font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--white); }
-.stamps dd { margin: 0; }
-.stamp__tile { display: flex; align-items: center; justify-content: center; height: 88px; padding: 8px; box-sizing: border-box; background: var(--white); border-radius: 2px; }
-.stamp__tile img { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; }
-.stamp__tile--text { font-family: var(--f-ui); font-size: 1.25rem; line-height: 1; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; }
+/* Carimbos como prémios: selo sem fundo (com sombra, como medalha) + nome + entidade/ano, centrados. Sem caixa nem contorno. */
+.stamps { margin: 12px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 148px)); gap: 20px 16px; }
+.stamp { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.stamp dt { order: 2; margin-top: 12px; font-family: var(--f-ui); font-size: 0.9375rem; line-height: 1.2; font-weight: 600; color: var(--white); }
+.stamp__ref { order: 3; margin: 4px 0 0; font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--white); }
+.stamp__seal { order: 1; margin: 0; height: 92px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 6px 12px rgb(0 0 0 / 0.45)); }
+.stamp__seal img { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; }
+.stamp__seal--type { flex-direction: column; font-family: var(--f-ui); font-size: 4.5rem; line-height: 0.8; font-weight: 600; letter-spacing: -0.04em; color: var(--white); }
+.stamp__seal--type span { margin-bottom: 6px; font-family: var(--f-mono); font-size: 12px; line-height: 1; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; }
 
 /* ---------- Cabeçalho de secção ---------- */
 .sec-head { row-gap: 16px; border-top: 2px solid var(--ink); padding-top: 20px; }
@@ -395,9 +396,10 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
 
   .hero { min-height: clamp(520px, calc(100svh - 160px), 720px); }
   .hero-inner { padding-top: 64px; padding-bottom: 32px; }
-  .stamps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 8px; }
-  .stamp__tile { height: 68px; padding: 6px; }
-  .stamp__tile--text { font-size: 1.0625rem; }
+  .stamps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 8px; }
+  .stamp__seal { height: 68px; }
+  .stamp__seal--type { font-size: 3.5rem; }
+  .stamp dt { font-size: 0.875rem; }
   .path__body { padding: 24px; }
   .path__name { font-size: 2.25rem; }
   .paths-sec { padding-top: 32px; }

@@ -184,11 +184,14 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 .founders__title { margin: 0; font-family: var(--f-ui); font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.04; font-weight: 600; letter-spacing: -0.025em; }
 .founders__text .actions { margin-top: 4px; }
 
-/* Carimbos: um por facto, por baixo do subtítulo do hero (contorno branco sobre o véu) */
-.stamps { margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.stamps > div { padding: 8px 12px 10px; border: 1px solid var(--white); border-radius: 2px; display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 4px; }
+/* Carimbos: um por facto, por baixo do título do hero — selo em tile branco (sem contorno) + legenda branca */
+.stamps { margin: 4px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 152px)); gap: 16px 12px; }
+.stamps > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 8px; }
 .stamps dt { font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--white); }
-.stamps dd { margin: 0; font-family: var(--f-ui); font-size: 1.125rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+.stamps dd { margin: 0; }
+.stamp__tile { display: flex; align-items: center; justify-content: center; height: 88px; padding: 8px; box-sizing: border-box; background: var(--white); border-radius: 2px; }
+.stamp__tile img { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; }
+.stamp__tile--text { font-family: var(--f-ui); font-size: 1.25rem; line-height: 1; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; }
 
 /* ---------- Cabeçalho de secção ---------- */
 .sec-head { row-gap: 16px; border-top: 2px solid var(--ink); padding-top: 20px; }
@@ -306,21 +309,6 @@ html.is-loading .loader { position: fixed; inset: 0; z-index: 1000; display: gri
 .cred strong { font-family: var(--f-ui); font-weight: 600; }
 .cred__sub { font-size: 0.9375rem; color: var(--g700); }
 .cred__ref { font-family: var(--f-mono); font-size: 14px; }
-/* Selos das distinções (secção 04) */
-.seals { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.seal { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 16px; min-height: 196px; padding: 24px 16px 16px; background: var(--white); border-top: 1px solid var(--ink); }
-.seal__img { display: block; height: 104px; width: auto; max-width: 100%; object-fit: contain; margin: auto 0; }
-.seal__img--wide { height: 112px; }
-.seal__img--round { height: 120px; }
-.seal__cap { font-family: var(--f-mono); font-size: 12px; line-height: 1.4; color: var(--g700); text-align: center; }
-@media (max-width: 760px) {
-  .seals { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .seal { min-height: 164px; }
-  .seal__img { height: 84px; }
-  .seal__img--wide { height: 88px; }
-  .seal__img--round { height: 96px; }
-}
-
 
 /* ---------- 05 Como trabalhamos ---------- */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; border-top: 1px solid var(--ink); }
@@ -407,6 +395,9 @@ textarea.input { padding: 12px; line-height: 1.5; resize: vertical; }
 
   .hero { min-height: clamp(520px, calc(100svh - 160px), 720px); }
   .hero-inner { padding-top: 64px; padding-bottom: 32px; }
+  .stamps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 8px; }
+  .stamp__tile { height: 68px; padding: 6px; }
+  .stamp__tile--text { font-size: 1.0625rem; }
   .path__body { padding: 24px; }
   .path__name { font-size: 2.25rem; }
   .paths-sec { padding-top: 32px; }

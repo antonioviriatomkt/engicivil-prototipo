@@ -4,7 +4,7 @@ Decisões que valem para os dois protótipos. Entrada nova no topo, com data, qu
 
 | Data | Decisão | Quem | Porquê / notas |
 |---|---|---|---|
-| 2026-10-22 | **Selos das distinções:** só com o ano efetivamente atribuído (o IAPMEI exige o ano no logótipo PME Líder; os selos Scoring são datados e personalizados). Até haver os ficheiros oficiais, usam-se recortes das imagens publicadas pela Engicivil; R.U.-I.S. com o SVG oficial da AICCOPN. | António (pedido) + Viriato | Ficheiros oficiais PME Líder/Scoring → pedir à Engicivil. |
+| 2026-10-22 | **Selos das distinções:** só com o ano efetivamente atribuído (o IAPMEI exige o ano no logótipo PME Líder; os selos Scoring são datados e personalizados). Até haver os ficheiros oficiais, usam-se recortes das imagens publicadas pela Engicivil; R.U.-I.S. com o SVG oficial da AICCOPN. No G os selos estão nos carimbos do hero (a faixa da secção 04 foi apagada a pedido do António). | António (pedido) + Viriato | Ficheiros oficiais PME Líder/Scoring → pedir à Engicivil. |
 | 2026-10-22 | **Correção de factos:** PME Líder = 2020, 2021, 2022 (não 2021–2023). O «Prémio de Excelência» Scoring é o selo **TOP 10 Melhores PME do Setor** (construção, reabilitação e remodelações), Edição 2022, 2.º ano consecutivo. NIPC da Cardoso & Manata visível no selo: **510 832 091**. | Viriato | Fontes: diploma PME Líder 2022 e selos publicados no site da Engicivil. |
 | 2026-10-21 | Repositório **público**, com o contexto do projeto. | António | Escolha explícita. ⚠️ Feedback do cliente e notas da ficha ficam visíveis a qualquer pessoa. |
 | 2026-10-21 | **Stack:** HTML/CSS estático + Vite multi-página; deploy no Vercel com preview por branch. | António (recomendação da Viriato) | Mais próximo dos mockups e fácil de manter. |
